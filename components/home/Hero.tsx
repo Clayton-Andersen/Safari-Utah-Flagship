@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
       <Image
-        src="/images/hero-placeholder.jpg" // replace when you have your real image
-        alt="Western landscape suitable for wildlife tours"
+        src="/images/hero-antelope-island.jpg" // 👈 your real hero image
+        alt="Antelope Island landscape with wildlife viewing opportunities"
         fill
         priority
         className="object-cover brightness-[0.55]"

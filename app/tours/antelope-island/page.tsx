@@ -1,5 +1,6 @@
 import Section from "@/components/shared/Section";
 import BookingButton from "@/components/shared/BookingButton";
+import Image from "next/image";
 
 export const metadata = {
   title: "Premium Antelope Island Wildlife Tour | Safari Utah",
@@ -10,16 +11,30 @@ export const metadata = {
 export default function AntelopeIslandTourPage() {
   return (
     <>
-      {/* Hero / Intro */}
-      <Section
-        eyebrow="Premium Antelope Island Wildlife Tour"
-        title="A private, expert-guided wildlife experience."
-        subtitle="Explore Antelope Island’s sweeping landscapes, diverse ecosystems, and remarkable wildlife with an experienced safari-trained guide."
-      >
-        <p className="text-sm text-sand/80">
-          A private, expert-guided wildlife experience inspired by the depth of African safari guiding. Explore Antelope Island’s sweeping landscapes, diverse ecosystems, and remarkable wildlife with an experienced safari-trained guide.
-        </p>
-      </Section>
+      {/* Visual Hero */}
+      <section className="relative h-[50vh] md:h-[80vh] overflow-hidden">
+        <Image
+          src="/images/avocets.jpeg" // 👈 your strong wildlife/tour image
+          alt="Wildlife viewing on Antelope Island"
+          fill
+          priority
+          className="object-cover brightness-[0.6]"
+        />
+        <div className="relative z-10 flex h-full items-end">
+          <div className="mx-auto max-w-6xl px-4 pb-10 space-y-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-sand/80">
+              Premium Antelope Island Wildlife Tour
+            </p>
+            <h1 className="font-serif text-3xl md:text-5xl text-bone max-w-3xl">
+              A private, expert-guided wildlife experience.
+            </h1>
+            <p className="max-w-xl text-sm md:text-base text-sand/80">
+              Explore Antelope Island’s sweeping landscapes, diverse ecosystems, and remarkable wildlife with an experienced safari-trained guide.
+            </p>
+            <BookingButton label="Book your private Antelope Island tour" size="md" />
+          </div>
+        </div>
+      </section>
 
       {/* Tour Overview */}
       <Section title="Tour Overview">

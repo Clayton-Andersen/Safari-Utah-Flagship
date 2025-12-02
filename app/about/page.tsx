@@ -32,7 +32,7 @@ export default function AboutPage() {
           {/* Guide Photo */}
           <div className="rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
             <Image
-              src="/images/Clayton.jpeg" // make sure this matches your filename
+              src="/images/guide.jpeg" // make sure this matches your filename
               alt="Clayton Andersen, Safari Utah guide"
               width={600}
               height={800}
