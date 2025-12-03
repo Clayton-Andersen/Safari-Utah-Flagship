@@ -2,28 +2,40 @@
 
 import { useState } from "react";
 
+type Status = "idle" | "submitting" | "sent" | "error";
+
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
 
     const form = e.currentTarget;
-    const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-    };
+    const formData = new FormData(form);
+
+    // Required by Web3Forms
+    formData.append("access_key", "62addfbd-2462-4521-b1bc-d57cbc432911");
+    formData.append("from_name", "Safari Utah Website");
+    formData.append("subject", "New Safari Utah inquiry");
 
     try {
-      // For now we just log; later you can hook this to an email service or API route.
-      console.log("Contact form submission:", data);
-      setStatus("sent");
-      form.reset();
-    } catch {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const json = await response.json();
+
+      if (json.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        console.error("Web3Forms error:", json);
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error("Form submit error:", err);
       setStatus("error");
     }
   }
@@ -40,6 +52,7 @@ export default function ContactForm() {
           className="w-full rounded-lg border border-sand/30 bg-night/60 px-3 py-2 text-sm outline-none focus:border-sand"
         />
       </div>
+
       <div>
         <label className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
           Email
@@ -51,6 +64,7 @@ export default function ContactForm() {
           className="w-full rounded-lg border border-sand/30 bg-night/60 px-3 py-2 text-sm outline-none focus:border-sand"
         />
       </div>
+
       <div>
         <label className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
           Message
@@ -62,6 +76,7 @@ export default function ContactForm() {
           className="w-full rounded-lg border border-sand/30 bg-night/60 px-3 py-2 text-sm outline-none focus:border-sand"
         />
       </div>
+
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -69,6 +84,7 @@ export default function ContactForm() {
       >
         {status === "submitting" ? "Sending…" : "Send Message"}
       </button>
+
       {status === "sent" && (
         <p className="text-xs text-emerald-400 mt-1">
           Thank you—your message has been sent.
@@ -76,7 +92,7 @@ export default function ContactForm() {
       )}
       {status === "error" && (
         <p className="text-xs text-red-400 mt-1">
-          Something went wrong. Please try again or email directly.
+          Something went wrong. Please try again, or email safariutah@gmail.com.
         </p>
       )}
     </form>
