@@ -11,20 +11,41 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Intro Section */}
+      {/* About Safari Utah */}
       <Section
-        eyebrow="About Safari Utah"
-        title="African-Inspired Guiding in the American West"
+        title="About Safari Utah"
+        subtitle="African-Inspired Guiding in the American West"
       >
-        <div className="space-y-6 text-sm text-sand/80 max-w-3xl">
-          <p>
-            Safari Utah brings African-inspired nature guiding to the American
-            West through private, expert-led wildlife experiences. Our focus is
-            to connect people with nature through clear insight, meaningful
-            moments, and a deeper understanding of place.
-          </p>
+        <div className="grid gap-10 md:grid-cols-[2fr,1.2fr] items-start">
+
+          {/* Text Column */}
+          <div className="space-y-6 text-sm text-sand/80 max-w-prose">
+            <p>
+              Safari Utah brings African-inspired nature guiding to the American West
+              through private, expert-led wildlife experiences. Our focus is to
+              connect people with nature through clear insight, meaningful moments,
+              and a deeper understanding of place.
+            </p>
+            <p>
+              Each tour emphasizes presence, ecological context, and the quiet,
+              unhurried rhythm of time in the field — drawing from the traditions and
+              depth of southern African safari guiding.
+            </p>
+          </div>
+
+          {/* Image Column — NEW */}
+          <div className="rounded-2xl overflow-hidden border border-sand/20 bg-night/40 h-full">
+            <Image
+              src="/images/about-safari.jpg"
+              alt="Safari Utah wildlife viewing experience on Antelope Island"
+              width={800}
+              height={600}
+              className="object-cover h-full w-full"
+            />
+          </div>
         </div>
       </Section>
+
 
       {/* About Your Guide */}
       <Section title="About Your Guide">
@@ -32,7 +53,7 @@ export default function AboutPage() {
           {/* Guide Photo */}
           <div className="rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
             <Image
-              src="/images/guide.jpeg" // make sure this matches your filename
+              src="/images/guide.jpg" // make sure this matches your filename
               alt="Clayton Andersen, Safari Utah guide"
               width={600}
               height={800}

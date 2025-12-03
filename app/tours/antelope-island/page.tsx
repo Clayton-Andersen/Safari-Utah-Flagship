@@ -15,7 +15,7 @@ export default function AntelopeIslandTourPage() {
       <section className="relative h-[50vh] md:h-[80vh] overflow-hidden">
         <Image
           src="/images/avocets.jpeg" // 👈 your strong wildlife/tour image
-          alt="Wildlife viewing on Antelope Island"
+          alt="American avocets wading in shallow water near Antelope Island"
           fill
           priority
           className="object-cover brightness-[0.6]"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const reviews = [
   {
     name: "Alex Epps",
@@ -33,8 +35,20 @@ const reviews = [
 
 export default function ReviewStrip() {
   return (
-    <section className="bg-night border-y border-sand/20">
-      <div className="mx-auto max-w-6xl px-4 py-10 space-y-4">
+    <section className="relative border-y border-sand/20">
+      {/* Background image + overlay */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/buffalo_point_winter_light.jpeg" // existing image you mentioned
+          alt="Soft view of American avocets near Antelope Island"
+          fill
+          className="object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-night/80" />
+      </div>
+
+      {/* Content */}
+      <div className="relative mx-auto max-w-6xl px-4 py-10 space-y-4">
         <h2 className="font-serif text-2xl text-bone">
           Guest Reviews from Antelope Island
         </h2>
@@ -46,7 +60,7 @@ export default function ReviewStrip() {
           {reviews.map((r) => (
             <figure
               key={r.name + r.quote.slice(0, 20)}
-              className="min-w-[260px] max-w-sm border border-sand/20 rounded-2xl p-5 bg-night/60"
+              className="min-w-[260px] max-w-sm border border-sand/20 rounded-2xl p-5 bg-night/70"
             >
               {/* ⭐ Stars */}
               <div className="flex items-center gap-1 mb-2">
@@ -73,7 +87,7 @@ export default function ReviewStrip() {
         {/* Google reviews link */}
         <div className="pt-4">
           <a
-            href="https://www.google.com/search?q=safari+utah+google+reviews&oq=safari+utah+google+reviews&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigAdIBCDQ1MDVqMGo0qAIDsAIB8QXkg4NJq9M58A&sourceid=chrome&ie=UTF-8#sv=CAESywEKuQEStgEKd0FMa3RfdkVQR0xFYVROeTQ2OEMwRDkxbkRxV05FZVc5d1hQMHZVMXZjOE5ncldNeUNSaDkwVzJxWjlMVXJXOVJiTk15M0w2RzNGV1BJeWFUbVp4UnNZZ0hQSU83amtIX29FRXM2Rnp4bldrVTlYWk95dW43Uk9VEhdBVm9lYWViMUY2YmFrUElQejVfZS1RURoiQUZNQUdHcTBZVjRCdWgwTHlWeGp6LTVxam5kaTVPRzlEURIEODA1MRoBMyoAMAA4ASCvs5PvBjACSgIQAg"
+            href="https://www.google.com/search?q=safari+utah&oq=safari+utah&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIICAEQRRgnGDsyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGD3SAQgyNzIzajBqN6gCCLACAfEF9KK6AlchuEHxBfSiugJXIbhB&sourceid=chrome&ie=UTF-8&lqi=CgtTYWZhcmkgVXRhaEi5paTxwruAgAhaExAAGAAYASILc2FmYXJpIHV0YWiSAQ10b3VyX29wZXJhdG9y4AEA#lkt=LocalPoiReviews&rlimm=8288452450578165872"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs uppercase tracking-[0.2em] text-sand/60 hover:text-sand transition underline"
@@ -85,4 +99,3 @@ export default function ReviewStrip() {
     </section>
   );
 }
-
