@@ -10,8 +10,9 @@ const navItems = [
   { href: "/tours/antelope-island", label: "Flagship Tour" },
   { href: "/about", label: "About" },
   { href: "/custom-experiences", label: "Custom Experiences" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/policies", label: "Policies" },
+  { href: "/gallery", label: "Gallery" },
+  //{ href: "/faq", label: "FAQ" },
+  //{ href: "/policies", label: "Policies" },
   { href: "/contact", label: "Contact" }
 ];
 

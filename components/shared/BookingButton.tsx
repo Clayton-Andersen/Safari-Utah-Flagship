@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 type Props = {
   size?: "sm" | "md" | "lg";
   label?: string;
@@ -11,17 +13,33 @@ const sizeClasses = {
   lg: "px-8 py-4 text-base",
 };
 
-export default function BookingButton({ size = "md", label }: Props) {
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "#";
+const baseClasses =
+  "inline-flex items-center justify-center rounded-full bg-sand text-night uppercase tracking-[0.2em] hover:bg-bone transition";
 
+export default function BookingButton({ size = "md", label }: Props) {
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
+
+  //  Future: if you set NEXT_PUBLIC_BOOKING_URL in Vercel, buttons go to that URL
+  if (bookingUrl) {
+    return (
+      <a
+        href={bookingUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${baseClasses} ${sizeClasses[size]}`}
+      >
+        {label ?? "Book Now"}
+      </a>
+    );
+  }
+
+  //  For now: route to Contact page for booking inquiries
   return (
-    <a
-      href={bookingUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full bg-sand text-night uppercase tracking-[0.2em] hover:bg-bone transition ${sizeClasses[size]}`}
+    <Link
+      href="/contact?reason=booking"
+      className={`${baseClasses} ${sizeClasses[size]}`}
     >
       {label ?? "Book Now"}
-    </a>
+    </Link>
   );
 }

@@ -19,6 +19,17 @@ export default function ContactPage() {
         <div className="grid gap-10 md:grid-cols-[1.5fr,1fr] items-start text-sm text-sand/80">
           {/* Form */}
           <div>
+            {/* Booking note – always shown for now */}
+            <div className="mb-4 rounded-xl border border-sand/30 bg-night/60 px-3 py-3 text-xs text-sand/80">
+              <p className="font-semibold text-sand">Booking note</p>
+              <p className="mt-1">
+                Our online booking system is being updated. For now, please use
+                this form to request your tour. Include your preferred date,
+                time of day (daylight or sunset), group size (1–4), and any
+                focus you have (photography, birding, ecology, etc.).
+              </p>
+            </div>
+
             <ContactForm />
           </div>
 

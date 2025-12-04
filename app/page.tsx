@@ -125,6 +125,11 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+        <div>
+          <p><Link href="/about" className="text-xs underline text-sand/70 hover:text-sand">
+  Learn more about Safari Utah & your guide
+</Link></p>
+        </div>
       </Section>
 
       {/* Custom Experiences – By Request Only */}
