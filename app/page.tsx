@@ -5,7 +5,6 @@ import ValuePillars from "@/components/home/ValuePillars"; // optional – keep 
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip"; // you can comment out until you add it
 import BookingButton from "@/components/shared/BookingButton";
-import MiniGallery from "@/components/home/MiniGallery";
 
 
 export default function HomePage() {
@@ -15,7 +14,6 @@ export default function HomePage() {
 
       {/* Optional “Value pillars” section – keep if you like the structure */}
       <ValuePillars />
-      <MiniGallery />
       {/* Our Premium Wildlife Experience / Tours preview */}
       <Section
         eyebrow="Our Premium Wildlife Experience"
@@ -29,12 +27,12 @@ export default function HomePage() {
           {/* Left: copy + image */}
           <div className="space-y-4 text-sm text-sand/80">
             <p>
-              Discover Antelope Island with a private, expertly guided wildlife
-              tour inspired by the depth of African safari guiding. Each
-              experience is tailored to you, offering time to slow down, observe,
-              and appreciate the landscape and the animals that define it.
+              Discover Antelope Island through immersive, expert-guided wildlife experiences
+              inspired by the depth of African safari guiding. Choose between fully private
+              premium tours or a calm, capped small-group option.
+              Each format is designed to help you connect with the island’s wildlife and
+              landscapes in a thoughtful, intentional way.
             </p>
-
             <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
                 src="/images/bison-antelope-island.jpg"
@@ -188,7 +186,9 @@ export default function HomePage() {
       </Section>
 
       {/* Reviews – once you’ve added ReviewStrip with real quotes */}
-      <ReviewStrip />
+      <div className="w-full overflow-x-hidden">
+        <ReviewStrip />
+      </div>
     </>
   );
 }

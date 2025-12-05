@@ -19,7 +19,7 @@ export default function Hero() {
             Inspired by Africa, Discover the American West
           </h1>
 
-          <p className="max-w-xl text-sm md:text-base text-sand/80 mb-8">
+          <p className="max-w-xl text-sm lg:text-base text-sand/100 mb-8">
             Step into the wild with exclusive, private tours led by an expert safari guide. Safari Utah brings African-inspired experience to some of the West’s most iconic and beautiful landscapes, connecting you with nature through clear insight, intimate wildlife moments, and unhurried time in the field.
           </p>
 
