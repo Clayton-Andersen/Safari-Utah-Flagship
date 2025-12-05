@@ -5,6 +5,8 @@ import ValuePillars from "@/components/home/ValuePillars"; // optional – keep 
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip"; // you can comment out until you add it
 import BookingButton from "@/components/shared/BookingButton";
+import MiniGallery from "@/components/home/MiniGallery";
+
 
 export default function HomePage() {
   return (
@@ -13,8 +15,8 @@ export default function HomePage() {
 
       {/* Optional “Value pillars” section – keep if you like the structure */}
       <ValuePillars />
-
-            {/* Our Premium Wildlife Experience / Tours preview */}
+      <MiniGallery />
+      {/* Our Premium Wildlife Experience / Tours preview */}
       <Section
         eyebrow="Our Premium Wildlife Experience"
         title="Premium Antelope Island Wildlife Tours"
