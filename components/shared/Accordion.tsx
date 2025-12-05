@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import type { ReactNode } from "react";
 
 type AccordionItem = {
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 type Props = {

@@ -4,13 +4,14 @@ type Props = {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
+  id?: string;
   children: ReactNode;
   className?: string;
 };
 
-export default function Section({ eyebrow, title, subtitle, children, className }: Props) {
+export default function Section({ eyebrow, title, subtitle, id, children, className }: Props) {
   return (
-    <section className={`px-4 py-12 md:py-20 ${className ?? ""}`}>
+    <section id={id} className={`px-4 py-12 md:py-20 ${className ?? ""}`}>
       <div className="mx-auto max-w-6xl">
         {(eyebrow || title || subtitle) && (
           <header className="mb-8 max-w-2xl space-y-3">

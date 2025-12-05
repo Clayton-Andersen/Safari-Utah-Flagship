@@ -40,12 +40,15 @@ const faqItems = [
   {
     question: "What’s the group size?",
     answer:
-      "All tours are fully private, capped at 1–4 guests for a quiet, premium experience.",
+    <div className="space-y-2">
+      <p><strong>Premium Tours:</strong> fully private, 1–4 guests.</p>
+      <p><strong>Small-Group Tour:</strong> shared experience with a capped group size for calm, comfortable wildlife viewing.</p>
+    </div>
   },
   {
     question: "Why is the group size limited to 4?",
     answer:
-      "Small groups allow better wildlife viewing, safer positioning, and a more personal, attentive guiding experience.",
+      "This applies to the premium private tours. The small-group tour has a slightly larger shared capacity but remains intentionally capped.",
   },
   {
     question: "What if the weather changes?",
@@ -65,7 +68,7 @@ const faqItems = [
   {
     question: "Why choose this tour over a van tour?",
     answer:
-      "This experience is private, flexible, and guided by a professionally trained safari guide. There are no crowded vehicles, fixed routes, or rushed stops. You get time, space, and expert interpretation tailored to your interests.",
+      "Premium tours are private, flexible, and guided by a professionally trained safari guide. There are no crowded vehicles, fixed routes, or rushed stops. You get time, space, and expert interpretation tailored to your interests.",
   },
   {
     question: "Is there walking involved?",

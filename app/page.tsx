@@ -14,11 +14,11 @@ export default function HomePage() {
       {/* Optional “Value pillars” section – keep if you like the structure */}
       <ValuePillars />
 
-      {/* Our Premium Wildlife Experience / Tours preview */}
+            {/* Our Premium Wildlife Experience / Tours preview */}
       <Section
         eyebrow="Our Premium Wildlife Experience"
         title="Premium Antelope Island Wildlife Tours"
-        subtitle="Discover Antelope Island with private, expertly guided wildlife tours inspired by the depth of African safari guiding."
+        subtitle="Private premium safaris, with a small-group option for guests who prefer a shared experience."
       >
         <div
           id="tours"
@@ -27,10 +27,10 @@ export default function HomePage() {
           {/* Left: copy + image */}
           <div className="space-y-4 text-sm text-sand/80">
             <p>
-              Discover Antelope Island with a private, expertly guided wildlife tour
-              inspired by the depth of African safari guiding. Each experience is
-              tailored to you, offering time to slow down, observe, and appreciate
-              the landscape and the animals that define it.
+              Discover Antelope Island with a private, expertly guided wildlife
+              tour inspired by the depth of African safari guiding. Each
+              experience is tailored to you, offering time to slow down, observe,
+              and appreciate the landscape and the animals that define it.
             </p>
 
             <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
@@ -43,9 +43,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: two distinct tour cards */}
+          {/* Right: three tour cards (two premium, one small-group) */}
           <div className="grid gap-4 text-sm text-sand/80">
-            {/* Daylight tour */}
+            {/* Premium daytime tour */}
             <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
               <h3 className="font-serif text-lg">
                 Premium Antelope Island Tour
@@ -63,7 +63,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3">
                 <BookingButton
                   size="sm"
-                  label="Book your island  daytime tour"
+                  label="Book Your Private Antelope Island Tour"
                 />
                 <Link
                   href="/tours/antelope-island"
@@ -74,7 +74,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Sunset tour */}
+            {/* Premium Sunset Elite tour */}
             <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
               <h3 className="font-serif text-lg">
                 Premium Antelope Island Elite Sunset Tour
@@ -92,13 +92,48 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3">
                 <BookingButton
                   size="sm"
-                  label="Book your Sunset Elite experience"
+                  label="Book Your Sunset Elite Experience"
                 />
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
                 >
                   View full tour details
+                </Link>
+              </div>
+            </div>
+
+            {/* Small-group tour (lower tier, but present) */}
+            <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
+              <h3 className="font-serif text-lg">
+                Antelope Island Small-Group Wildlife Tour
+              </h3>
+              <p>
+                A four-hour small-group wildlife experience for guests who prefer
+                a shared tour while still valuing calm, space, and expert guidance.
+                Group size is capped to keep the outing intimate as we move
+                through Antelope Island&apos;s landscapes, stopping for wildlife,
+                photography, and clear ecological interpretation.
+              </p>
+              <p>
+                The itinerary mirrors the private tour but follows a set schedule
+                and shared vehicle, offering a more accessible way to experience
+                the island with a naturalist guide.
+              </p>
+              <p className="text-xs text-sand/70">
+                Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
+                adult $80
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <BookingButton
+                  size="sm"
+                  label="Book the Small-Group Tour"
+                />
+                <Link
+                  href="/tours/antelope-island#small-group"
+                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
+                >
+                  View small-group details
                 </Link>
               </div>
             </div>
@@ -127,8 +162,8 @@ export default function HomePage() {
         </div>
         <div>
           <p><Link href="/about" className="text-xs underline text-sand/70 hover:text-sand">
-  Learn more about Safari Utah & your guide
-</Link></p>
+            Learn more about Safari Utah & your guide
+          </Link></p>
         </div>
       </Section>
 
