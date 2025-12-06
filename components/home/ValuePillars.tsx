@@ -18,7 +18,7 @@ const pillars = [
 export default function ValuePillars() {
   return (
     <Section eyebrow="Premium Experience" title="A safari mindset, in Utah.">
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 font-semibold">
         {pillars.map((pillar) => (
           <div
             key={pillar.title}

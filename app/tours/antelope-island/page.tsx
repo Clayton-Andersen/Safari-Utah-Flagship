@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Premium Antelope Island Wildlife Tour | Safari Utah",
   description:
-    "A private, expert-guided wildlife experience inspired by the depth of African safari guiding.",
+    "Premium private Antelope Island wildlife tours, with a small-group option, inspired by the depth of African safari guiding.",
 };
 
 export default function AntelopeIslandTourPage() {
@@ -143,11 +143,20 @@ export default function AntelopeIslandTourPage() {
       <Section title="Book Your Experience">
         <div className="grid gap-6 md:grid-cols-2 text-sm text-sand/80 max-w-4xl">
           <div className="space-y-2 border border-sand/20 rounded-2xl p-6 bg-night/60">
+            <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
+              Private Tour
+            </span>
             <h3 className="font-serif text-lg">Premium Antelope Island Tour</h3>
-            <p>A four-hour private wildlife experience.</p>
+            <p>
+              A four-hour private wildlife and island experience designed around the best
+              daylight viewing.
+            </p>
             <BookingButton label="Book your private Antelope Island tour" />
           </div>
           <div className="space-y-2 border border-sand/20 rounded-2xl p-6 bg-night/60">
+            <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
+              Private Tour
+            </span>
             <h3 className="font-serif text-lg">
               Premium Antelope Island Elite Sunset Tour
             </h3>
@@ -156,6 +165,24 @@ export default function AntelopeIslandTourPage() {
             </p>
             <BookingButton label="Book your Sunset Elite experience" />
           </div>
+          <div className="border border-sand/20 rounded-2xl p-6 bg-night/60 space-y-3">
+            <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
+              Small Group Tour
+            </span>
+
+            <h3 className="font-serif text-lg">
+              Antelope Island Small-Group Wildlife Tour
+            </h3>
+
+            <p>
+              A four-hour shared wildlife and island experience.
+            </p>
+
+            <div>
+              <BookingButton size="sm" label="Book your Small-Group Tour" />
+            </div>
+          </div>
+
         </div>
       </Section>
     </>

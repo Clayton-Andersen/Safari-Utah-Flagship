@@ -33,10 +33,23 @@ export default function HomePage() {
               Each format is designed to help you connect with the island’s wildlife and
               landscapes in a thoughtful, intentional way.
             </p>
+            <p>You’ll gain a clearer understanding of the island’s ecology, wildlife patterns,
+               and the forces that shape these landscapes. Whether you prefer complete privacy
+              or a calm shared outing, each tour offers space to slow down, observe, and 
+              genuinely connect with Utah’s wild side.
+            </p>
             <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
                 src="/images/bison-antelope-island.jpg"
                 alt="Bison on Antelope Island viewed during a Safari Utah tour"
+                fill
+                className="object-cover"
+              />
+            </div>
+                        <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
+              <Image
+                src="/images/island-sunset.jpg"
+                alt="Sunset over the Great Salt Lake from Antelope Island"
                 fill
                 className="object-cover"
               />
@@ -112,13 +125,8 @@ export default function HomePage() {
                 A four-hour small-group wildlife experience for guests who prefer
                 a shared tour while still valuing calm, space, and expert guidance.
                 Group size is capped to keep the outing intimate as we move
-                through Antelope Island&apos;s landscapes, stopping for wildlife,
-                photography, and clear ecological interpretation.
-              </p>
-              <p>
-                The itinerary mirrors the private tour but follows a set schedule
-                and shared vehicle, offering a more accessible way to experience
-                the island with a naturalist guide.
+                through Antelope Island. The itinerary mirrors the private tour
+                but follows a set schedule and shared vehicle.
               </p>
               <p className="text-xs text-sand/70">
                 Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
