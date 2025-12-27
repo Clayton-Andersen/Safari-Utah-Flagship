@@ -12,22 +12,22 @@ export default function PoliciesPage() {
       <Section eyebrow="Policies" title="Refund Policy">
         <div className="space-y-4 text-sm text-sand/80 max-w-3xl">
           <p>
-            Guests may cancel their tour up to 24 hours before the scheduled
-            start time for a full refund. Cancellations made less than 24 hours
-            before the start time are non-refundable, and any changes requested
-            inside the 24-hour window cannot be accommodated. All times are
-            based on the local time of the experience.
+            Guests may cancel their tour at least 24 hours before the scheduled
+            start time for a full refund. Cancellations made within 24 hours of
+            the tour start time are subject to a $100 cancellation fee; any
+            remaining amount will be refunded. All times are based on the local
+            time of the experience
           </p>
 
           <p>
-            Tours may require suitable weather conditions. If Safari Utah must
-            cancel due to weather or any operational reason, guests will receive
-            either a rescheduled date or a full refund.
+            Tours require suitable conditions. In the rare event Safari Utah must
+            cancel due to inclement weather or because we are unable to operate,
+            guests will receive a full refund.
           </p>
 
           <p>
-            If Safari Utah cancels a tour for any reason, a full refund will be
-            issued.
+            Changes requested within 24 hours of the scheduled start time may
+            not be possible and are not guaranteed.
           </p>
         </div>
       </Section>

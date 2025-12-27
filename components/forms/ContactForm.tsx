@@ -43,10 +43,12 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-3 text-sm">
       <div>
-        <label className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
+        <label
+          htmlFor="name" className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
           Name
         </label>
         <input
+          id="name"
           name="name"
           required
           className="w-full rounded-lg border border-sand/30 bg-night/60 px-3 py-2 text-sm outline-none focus:border-sand"
@@ -54,10 +56,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
+        <label
+          htmlFor="email" className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
           Email
         </label>
         <input
+          id="email"
           type="email"
           name="email"
           required
@@ -66,10 +70,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
+        <label
+          htmlFor="message" className="block mb-1 text-xs uppercase tracking-[0.2em] text-sand/70">
           Message
         </label>
         <textarea
+          id="message"
           name="message"
           rows={4}
           required
