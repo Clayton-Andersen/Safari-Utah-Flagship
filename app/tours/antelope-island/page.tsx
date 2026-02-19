@@ -174,7 +174,7 @@ export default function AntelopeIslandTourPage() {
   label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
   href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
   />
-            <BookingButton label="Book your private Antelope Island tour" />
+           
           </div>
           <div className="space-y-2 border border-sand/20 rounded-2xl p-6 bg-night/60">
             <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
@@ -186,7 +186,12 @@ export default function AntelopeIslandTourPage() {
             <p>
               A 4.5–5 hour private sunset experience offered Fridays and Mondays.
             </p>
-            <BookingButton label="Book your Sunset Elite experience" />
+
+<RezdyModalButton
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
+  href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
+/>
+            
           </div>
           <div className="border border-sand/20 rounded-2xl p-6 bg-night/60 space-y-3">
             <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
@@ -202,6 +207,10 @@ export default function AntelopeIslandTourPage() {
             </p>
 
             <div>
+              <RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
               <BookingButton size="sm" label="Book your Small-Group Tour" />
             </div>
           </div>
