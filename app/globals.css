@@ -15,7 +15,7 @@ body {
 
 
 
-#button-booking {
+.rezdy-booking-button {
   display: inline-block;
   background-color: #d7c6a3;
   color: #1a1a1a;
@@ -34,12 +34,11 @@ body {
   cursor: pointer;
 }
 
-#button-booking:hover {
+.rezdy-booking-button:hover {
   background-color: #cbb896;
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
-
 
 
 
