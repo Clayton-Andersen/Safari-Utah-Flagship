@@ -137,7 +137,12 @@ export default function AntelopeIslandTourPage() {
             Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
             adult $80.
           </p>
-          <BookingButton label="Book the Small-Group Tour" />
+
+<RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
+
         </div>
       </Section>
 
@@ -165,6 +170,10 @@ export default function AntelopeIslandTourPage() {
               A four-hour private wildlife and island experience designed around the best
               daylight viewing.
             </p>
+   <RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
             <BookingButton label="Book your private Antelope Island tour" />
           </div>
           <div className="space-y-2 border border-sand/20 rounded-2xl p-6 bg-night/60">
