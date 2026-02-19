@@ -104,10 +104,10 @@ export default function HomePage() {
                 4.5–5 hours.
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Sunset Elite Experience"
-                />
+              <RezdyModalButton
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
+  href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
+/>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -133,11 +133,10 @@ export default function HomePage() {
                 Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
                 adult $80
               </p>
-              <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book the Small-Group Tour"
-                />
+             <RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
                 <Link
                   href="/tours/antelope-island#small-group"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
