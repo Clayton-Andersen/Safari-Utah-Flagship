@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 text-xs sm:text-sm">
-           <RezdyModalButton 
+   <RezdyModalButton 
   label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
   href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
   />
