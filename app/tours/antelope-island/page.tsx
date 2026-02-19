@@ -211,7 +211,7 @@ export default function AntelopeIslandTourPage() {
   label="BOOK THE SMALL-GROUP TOUR" 
   href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
   />
-              <BookingButton size="sm" label="Book your Small-Group Tour" />
+              
             </div>
           </div>
 
