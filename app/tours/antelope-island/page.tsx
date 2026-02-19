@@ -1,3 +1,4 @@
+import RezdyModalButton from "@/components/RezdyModalButton";
 import Section from "@/components/shared/Section";
 import BookingButton from "@/components/shared/BookingButton";
 import Image from "next/image";
@@ -85,33 +86,7 @@ export default function AntelopeIslandTourPage() {
 
           
 
-'use client'
-
-import Script from 'next/script'
-
-type Props = {
-  label: string
-  href?: string
-}
-
-export default function RezdyModalButton({ label, href = 'https://safariutah.rezdy.com' }: Props) {
-  return (
-    <>
-      <Script
-        src="https://safariutah.rezdy.com/pluginJs?script=modal"
-        strategy="afterInteractive"
-      />
-
-      <a
-        id="button-booking"
-        className="button-booking rezdy rezdy-modal"
-        href={href}
-      >
-        {label}
-      </a>
-    </>
-  )
-}
+<RezdyModalButton label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" />
           
           
 
