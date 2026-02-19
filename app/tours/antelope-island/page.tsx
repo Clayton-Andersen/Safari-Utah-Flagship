@@ -32,7 +32,12 @@ export default function AntelopeIslandTourPage() {
             <p className="max-w-xl text-sm md:text-base text-sand/80">
               Explore Antelope Island’s sweeping landscapes, diverse ecosystems, and remarkable wildlife with an experienced safari-trained guide.
             </p>
-            <BookingButton label="Book your private Antelope Island tour" size="md" />
+
+<RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
+            
           </div>
         </div>
       </section>
