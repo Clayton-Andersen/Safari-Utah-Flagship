@@ -133,6 +133,7 @@ export default function HomePage() {
                 Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
                 adult $80
               </p>
+              <div className="flex flex-wrap gap-3">
              <RezdyModalButton 
   label="BOOK THE SMALL-GROUP TOUR" 
   href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
