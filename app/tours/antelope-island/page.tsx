@@ -83,16 +83,11 @@ export default function AntelopeIslandTourPage() {
           <p className="font-medium">
             Minimum fare: $400 per tour (1–4 guests).
           </p>
-
-          
+ 
 
 <RezdyModalButton label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" />
           
-          
-
-
-          
-          <BookingButton label="Book your private Antelope Island tour" />
+      
         </div>
       </Section>
 
