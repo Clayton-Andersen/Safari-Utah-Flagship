@@ -5,7 +5,7 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars"; // optional – keep or remove as you like
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip"; // you can comment out until you add it
-import BookingButton from "@/components/shared/BookingButton";
+
 
 
 export default function HomePage() {
