@@ -74,10 +74,10 @@ export default function HomePage() {
                 Minimum fare: $400 per tour (1–4 guests).
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Private Antelope Island Tour"
-                />
+                <RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
