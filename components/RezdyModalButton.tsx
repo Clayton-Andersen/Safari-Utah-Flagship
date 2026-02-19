@@ -17,7 +17,7 @@ export default function RezdyModalButton({
         src="https://safariutah.rezdy.com/pluginJs?script=modal"
         strategy="afterInteractive"
       />
-      <a id="button-booking" className="rezdy rezdy-modal" href={href}>
+      <a className="rezdy rezdy-modal rezdy-booking-button" href={href}>
         {label}
       </a>
     </>
