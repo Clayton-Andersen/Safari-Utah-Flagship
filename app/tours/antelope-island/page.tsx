@@ -85,40 +85,33 @@ export default function AntelopeIslandTourPage() {
 
           
 
-<script type="text/javascript" src="https://safariutah.rezdy.com/pluginJs?script=modal"></script>
+'use client'
 
-<style>
-#button-booking {
-  display: inline-block;
-  background-color: #d7c6a3; /* warm beige/tan */
-  color: #1a1a1a; /* dark text */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 14px 32px;
-  border-radius: 999px; /* pill shape */
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+import Script from 'next/script'
+
+type Props = {
+  label: string
+  href?: string
 }
 
-#button-booking:hover {
-  background-color: #cbb896; /* slightly darker on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-}
-</style>
+export default function RezdyModalButton({ label, href = 'https://safariutah.rezdy.com' }: Props) {
+  return (
+    <>
+      <Script
+        src="https://safariutah.rezdy.com/pluginJs?script=modal"
+        strategy="afterInteractive"
+      />
 
-<a id="button-booking"
-   class="button-booking rezdy rezdy-modal"
-   href="https://safariutah.rezdy.com">
-   BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR
-</a>
+      <a
+        id="button-booking"
+        className="button-booking rezdy rezdy-modal"
+        href={href}
+      >
+        {label}
+      </a>
+    </>
+  )
+}
           
           
 
