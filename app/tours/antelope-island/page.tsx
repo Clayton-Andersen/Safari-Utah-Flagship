@@ -82,6 +82,84 @@ export default function AntelopeIslandTourPage() {
           <p className="font-medium">
             Minimum fare: $400 per tour (1–4 guests).
           </p>
+
+<script type="text/javascript" src="https://safariutah.rezdy.com/pluginJs?script=modal"></script>
+
+<style>
+#button-booking {
+  display: inline-block;
+  background-color: #d7c6a3; /* warm beige/tan */
+  color: #1a1a1a; /* dark text */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 999px; /* pill shape */
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+#button-booking:hover {
+  background-color: #cbb896; /* slightly darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+<a id="button-booking"
+   class="button-booking rezdy rezdy-modal"
+   href="https://safariutah.rezdy.com">
+   BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR
+</a>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://safariutah.rezdy.com/pluginJs?script=modal"></script>
+
+<style>
+#button-booking {
+  display: inline-block;
+  background-color: #d7c6a3; /* warm beige/tan */
+  color: #1a1a1a; /* dark text */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 999px; /* pill shape */
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+#button-booking:hover {
+  background-color: #cbb896; /* slightly darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+</style>
+          <a id="button-booking' class="button-booking rezdy rezdy-modal"
+          href="https://safariutah.rezdy.com/751404/premium-antelope-island-tour-private" > Preium Antelope Island Tour</a>
+          
+          
+
+
+          
           <BookingButton label="Book your private Antelope Island tour" />
         </div>
       </Section>
