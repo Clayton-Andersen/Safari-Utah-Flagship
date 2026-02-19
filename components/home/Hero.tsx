@@ -1,5 +1,4 @@
 import RezdyModalButton from "@/components/RezdyModalButton";
-import BookingButton from "../shared/BookingButton";
 import Image from "next/image";
 import Link from "next/link";
 
