@@ -1,3 +1,4 @@
+import RezdyModalButton from "@/components/RezdyModalButton";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
