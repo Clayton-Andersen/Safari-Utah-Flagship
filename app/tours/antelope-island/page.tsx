@@ -85,7 +85,10 @@ export default function AntelopeIslandTourPage() {
           </p>
  
 
-<RezdyModalButton label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" />
+<RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
           
       
         </div>
@@ -105,12 +108,11 @@ export default function AntelopeIslandTourPage() {
           </p>
 
 <RezdyModalButton
-  label="BOOK YOUR SUNSET ELITE TOUR"
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
   href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
 />
 
           
-          <BookingButton label="Book your Sunset Elite experience" />
         </div>
       </Section>
       {/* Small-group shared tour */}
