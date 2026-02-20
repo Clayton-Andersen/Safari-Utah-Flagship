@@ -146,6 +146,8 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
       </Section>
 
       {/* About Safari Utah + About Your Guide */}
