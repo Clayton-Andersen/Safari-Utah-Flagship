@@ -23,12 +23,12 @@ const items: GalleryItem[] = [
   {
     src: "/images/hero-antelope-island.jpg",
     alt: "Wide landscape view of Antelope Island and the Great Salt Lake",
-    label: "Antelope Island landscape",
+    label: "Antelope Island Landscape",
   },
   {
     src: "/images/arches.jpg",
     alt: "Red rock formations representing custom Arches or Canyonlands outings",
-    label: "Red rock country",
+    label: "Red Rock Country",
   },
   {
     src: "/images/wasatch.jpg",
@@ -38,22 +38,22 @@ const items: GalleryItem[] = [
   {
     src: "/images/canyonlands.jpg",
     alt: "Sunlit canyon landscape used for custom planning imagery",
-    label: "Canyonlands vista",
+    label: "Canyonlands Vista",
   },
   {
     src: "/images/burrowing-owl.jpg",
     alt: "Burrowing owls seen on the island and arount Utah",
-    label: "Canyonlands vista",
+    label: "Burrowing Owl",
   },
   {
     src: "/images/stansbury-pink-water.jpg",
     alt: "Stansbury Island offers stunning pink salt flats photography",
-    label: "Canyonlands vista",
+    label: "Pink Water on the Great Salt Lake",
   },
   {
     src: "/images/wild-horses.jpg",
     alt: "The wild horses in Northern Utah",
-    label: "Canyonlands vista",
+    label: "Wild Horses in Utah's West Desert",
   },
   // add more images here whenever you like
 ];
