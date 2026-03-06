@@ -1,3 +1,4 @@
+import RezdyModalButton from "@/components/RezdyModalButton";
 import Section from "@/components/shared/Section";
 import BookingButton from "@/components/shared/BookingButton";
 import Image from "next/image";
@@ -31,7 +32,12 @@ export default function AntelopeIslandTourPage() {
             <p className="max-w-xl text-sm md:text-base text-sand/80">
               Explore Antelope Island’s sweeping landscapes, diverse ecosystems, and remarkable wildlife with an experienced safari-trained guide.
             </p>
-            <BookingButton label="Book your private Antelope Island tour" size="md" />
+
+<RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
+            
           </div>
         </div>
       </section>
@@ -82,7 +88,14 @@ export default function AntelopeIslandTourPage() {
           <p className="font-medium">
             Minimum fare: $400 per tour (1–4 guests).
           </p>
-          <BookingButton label="Book your private Antelope Island tour" />
+ 
+
+<RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
+          
+      
         </div>
       </Section>
 
@@ -98,7 +111,13 @@ export default function AntelopeIslandTourPage() {
           <p className="font-medium">
             Minimum fare: $500 per tour (1–4 guests).
           </p>
-          <BookingButton label="Book your Sunset Elite experience" />
+
+<RezdyModalButton
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
+  href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
+/>
+
+          
         </div>
       </Section>
       {/* Small-group shared tour */}
@@ -123,7 +142,12 @@ export default function AntelopeIslandTourPage() {
             Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
             adult $80.
           </p>
-          <BookingButton label="Book the Small-Group Tour" />
+
+<RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
+
         </div>
       </Section>
 
@@ -151,7 +175,11 @@ export default function AntelopeIslandTourPage() {
               A four-hour private wildlife and island experience designed around the best
               daylight viewing.
             </p>
-            <BookingButton label="Book your private Antelope Island tour" />
+   <RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
+           
           </div>
           <div className="space-y-2 border border-sand/20 rounded-2xl p-6 bg-night/60">
             <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
@@ -163,7 +191,12 @@ export default function AntelopeIslandTourPage() {
             <p>
               A 4.5–5 hour private sunset experience offered Fridays and Mondays.
             </p>
-            <BookingButton label="Book your Sunset Elite experience" />
+
+<RezdyModalButton
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
+  href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
+/>
+            
           </div>
           <div className="border border-sand/20 rounded-2xl p-6 bg-night/60 space-y-3">
             <span className="inline-block px-2 py-1 text-[10px] uppercase tracking-[0.2em] bg-night text-sand border border-sand/30 rounded-md">
@@ -179,7 +212,11 @@ export default function AntelopeIslandTourPage() {
             </p>
 
             <div>
-              <BookingButton size="sm" label="Book your Small-Group Tour" />
+              <RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
+              
             </div>
           </div>
 

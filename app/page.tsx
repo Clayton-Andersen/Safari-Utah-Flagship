@@ -1,10 +1,11 @@
+import RezdyModalButton from "@/components/RezdyModalButton";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars"; // optional – keep or remove as you like
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip"; // you can comment out until you add it
-import BookingButton from "@/components/shared/BookingButton";
+
 
 
 export default function HomePage() {
@@ -74,10 +75,10 @@ export default function HomePage() {
                 Minimum fare: $400 per tour (1–4 guests).
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Private Antelope Island Tour"
-                />
+                <RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -103,10 +104,10 @@ export default function HomePage() {
                 4.5–5 hours.
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Sunset Elite Experience"
-                />
+              <RezdyModalButton
+  label="BOOK YOUR SUNSET ELITE EXPERIENCE"
+  href="https://safariutah.rezdy.com/751691/premium-antelope-island-elite-sunset-tour-private"
+/>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -133,10 +134,10 @@ export default function HomePage() {
                 adult $80
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book the Small-Group Tour"
-                />
+             <RezdyModalButton 
+  label="BOOK THE SMALL-GROUP TOUR" 
+  href="https://safariutah.rezdy.com/751694/premium-antelope-island-elite-sunset-tour-private"
+  />
                 <Link
                   href="/tours/antelope-island#small-group"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"

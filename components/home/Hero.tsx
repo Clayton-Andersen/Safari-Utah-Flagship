@@ -1,4 +1,4 @@
-import BookingButton from "../shared/BookingButton";
+import RezdyModalButton from "@/components/RezdyModalButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,10 +24,11 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 text-xs sm:text-sm">
-            <BookingButton
-              size="lg"
-              label="Book your private Antelope Island tour"
-            />
+   <RezdyModalButton 
+  label="BOOK YOUR PRIVATE ANTELOPE ISLAND TOUR" 
+  href="https://safariutah.rezdy.com/751404/premium-antelope-island-elite-sunset-tour-private"
+  />
+
             <Link
               href="#tours"
               className="inline-flex items-center justify-center rounded-full border border-sand/70 px-6 py-3 uppercase tracking-[0.2em] text-sand hover:bg-sand hover:text-night transition"
