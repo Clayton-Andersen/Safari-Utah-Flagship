@@ -1,8 +1,9 @@
 "use client";
-import RezdyModalButton from "@/components/RezdyModalButton";
+
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import BookingButton from "../shared/BookingButton";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -35,7 +36,7 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <RezdyModalButton label="BOOK NOW" href="https://safariutah.rezdy.com" />
+          <BookingButton size="sm" />
         </nav>
 
         <button
