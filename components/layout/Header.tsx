@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
-import BookingButton from "../shared/BookingButton";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -11,9 +10,7 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/custom-experiences", label: "Custom Experiences" },
   { href: "/gallery", label: "Gallery" },
-  //{ href: "/faq", label: "FAQ" },
-  //{ href: "/policies", label: "Policies" },
-  { href: "/contact", label: "Contact" }
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -27,7 +24,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm">
-          {navItems.map(item => (
+          {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -36,7 +33,13 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <BookingButton size="sm" />
+
+          <Link
+            href="/book"
+            className="inline-flex items-center rounded-full bg-sand px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
+          >
+            Book Now
+          </Link>
         </nav>
 
         <button

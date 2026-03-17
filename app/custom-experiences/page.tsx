@@ -1,5 +1,5 @@
 import Section from "@/components/shared/Section";
-import BookingButton from "@/components/shared/BookingButton";
+import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
@@ -128,7 +128,12 @@ export default function CustomExperiencesPage() {
             Use the contact form below or on the Contact page to start the
             process.
           </p>
-          <BookingButton label="Request a custom experience" size="md" />
+          <Link
+            href="/contact?reason=custom"
+            className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
+          >
+            Request a custom experience
+          </Link>
         </div>
       </Section>
     </>

@@ -1,4 +1,3 @@
-import BookingButton from "../shared/BookingButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
       <Image
-        src="/images/hero-antelope-island.jpg" // 👈 your real hero image
+        src="/images/hero-antelope-island.jpg"
         alt="Antelope Island landscape with wildlife viewing opportunities"
         fill
         priority
@@ -24,10 +23,13 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 text-xs sm:text-sm">
-            <BookingButton
-              size="lg"
-              label="Book your private Antelope Island tour"
-            />
+            <Link
+              href="/book#private-tours"
+              className="inline-flex items-center justify-center rounded-full bg-sand px-8 py-4 text-base font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone"
+            >
+              Book your private Antelope Island tour
+            </Link>
+
             <Link
               href="#tours"
               className="inline-flex items-center justify-center rounded-full border border-sand/70 px-6 py-3 uppercase tracking-[0.2em] text-sand hover:bg-sand hover:text-night transition"

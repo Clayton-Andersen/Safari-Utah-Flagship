@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import BookingButton from "../shared/BookingButton";
 
 type NavItem = {
   href: string;
@@ -30,7 +29,14 @@ export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps)
             {item.label}
           </Link>
         ))}
-        <BookingButton size="md" />
+
+        <Link
+          href="/book"
+          className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
+          onClick={onClose}
+        >
+          Book Now
+        </Link>
       </div>
     </nav>
   );

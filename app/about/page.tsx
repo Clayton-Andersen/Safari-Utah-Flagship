@@ -1,5 +1,5 @@
 import Section from "@/components/shared/Section";
-import BookingButton from "@/components/shared/BookingButton";
+import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
@@ -30,11 +30,11 @@ export default function AboutPage() {
               and deeply informative, not rushed or scripted.
             </p>
             <p>
-              On every outing, we keep group sizes small, move at your pace, and stay focused on real 
-              connection with place; quiet moments, clear explanations, and time to ask questions. You can 
-              expect ethical wildlife viewing, honest answers, and a guide who is paying close attention to 
-              both the environment and your comfort. Whether you are a first-time visitor or a local seeing 
-              the Great Salt Lake and surrounding ecosystems with fresh eyes, Safari Utah gives you a 
+              On every outing, we keep group sizes small, move at your pace, and stay focused on real
+              connection with place; quiet moments, clear explanations, and time to ask questions. You can
+              expect ethical wildlife viewing, honest answers, and a guide who is paying close attention to
+              both the environment and your comfort. Whether you are a first-time visitor or a local seeing
+              the Great Salt Lake and surrounding ecosystems with fresh eyes, Safari Utah gives you a
               structured yet flexible experience that feels personal, grounded, and memorable.
             </p>
           </div>
@@ -91,7 +91,12 @@ export default function AboutPage() {
               say goodbye.
             </p>
 
-            <BookingButton label="Book Your Experience" size="md" />
+            <Link
+              href="/book"
+              className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
+            >
+              Book Your Experience
+            </Link>
           </div>
         </div>
       </Section>

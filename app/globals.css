@@ -9,3 +9,10 @@
 body {
   @apply bg-night text-bone font-sans antialiased;
 }
+
+.bokun-widgets-cart-wrapper,
+#bokun-widgets-cart {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

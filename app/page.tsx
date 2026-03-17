@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
-import ValuePillars from "@/components/home/ValuePillars"; // optional – keep or remove as you like
+import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
-import ReviewStrip from "@/components/shared/ReviewStrip"; // you can comment out until you add it
-import BookingButton from "@/components/shared/BookingButton";
+import ReviewStrip from "@/components/shared/ReviewStrip";
 
+const buttonClasses =
+  "inline-flex items-center justify-center rounded-full bg-sand px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-      {/* Optional “Value pillars” section – keep if you like the structure */}
       <ValuePillars />
-      {/* Our Premium Wildlife Experience / Tours preview */}
+
       <Section
         eyebrow="Our Premium Wildlife Experience"
         title="Premium Antelope Island Wildlife Tours"
@@ -24,7 +24,6 @@ export default function HomePage() {
           id="tours"
           className="grid gap-8 md:grid-cols-[2fr,2fr] items-start"
         >
-          {/* Left: copy + image */}
           <div className="space-y-4 text-sm text-sand/80">
             <p>
               Discover Antelope Island through immersive, expert-guided wildlife experiences
@@ -33,11 +32,13 @@ export default function HomePage() {
               Each format is designed to help you connect with the island’s wildlife and
               landscapes in a thoughtful, intentional way.
             </p>
-            <p>You’ll gain a clearer understanding of the island’s ecology, wildlife patterns,
-               and the forces that shape these landscapes. Whether you prefer complete privacy
-              or a calm shared outing, each tour offers space to slow down, observe, and 
+            <p>
+              You’ll gain a clearer understanding of the island’s ecology, wildlife patterns,
+              and the forces that shape these landscapes. Whether you prefer complete privacy
+              or a calm shared outing, each tour offers space to slow down, observe, and
               genuinely connect with Utah’s wild side.
             </p>
+
             <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
                 src="/images/bison-antelope-island.jpg"
@@ -46,7 +47,8 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-                        <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
+
+            <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
                 src="/images/island-sunset.jpg"
                 alt="Sunset over the Great Salt Lake from Antelope Island"
@@ -56,9 +58,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: three tour cards (two premium, one small-group) */}
           <div className="grid gap-4 text-sm text-sand/80">
-            {/* Premium daytime tour */}
             <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
               <h3 className="font-serif text-lg">
                 Premium Antelope Island Tour
@@ -74,10 +74,9 @@ export default function HomePage() {
                 Minimum fare: $400 per tour (1–4 guests).
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Private Antelope Island Tour"
-                />
+                <Link href="/book#private-tours" className={buttonClasses}>
+                  Book Your Private Antelope Island Tour
+                </Link>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -87,7 +86,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Premium Sunset Elite tour */}
             <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
               <h3 className="font-serif text-lg">
                 Premium Antelope Island Elite Sunset Tour
@@ -103,10 +101,9 @@ export default function HomePage() {
                 4.5–5 hours.
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book Your Sunset Elite Experience"
-                />
+                <Link href="/book#private-tours" className={buttonClasses}>
+                  Book Your Sunset Elite Experience
+                </Link>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -116,7 +113,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Small-group tour (lower tier, but present) */}
             <div className="border border-sand/20 rounded-2xl p-6 bg-night/50 space-y-3">
               <h3 className="font-serif text-lg">
                 Antelope Island Small-Group Wildlife Tour
@@ -133,10 +129,9 @@ export default function HomePage() {
                 adult $80
               </p>
               <div className="flex flex-wrap gap-3">
-                <BookingButton
-                  size="sm"
-                  label="Book the Small-Group Tour"
-                />
+                <Link href="/book#small-group" className={buttonClasses}>
+                  Book the Small-Group Tour
+                </Link>
                 <Link
                   href="/tours/antelope-island#small-group"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
@@ -149,7 +144,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* About Safari Utah + About Your Guide */}
       <Section
         eyebrow="About Safari Utah"
         title="African-Inspired Nature Guiding in the American West"
@@ -169,13 +163,14 @@ export default function HomePage() {
           </div>
         </div>
         <div>
-          <p><Link href="/about" className="text-xs underline text-sand/70 hover:text-sand">
-            Learn more about Safari Utah & your guide
-          </Link></p>
+          <p>
+            <Link href="/about" className="text-xs underline text-sand/70 hover:text-sand">
+              Learn more about Safari Utah & your guide
+            </Link>
+          </p>
         </div>
       </Section>
 
-      {/* Custom Experiences – By Request Only */}
       <Section
         eyebrow="Custom Experiences"
         title="Custom Experiences — By Request Only"
@@ -193,7 +188,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Reviews – once you’ve added ReviewStrip with real quotes */}
       <div className="w-full overflow-x-hidden">
         <ReviewStrip />
       </div>
