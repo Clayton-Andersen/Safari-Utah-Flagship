@@ -22,14 +22,17 @@ export default function BookPage() {
           <p>
             Safari Utah offers two premium private experiences and one
             small-group wildlife tour on Antelope Island. Choose your preferred
-            path below to view availability and complete your booking.
+            option below to continue to booking.
           </p>
         </div>
       </Section>
 
       <Section title="Booking Options">
         <div className="grid gap-6 md:grid-cols-3 max-w-5xl text-sm text-sand/80">
-          <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 md:col-span-2">
+          <div
+            id="private-tours"
+            className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 md:col-span-2 scroll-mt-24"
+          >
             <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
               Premium Private Experiences
             </span>
@@ -50,12 +53,15 @@ export default function BookPage() {
               <li>Private experience; 1 to 4 guests</li>
             </ul>
 
-            <Link href="/book/private" className={buttonClasses}>
+            <a href="/book/private" className={buttonClasses}>
               View Private Booking Options
-            </Link>
+            </a>
           </div>
 
-          <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6">
+          <div
+            id="small-group"
+            className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 scroll-mt-24"
+          >
             <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
               Small Group Tour
             </span>
@@ -75,9 +81,9 @@ export default function BookPage() {
               <li>Approximately 4 hours</li>
             </ul>
 
-            <Link href="/book/small-group" className={buttonClasses}>
+            <a href="/book/small-group" className={buttonClasses}>
               View Small-Group Booking
-            </Link>
+            </a>
           </div>
         </div>
       </Section>

@@ -1,86 +1,103 @@
 import Section from "@/components/shared/Section";
+import BokunButton from "@/components/shared/BokunButton";
+import BokunLoader from "@/components/shared/BokunLoader";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Book Your Utah Wildlife Tour | Safari Utah",
-  description:
-    "Choose between our premium private Antelope Island tours and our small-group wildlife tour.",
+    title: "Book a Private Antelope Island Tour | Safari Utah",
+    description:
+        "Book either the Premium Antelope Island Tour or the Premium Antelope Island Elite Sunset Tour.",
 };
 
 const buttonClasses =
-  "inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans";
+    "inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans";
 
-export default function BookPage() {
-  return (
-    <>
-      <Section
-        eyebrow="Booking"
-        title="Choose Your Antelope Island Experience"
-        subtitle="Select the booking path that fits your style of travel."
-      >
-        <div className="max-w-3xl space-y-4 text-sm text-sand/80">
-          <p>
-            Safari Utah offers two premium private experiences and one
-            small-group wildlife tour on Antelope Island. Choose your preferred
-            path below to view availability and complete your booking.
-          </p>
-        </div>
-      </Section>
+export default function PrivateBookPage() {
+    return (
+        <>
+            <BokunLoader channelUuid="0e590548-6d52-498f-9513-129853da57cf" />
 
-      <Section title="Booking Options">
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl text-sm text-sand/80">
-          <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 md:col-span-2">
-            <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
-              Premium Private Experiences
-            </span>
+            <Section
+                eyebrow="Private Booking"
+                title="Choose Your Premium Private Experience"
+                subtitle="Both options are private experiences for your group only."
+            >
+                <div className="max-w-3xl space-y-4 text-sm text-sand/80">
+                    <p>
+                        Choose between our signature daytime private wildlife tour and our
+                        longer Elite Sunset Tour. Both experiences include expert guiding
+                        and Salt Lake City area hotel pickup and drop-off.
+                    </p>
+                    <p>
+                        <a href="/book" className="underline text-sand/80 hover:text-sand">
+                            Back to all booking options
+                        </a>
+                    </p>
+                </div>
+            </Section>
 
-            <h2 className="font-serif text-2xl text-bone">
-              Book a Private Antelope Island Experience
-            </h2>
+            <Section title="Private Tours">
+                <div className="grid gap-6 md:grid-cols-2 max-w-5xl text-sm text-sand/80">
+                    <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6">
+                        <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
+                            Private Tour
+                        </span>
 
-            <p>
-              Choose between our signature private daytime wildlife tour and our
-              longer Elite Sunset Tour. Both are private experiences for your
-              group only.
-            </p>
+                        <h2 className="font-serif text-2xl text-bone">
+                            Premium Antelope Island Tour
+                        </h2>
 
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Premium Antelope Island Tour</li>
-              <li>Premium Antelope Island Elite Sunset Tour</li>
-              <li>Private experience; 1 to 4 guests</li>
-            </ul>
+                        <p>
+                            A private daytime wildlife experience designed around the best
+                            daylight viewing, with flexibility for wildlife sightings,
+                            photography, and interpretation throughout the outing.
+                        </p>
 
-            <Link href="/book/private" className={buttonClasses}>
-              View Private Booking Options
-            </Link>
-          </div>
+                        <ul className="space-y-2 list-disc pl-5">
+                            <li>Private experience for your group only</li>
+                            <li>Approximately 4 hours</li>
+                            <li>$400 minimum fare; 1 to 4 guests</li>
+                        </ul>
 
-          <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6">
-            <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
-              Small Group Tour
-            </span>
+                        <BokunButton
+                            buttonId="bokun_1a0059c4_a599_458b_91d5_474f465422cd"
+                            dataSrc="https://widgets.bokun.io/online-sales/0e590548-6d52-498f-9513-129853da57cf/experience/1167473?partialView=1"
+                            label="Book Your Private Antelope Island Tour"
+                            className={buttonClasses}
+                        />
+                    </div>
 
-            <h2 className="font-serif text-2xl text-bone">
-              Book the Small-Group Tour
-            </h2>
+                    <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6">
+                        <span className="inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand">
+                            Private Tour
+                        </span>
 
-            <p>
-              A shared wildlife experience with expert guiding and a more
-              accessible price point.
-            </p>
+                        <h2 className="font-serif text-2xl text-bone">
+                            Premium Antelope Island Elite Sunset Tour
+                        </h2>
 
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Antelope Island Small-Group Wildlife Tour</li>
-              <li>Shared small-group experience</li>
-              <li>Approximately 4 hours</li>
-            </ul>
+                        <p>
+                            A longer private experience timed for the island’s most beautiful
+                            light, with exceptional sunset atmosphere and strong photography
+                            opportunities.
+                        </p>
 
-            <Link href="/book/small-group" className={buttonClasses}>
-              View Small-Group Booking
-            </Link>
-          </div>
-        </div>
-      </Section>
-    </>
-  );
+                        <ul className="space-y-2 list-disc pl-5">
+                            <li>Private experience for your group only</li>
+                            <li>Approximately 4.5 to 5 hours</li>
+                            <li>$500 minimum fare; 1 to 4 guests</li>
+                            <li>Offered Fridays and Mondays</li>
+                        </ul>
+
+                        <BokunButton
+                            buttonId="bokun_0188482c_9722_4886_953e_c2bbfdb222f0"
+                            dataSrc="https://widgets.bokun.io/online-sales/0e590548-6d52-498f-9513-129853da57cf/experience/1174895?partialView=1"
+                            label="Book Your Private Sunset Elite Experience"
+                            className={buttonClasses}
+                        />
+                    </div>
+                </div>
+            </Section>
+        </>
+    );
 }
