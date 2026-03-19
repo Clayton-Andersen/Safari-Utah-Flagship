@@ -130,7 +130,6 @@ export default function AntelopeIslandTourPage() {
                     <li>Approximately 4.5 to 5 hours</li>
                     <li>$500 minimum fare</li>
                     <li>1 to 4 guests</li>
-                    <li>Offered Fridays and Mondays</li>
                   </ul>
                   <p className="text-sm text-sand/80">
                     <span className="font-semibold text-bone">Best for:</span>{" "}
@@ -163,7 +162,7 @@ export default function AntelopeIslandTourPage() {
                 <li>Shared small-group experience</li>
                 <li>Approximately 4 hours</li>
                 <li>1 adult $160</li>
-                <li>2+ adults $140 per person</li>
+                <li>2 or more guests at $140 per adult</li>
                 <li>Youth with adult $80</li>
               </ul>
 

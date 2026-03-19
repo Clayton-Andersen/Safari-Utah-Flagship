@@ -86,7 +86,6 @@ export default function PrivateBookPage() {
                             <li>Private experience for your group only</li>
                             <li>Approximately 4.5 to 5 hours</li>
                             <li>$500 minimum fare; 1 to 4 guests</li>
-                            <li>Offered Fridays and Mondays</li>
                         </ul>
 
                         <BokunButton
