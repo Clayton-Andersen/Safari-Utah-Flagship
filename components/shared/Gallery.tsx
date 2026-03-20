@@ -16,6 +16,51 @@ const items: GalleryItem[] = [
     label: "Bison on Antelope Island",
   },
   {
+    src: "/images/bison calf.jpg",
+    alt: "Bison calf curiously looks up at us",
+    label: "Curious Bison Calf",
+  },
+  {
+    src: "/images/yellow blackbird.jpg",
+    alt: "Yellow-headed blackbird during birding tour",
+    label: "Yellow-headed blackbird during birding tour",
+  },
+  {
+    src: "/images/sunset.jpg",
+    alt: "Enjoying a Sunset View",
+    label: "Buffalo Point Sunset",
+  },
+  {
+    src: "/images/coyote.jpg",
+    alt: "Coyote strolling through the shallow lake edges at the Great Salt Lake",
+    label: "Coyote strolling shallows on the Great Salt Lake",
+  },
+  {
+    src: "/images/Killdeer.jpg",
+    alt: "Killdeer near Antelope Island",
+    label: "Killdeer Standing Atop Rock",
+  },
+  {
+    src: "/images/kestrel.jpeg",
+    alt: "American Kestrel",
+    label: "Small but Fierce American Kestrel",
+  },
+  {
+    src: "/images/Great Horned Owl.jpeg",
+    alt: "Great Horned Owl in Tree",
+    label: "Great Horned Owl",
+  },
+  {
+    src: "/images/bison-landscape.jpeg",
+    alt: "Bison grazing on Antelope Island during a Safari Utah tour",
+    label: "Bison Roaming the Windy Plains",
+  },
+  {
+    src: "/images/IslandSunset.jpg",
+    alt: "One of the many spectacular sunsets from Antelope Island",
+    label: "Sunset on Antelope Island",
+  },
+  {
     src: "/images/avocets.jpeg",
     alt: "American avocets wading in shallow water near Antelope Island",
     label: "American avocets",
