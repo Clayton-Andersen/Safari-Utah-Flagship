@@ -1,102 +1,152 @@
 import Section from "@/components/shared/Section";
-import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
   title: "About Safari Utah",
   description:
-    "African-inspired nature guiding in the American West, led by an expert safari guide.",
+    "African-inspired nature guiding in the American West, led by safari-trained guides.",
 };
 
 export default function AboutPage() {
   return (
     <>
-      {/* About Safari Utah */}
       <Section
         title="About Safari Utah"
-        subtitle="African-Inspired Guiding in the American West"
+        subtitle="African-inspired guiding in the American West"
       >
-        <div className="grid gap-10 md:grid-cols-[2fr,1.2fr] items-start">
+        <div className="mb-10 border-b border-sand/20" />
 
-          {/* Text Column */}
-          <div className="space-y-6 text-sm text-sand/80 max-w-prose">
+        <div className="grid items-start gap-10 md:grid-cols-[2fr,1.2fr]">
+          <div className="max-w-prose space-y-6 text-sm leading-7 text-sand/85">
             <p>
-              Safari Utah is a small, owner-led guiding company built around a simple idea; bring the
-              depth and clarity of African safari guiding to the wild heart of Utah. We specialize in
-              private, expert-led wildlife experiences that blend solid natural science with an easygoing,
-              human approach. Every tour is designed to slow things down so you can actually see and
-              understand what is in front of you; from the shape of the land to the behavior of the animals
-              that live here. Our job is to translate the landscape for you so the day feels both relaxed
-              and deeply informative, not rushed or scripted.
+              Safari Utah is a small, owner-led guiding company built around a
+              simple idea: bring the depth and clarity of African safari guiding
+              to the wild heart of Utah. We specialize in private, expert-led
+              wildlife experiences that blend solid natural science with an
+              easygoing, human approach. Every tour is designed to slow things
+              down so you can actually see and understand what is in front of
+              you, from the shape of the land to the behavior of the animals
+              that live here.
             </p>
             <p>
-              On every outing, we keep group sizes small, move at your pace, and stay focused on real
-              connection with place; quiet moments, clear explanations, and time to ask questions. You can
-              expect ethical wildlife viewing, honest answers, and a guide who is paying close attention to
-              both the environment and your comfort. Whether you are a first-time visitor or a local seeing
-              the Great Salt Lake and surrounding ecosystems with fresh eyes, Safari Utah gives you a
-              structured yet flexible experience that feels personal, grounded, and memorable.
+              On every outing, we keep group sizes small, move at your pace, and
+              stay focused on real connection with place: quiet moments, clear
+              explanations, and time to ask questions. You can expect ethical
+              wildlife viewing, honest answers, and guides who are paying close
+              attention to both the environment and your comfort. The goal is a
+              day that feels personal, grounded, and memorable rather than
+              rushed or scripted.
             </p>
           </div>
 
-          {/* Image Column — NEW */}
-          <div className="rounded-2xl overflow-hidden border border-sand/20 bg-night/40 h-full">
-            <Image
-              src="/images/about-safari.jpg"
-              alt="Safari Utah wildlife viewing experience on Antelope Island"
-              width={800}
-              height={600}
-              className="object-cover h-full w-full"
-            />
+          <div className="self-start overflow-hidden rounded-2xl border border-sand/20 bg-night/40">
+            <div className="aspect-square w-full p-6 md:p-8">
+              <Image
+                src="/images/about-safari.jpg"
+                alt="Safari Utah logo of mountains and bison"
+                width={800}
+                height={800}
+                className="block h-full w-full object-contain object-center"
+              />
+            </div>
           </div>
         </div>
       </Section>
 
+      <Section title="About Your Guides">
+        <div className="mb-10 border-b border-sand/20" />
 
-      {/* About Your Guide */}
-      <Section title="About Your Guide">
-        <div className="grid gap-10 md:grid-cols-[1fr,2fr] items-start">
-          {/* Guide Photo */}
-          <div className="rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
-            <Image
-              src="/images/guide.jpg" // make sure this matches your filename
-              alt="Clayton Andersen, Safari Utah guide"
-              width={600}
-              height={800}
-              className="object-cover h-full w-full"
-              priority
-            />
+        <div className="space-y-12">
+          <div className="grid items-start gap-10 md:grid-cols-[1fr,2fr]">
+            <div className="overflow-hidden rounded-2xl border border-sand/20 bg-night/40">
+              <Image
+                src="/images/guide.jpg"
+                alt="Clayton, Safari Utah owner and guide"
+                width={600}
+                height={800}
+                className="block h-full w-full object-cover"
+                priority
+              />
+            </div>
+
+            <div className="space-y-6 text-sm leading-7 text-sand/85">
+              <div className="space-y-1">
+                <h3 className="font-serif text-2xl text-bone">Clayton</h3>
+                <p className="text-sm text-sand/75">
+                  Owner, guide, and co-creator of Safari Utah
+                </p>
+              </div>
+
+              <p>
+                I’m Clayton, a Utah native, safari guide, and lifelong nature
+                nerd who built Safari Utah to offer the kind of wildlife
+                experiences I always wished more people had access to. I studied
+                the natural sciences, trained as a FGASA safari guide in South
+                Africa, and then spent years working in the field here in Utah,
+                learning how to read landscapes, understand animal behavior, and
+                notice the small details most people pass right by. That mix of
+                African safari training and deep local experience shapes every
+                tour I lead, from the way I plan the day to how I interpret what
+                we’re seeing in the moment.
+              </p>
+              <p>
+                At the heart of my guiding is the belief that people connect
+                more deeply with a place when they are given the time and
+                context to really see it. My style is calm, personal, and
+                unhurried. I want you to feel like you’re out in the field with
+                a highly skilled friend, not being pushed through a scripted
+                tour. Whether we’re watching bison on Antelope Island, scanning
+                for coyotes and birds of prey, or simply taking in the light on
+                the lake, I aim to give you meaningful context that stays with
+                you long after the day is over. My goal is simple: you leave
+                feeling inspired and more connected to the natural world.
+              </p>
+            </div>
           </div>
 
-          {/* Guide Text */}
-          <div className="space-y-6 text-sm text-sand/80">
-            <p>
-              I’m Clayton, a Utah native, safari guide, and unabashed nature nerd who built Safari Utah
-              to give guests the kind of wildlife experiences I wish more people had. I studied the natural
-              sciences and trained as a FGASA safari guide in South Africa, then spent years working in the
-              field here in Utah, learning how to read landscapes, track wildlife, and notice the small
-              details most people walk right past. That mix of African safari training and deep local
-              experience shapes every tour I run from the way I plan the day to how I explain what we’re
-              seeing. My style is calm, professional, and unhurried; I want you to feel like you’re out
-              with a highly skilled friend, not stuck on a tour bus.
-            </p>
-            <p>
-              What matters most to me is helping people slow down, really see a place, and walk away
-              feeling more connected to the natural world and to themselves. Whether we’re watching bison
-              graze on Antelope Island, scanning for coyotes and birds of prey, or just sitting in a quiet
-              moment taking in the light on the lake, I’ll give you clear, meaningful context for what
-              you’re seeing so it sticks with you long after the trip ends. I keep my groups small and the
-              experience highly personalized so we can follow your interests, your pace, and your comfort
-              level. My goal is simple: you feel safe, cared for, and genuinely inspired by the time we
-              say goodbye.
-            </p>
+          <div className="grid items-start gap-10 md:grid-cols-[2fr,1fr]">
+            <div className="space-y-6 text-sm leading-7 text-sand/85">
+              <div className="space-y-1">
+                <h3 className="font-serif text-2xl text-bone">Sinéad</h3>
+                <p className="text-sm text-sand/75">
+                  Guide and co-creator of Safari Utah
+                </p>
+              </div>
 
-            <Link
-              href="/book"
-              className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
-            >
-              Book Your Experience
-            </Link>
+              <p>
+                I’m Sinéad, an English transplant who moved to the US for the
+                wild open spaces and big landscapes of the American West. After
+                a childhood immersed in the British countryside, my fascination
+                with wildlife deepened through FGASA safari guide training in
+                South Africa and nearly a decade working in animal medicine. I’m
+                also a self-confessed bird nerd, and I’m often happiest with
+                binoculars in hand, whether I’m watching hummingbirds for far
+                too long or heading into the Wasatch in search of fresh air,
+                elevation, and whatever wildlife the day brings.
+              </p>
+              <p>
+                My approach to guiding is rooted in ecology, with a special
+                interest in birding and animal behavior. I believe the outdoors
+                should feel accessible, engaging, and restorative, and my role
+                is to help guests connect with a place in a way that feels
+                personal and meaningful. Our tours are guest-centered, so we can
+                adapt the day around your interests, pace, and comfort. Whether
+                you are here for bison, birds, human history, or simply the
+                beauty of Antelope Island itself, I want you to leave with a
+                deeper appreciation for the landscape and the life it holds.
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-sand/20 bg-night/40">
+              <Image
+                src="/images/Sinead.jpg"
+                alt="Sinéad, Safari Utah guide"
+                width={600}
+                height={800}
+                className="block h-full w-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </Section>

@@ -5,12 +5,12 @@ import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/tours/antelope-island", label: "Antelope Island Tours" },
-  { href: "/about", label: "About" },
   { href: "/custom-experiences", label: "Custom Experiences" },
+  { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Header() {

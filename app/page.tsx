@@ -8,42 +8,37 @@ import ReviewStrip from "@/components/shared/ReviewStrip";
 const buttonClasses =
   "inline-flex items-center justify-center rounded-full bg-sand px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone";
 
-const badgeClasses =
-  "inline-block rounded-md border border-sand/30 bg-night px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-sand";
+const outlinedHeadingClasses =
+  "inline-block rounded-xl border border-sand/20 px-4 py-3 font-serif text-lg text-bone";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-      <ValuePillars />
-
       <Section
         eyebrow="Antelope Island Tours"
-        title="Choose the experience that fits your style"
-        subtitle="Private tours for guests who want exclusivity and flexibility, plus a small-group option for those who prefer a shared experience."
+        title="Choose Your Antelope Island Tour"
+        subtitle="3 ways to experience Antelope Island: a private day tour, a private sunset tour, or a small-group outing."
       >
         <div
           id="tours"
-          className="grid gap-8 md:grid-cols-[2fr,2fr] items-start"
+          className="grid items-start gap-8 md:grid-cols-[2fr,2fr]"
         >
           <div className="space-y-4 text-sm leading-7 text-sand/85">
             <p>
-              Discover Antelope Island through immersive, expert-guided wildlife
-              experiences inspired by the depth of African safari guiding.
-              Choose between fully private premium tours or a calm, capped
-              small-group option. Each format is designed to help you connect
-              with the island’s wildlife and landscapes in a thoughtful,
-              intentional way.
+              Safari Utah offers wildlife-focused Antelope Island tours shaped by
+              African safari training, ecological field experience, and a calmer
+              pace in the field. Choose the format that fits your style of travel,
+              whether that means a fully private outing or a shared small-group
+              experience.
             </p>
             <p>
-              Whether you prefer complete privacy or a shared outing, each tour
-              offers time to slow down, observe, and gain a clearer
-              understanding of the island’s wildlife, ecology, and seasonal
-              rhythms.
+              Every tour is designed to help you slow down, see more, and better
+              understand the island’s wildlife, landscapes, and seasonal rhythms.
             </p>
 
-            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-80">
               <Image
                 src="/images/bison-antelope-island.jpg"
                 alt="Bison on Antelope Island viewed during a Safari Utah tour"
@@ -52,10 +47,18 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-80">
               <Image
                 src="/images/island-sunset.jpg"
                 alt="Sunset over the Great Salt Lake from Antelope Island"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-80">
+              <Image
+                src="/images/meadowlark niiiiice.jpg"
+                alt="Western meadowlard atop a small shrub"
                 fill
                 className="object-cover"
               />
@@ -64,16 +67,15 @@ export default function HomePage() {
 
           <div className="grid gap-4 text-sm text-sand/85">
             <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/50 p-6">
-              <span className={badgeClasses}>Private Tour</span>
-
-              <h3 className="font-serif text-lg text-bone">
-                Premium Antelope Island Tour
-              </h3>
+              <div className="space-y-3 border-b border-sand/15 pb-4">
+                <h3 className={outlinedHeadingClasses}>Private Day Tour</h3>
+                
+              </div>
 
               <p className="leading-7">
-                A four-hour private wildlife experience designed around the best
-                daylight viewing, with a flexible pace for wildlife,
-                photography, and interpretation throughout the outing.
+                A private daytime wildlife tour designed around the best daylight
+                viewing, with a flexible pace for wildlife, photography, and
+                natural history interpretation.
               </p>
 
               <ul className="list-disc space-y-1 pl-5 text-sand/85">
@@ -89,27 +91,26 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-3">
                 <a href="/book/private" className={buttonClasses}>
-                  Book Your Private Tour
+                  Book Private Day Tour
                 </a>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] text-sand/75 underline hover:text-sand"
                 >
-                  View full details
+                  View full tour details
                 </Link>
               </div>
             </div>
 
             <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/50 p-6">
-              <span className={badgeClasses}>Private Sunset Tour</span>
-
-              <h3 className="font-serif text-lg text-bone">
-                Premium Antelope Island Elite Sunset Tour
-              </h3>
+              <div className="space-y-3 border-b border-sand/15 pb-4">
+                <h3 className={outlinedHeadingClasses}>Private Sunset Tour</h3>
+                
+              </div>
 
               <p className="leading-7">
-                A longer private wildlife experience timed for the island’s
-                most beautiful evening light, with extra atmosphere and strong
+                A longer private wildlife tour timed for the island’s most
+                beautiful evening light, with extra atmosphere and strong
                 photography opportunities.
               </p>
 
@@ -126,23 +127,24 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-3">
                 <a href="/book/sunset" className={buttonClasses}>
-                  Book Your Sunset Tour
+                  Book Sunset Tour
                 </a>
                 <Link
                   href="/tours/antelope-island"
                   className="text-xs uppercase tracking-[0.2em] text-sand/75 underline hover:text-sand"
                 >
-                  View full details
+                  View full tour details
                 </Link>
               </div>
             </div>
 
             <div className="space-y-4 rounded-2xl border border-sand/20 bg-night/50 p-6">
-              <span className={badgeClasses}>Small-Group Tour</span>
-
-              <h3 className="font-serif text-lg text-bone">
-                Antelope Island Small-Group Wildlife Tour
-              </h3>
+              <div className="space-y-3 border-b border-sand/15 pb-4">
+                <h3 className={outlinedHeadingClasses}>Small-Group Tour</h3>
+                <p className="text-sm text-sand/75">
+                  Antelope Island Small-Group Wildlife Tour
+                </p>
+              </div>
 
               <p className="leading-7">
                 A shared wildlife experience for guests who want calm pacing,
@@ -164,7 +166,7 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-3">
                 <a href="/book/small-group" className={buttonClasses}>
-                  Book the Small-Group Tour
+                  Book Small-Group Tour
                 </a>
                 <Link
                   href="/tours/antelope-island#small-group"
@@ -178,42 +180,11 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="About Safari Utah"
-        title="African-Inspired Nature Guiding in the American West"
-      >
-        <div className="space-y-8 text-sm leading-7 text-sand/85">
-          <div className="space-y-3">
-            <p>
-              Safari Utah brings African-inspired nature guiding to the American
-              West through private, expert-led wildlife experiences. Our focus
-              is to connect people with nature through clear insight,
-              meaningful moments, and a deeper understanding of place.
-            </p>
-          </div>
+      <ValuePillars />
 
-          <div className="space-y-3">
-            <h3 className="font-serif text-xl text-bone">About Your Guide</h3>
-            <p>
-              Educated in the natural sciences, with ecological field experience
-              and professional FGASA safari guide training, Clayton offers a
-              grounded, holistic approach to interpreting landscapes and
-              wildlife. His goal is to help people understand the natural world
-              more deeply and recognize our connection to it.
-            </p>
-          </div>
-        </div>
-        <div>
-          <p>
-            <Link
-              href="/about"
-              className="text-xs underline text-sand/75 hover:text-sand"
-            >
-              Learn more about Safari Utah & your guide
-            </Link>
-          </p>
-        </div>
-      </Section>
+      <div className="w-full overflow-x-hidden">
+        <ReviewStrip />
+      </div>
 
       <Section
         eyebrow="Custom Experiences"
@@ -221,24 +192,19 @@ export default function HomePage() {
       >
         <div className="space-y-4 text-sm leading-7 text-sand/85">
           <p>
-            For guests seeking something tailored, Safari Utah offers a limited
-            number of custom outings. Options include full-day trips to Arches
-            or Canyonlands, wildlife and nature outings in the Wasatch
-            Mountains, and personalized African safari planning. These
-            experiences are curated individually and available by request.
+            For guests seeking something more tailored, Safari Utah offers a
+            limited number of custom outings. Options include full-day trips to
+            Arches or Canyonlands, wildlife and nature outings in the Wasatch
+            Mountains, and personalized African safari planning.
           </p>
-          <a
+          <Link
             href="/custom-experiences"
             className="inline-flex rounded-full border border-sand/70 px-5 py-2 text-xs uppercase tracking-[0.2em] transition hover:bg-sand hover:text-night"
           >
             Request a custom experience
-          </a>
+          </Link>
         </div>
       </Section>
-
-      <div className="w-full overflow-x-hidden">
-        <ReviewStrip />
-      </div>
     </>
   );
 }
