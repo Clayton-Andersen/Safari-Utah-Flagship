@@ -13,12 +13,16 @@ type MobileMenuProps = {
   navItems: NavItem[];
 };
 
-export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
+export default function MobileMenu({
+  open,
+  onClose,
+  navItems,
+}: MobileMenuProps) {
   if (!open) return null;
 
   return (
     <nav className="md:hidden border-t border-sand/20 bg-night">
-      <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-3 text-sm">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm">
         {navItems.map((item) => (
           <Link
             key={item.href}
@@ -31,7 +35,7 @@ export default function MobileMenu({ open, onClose, navItems }: MobileMenuProps)
         ))}
 
         <Link
-          href="/book"
+          href="/tours/antelope-island#choose-your-tour"
           className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
           onClick={onClose}
         >

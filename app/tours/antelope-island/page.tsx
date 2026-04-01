@@ -50,8 +50,8 @@ export default function AntelopeIslandTourPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Link href="/book" className={primaryButtonClasses}>
-                  Book Now
+                <Link href="/book/private" className={primaryButtonClasses}>
+                  Book Private Tour
                 </Link>
                 <Link
                   href="#choose-your-tour"
@@ -109,7 +109,7 @@ export default function AntelopeIslandTourPage() {
                     private wildlife experience at their own pace.
                   </p>
                   <Link
-                    href="/book#private-tours"
+                    href="/book/private"
                     className={primaryButtonClasses}
                   >
                     Book Private Tour
@@ -136,12 +136,9 @@ export default function AntelopeIslandTourPage() {
                     guests who want sunset light, stronger photography
                     opportunities, and extra time on the island.
                   </p>
-                  <Link
-                    href="/book#private-tours"
-                    className={primaryButtonClasses}
-                  >
+                  <a href="/book/sunset" className={primaryButtonClasses}>
                     Book Sunset Tour
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -172,9 +169,9 @@ export default function AntelopeIslandTourPage() {
                 entry price without losing the value of expert guiding.
               </p>
 
-              <Link href="/book#small-group" className={primaryButtonClasses}>
+              <a href="/book/small-group" className={primaryButtonClasses}>
                 Book Small-Group Tour
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -263,9 +260,9 @@ export default function AntelopeIslandTourPage() {
               Ideal for couples, families, photographers, and visitors who want
               a private introduction to Antelope Island with expert guiding.
             </p>
-            <Link href="/book#private-tours" className={primaryButtonClasses}>
+            <a href="/book/private" className={primaryButtonClasses}>
               Book Private Tour
-            </Link>
+            </a>
           </div>
         </div>
       </Section>
@@ -297,9 +294,18 @@ export default function AntelopeIslandTourPage() {
               Best for guests who want dramatic evening light, a more atmospheric
               experience, and additional time for photography and scenic stops.
             </p>
-            <Link href="/book#private-tours" className={primaryButtonClasses}>
-              Book Private Sunset Tour
-            </Link>
+            <a href="/book/sunset" className={primaryButtonClasses}>
+              Book Sunset Tour
+            </a>
+          </div><div className="rounded-2xl border border-sand/20 bg-night/50 p-6 space-y-4">
+            <h3 className="font-serif text-xl text-bone">Best fit</h3>
+            <p className="text-sm text-sand/80">
+              Best for guests who want dramatic evening light, a more atmospheric
+              experience, and additional time for photography and scenic stops.
+            </p>
+            <a href="/book/sunset" className={primaryButtonClasses}>
+              Book Sunset Tour
+            </a>
           </div>
         </div>
       </Section>
@@ -332,9 +338,9 @@ export default function AntelopeIslandTourPage() {
               accessible price point, and who are comfortable joining others on
               the tour.
             </p>
-            <Link href="/book#small-group" className={primaryButtonClasses}>
-              Book Small-Group Tour
-            </Link>
+            <a href="/book/sunset" className={primaryButtonClasses}>
+              Book Sunset Tour
+            </a>
           </div>
         </div>
       </Section>
@@ -367,13 +373,16 @@ export default function AntelopeIslandTourPage() {
             experiences. If you prefer a shared outing, choose the small-group
             wildlife tour.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/book" className={primaryButtonClasses}>
-              Go to Booking Page
-            </Link>
-            <Link href="/book#small-group" className={secondaryButtonClasses}>
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
+            <a href="/book/private" className={primaryButtonClasses}>
+              Book Private Tour
+            </a>
+            <a href="/book/sunset" className={primaryButtonClasses}>
+              Book Sunset Tour
+            </a>
+            <a href="/book/small-group" className={primaryButtonClasses}>
               Book Small-Group Tour
-            </Link>
+            </a>
           </div>
         </div>
       </Section>

@@ -8,17 +8,24 @@ type BokunLoaderProps = {
 
 export default function BokunLoader({ channelUuid }: BokunLoaderProps) {
   useEffect(() => {
-    const scriptId = `bokun-widgets-loader-${channelUuid}`;
-    const existingScript = document.getElementById(scriptId);
+    const existingBokunScripts = document.querySelectorAll(
+      'script[id^="bokun-widgets-loader-"], script[src*="BokunWidgetsLoader.js"]'
+    );
 
-    if (existingScript) return;
+    existingBokunScripts.forEach((script) => {
+      script.parentNode?.removeChild(script);
+    });
 
     const script = document.createElement("script");
-    script.id = scriptId;
+    script.id = `bokun-widgets-loader-${channelUuid}`;
     script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${channelUuid}`;
     script.async = true;
 
     document.body.appendChild(script);
+
+    return () => {
+      script.parentNode?.removeChild(script);
+    };
   }, [channelUuid]);
 
   return null;
