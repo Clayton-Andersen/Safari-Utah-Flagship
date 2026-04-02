@@ -4,9 +4,9 @@ import BokunLoader from "@/components/shared/BokunLoader";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Book the Sunset Tour | Safari Utah",
+  title: "Book the Private Sunset Tour | Safari Utah",
   description:
-    "Book the Premium Antelope Island Elite Sunset Tour with Safari Utah.",
+    "Book the Premium Antelope Island Elite Sunset Tour, a private evening wildlife tour on Antelope Island.",
 };
 
 const buttonClasses =
@@ -22,14 +22,15 @@ export default function SunsetBookPage() {
 
       <Section
         eyebrow="Private Sunset Tour Booking"
-        title="Book the Sunset Tour"
-        subtitle="A private evening wildlife tour for your group only."
+        title="Book the Private Sunset Tour"
       >
         <div className="max-w-3xl space-y-4 text-sm leading-7 text-sand/85">
           <p>
-            This extended private wildlife tour is timed for the island’s most
-            beautiful evening light, with extra time for wildlife viewing,
-            photography, and a memorable finish over the Great Salt Lake.
+            This extended private tour on Antelope Island is designed for guests
+            who want the island’s best evening light, a more atmospheric pace,
+            and extra time in the field. It is the strongest fit for guests who
+            value sunset color, photography, and a more elevated finish to the
+            day.
           </p>
           <p>
             <Link
@@ -48,24 +49,21 @@ export default function SunsetBookPage() {
 
           <div className="space-y-1">
             <h2 className="font-serif text-2xl text-bone">
-              Private Sunset Tour
+              Premium Antelope Island Private Sunset Tour
             </h2>
-            <p className="text-sm text-sand/75">
-              Premium Antelope Island Elite Sunset Tour
-            </p>
           </div>
 
           <p className="leading-7">
-            A longer private wildlife tour timed for the island’s best evening
-            light, with exceptional sunset atmosphere and strong photography
-            opportunities.
+            A longer private tour for guests who want evening light, a more
+            atmospheric experience, and extra time to enjoy Antelope Island at a
+            relaxed pace.
           </p>
 
           <ul className="list-disc space-y-2 pl-5">
             <li>Private experience for your group only</li>
             <li>Approximately 4.5 to 5 hours</li>
             <li>From $500 per tour (1–4 guests)</li>
-            <li>Offered Fridays and Mondays</li>
+            <li>Salt Lake City area pickup and drop-off included</li>
           </ul>
 
           <BokunButton

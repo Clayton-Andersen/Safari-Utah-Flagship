@@ -23,14 +23,15 @@ export default function PrivateBookPage() {
       <Section
         eyebrow="Private Day Tour Booking"
         title="Book the Private Day Tour"
-        subtitle="A private daytime wildlife tour for your group only."
+
       >
         <div className="max-w-3xl space-y-4 text-sm leading-7 text-sand/85">
-          <p>
-            This is our signature private daytime wildlife tour on Antelope
-            Island, designed around the best daylight viewing with flexibility
-            for wildlife sightings, photography, and natural history
-            interpretation throughout the outing.
+          <p>This is our signature private daytime tour on Antelope Island,
+            designed for guests who want privacy, flexibility, and a more
+            personal pace in the field. It is the best fit for most private
+            guests and leaves room to follow wildlife activity, scenic stops,
+            photography, and interpretation in a way that feels comfortable
+            and tailored to your group.
           </p>
           <p>
             <Link
@@ -48,14 +49,12 @@ export default function PrivateBookPage() {
           <span className={badgeClasses}>Private Day Tour</span>
 
           <div className="space-y-1">
-            <h2 className="font-serif text-2xl text-bone">Private Day Tour</h2>
-            <p className="text-sm text-sand/75">Premium Antelope Island Tour</p>
+            <h2 className="font-serif text-2xl text-bone">Premium Antelope Island Private Day Tour</h2>
           </div>
 
           <p className="leading-7">
-            A private daytime wildlife tour designed around the best daylight
-            viewing, with a flexible pace for wildlife, photography, and natural
-            history interpretation.
+            A private daytime tour for guests who want privacy, flexibility,
+            and the freedom to experience Antelope Island at their own pace.
           </p>
 
           <ul className="list-disc space-y-2 pl-5">

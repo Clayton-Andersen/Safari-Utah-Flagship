@@ -4,9 +4,9 @@ import BokunLoader from "@/components/shared/BokunLoader";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Book the Small-Group Tour | Safari Utah",
+  title: "Book the Shared Small-Group Tour | Safari Utah",
   description:
-    "Book the Antelope Island Small-Group Wildlife Tour with Safari Utah.",
+    "Book the Antelope Island Small-Group Wildlife Tour, a shared public wildlife tour on Antelope Island.",
 };
 
 const buttonClasses =
@@ -21,15 +21,16 @@ export default function SmallGroupBookPage() {
       <BokunLoader channelUuid="af390726-dee6-4233-8c58-0c0de47938d0" />
 
       <Section
-        eyebrow="Small-Group Tour Booking"
-        title="Book the Small-Group Tour"
-        subtitle="A shared wildlife tour with expert guiding and calm pacing."
+        eyebrow="Shared Small-Group Tour Booking"
+        title="Book the Shared Small-Group Tour"
       >
         <div className="max-w-3xl space-y-4 text-sm leading-7 text-sand/85">
           <p>
-            This shared wildlife tour is designed for guests who want a more
-            accessible option while still enjoying expert interpretation,
-            meaningful time in the field, and a calm, personal feel.
+            This shared public tour on Antelope Island is designed for guests
+            who want expert guiding, calm pacing, and a more accessible way to
+            experience the island. It is the best fit for guests who are
+            comfortable joining others while still wanting a small-scale,
+            wildlife-focused outing.
           </p>
           <p>
             <Link
@@ -42,29 +43,27 @@ export default function SmallGroupBookPage() {
         </div>
       </Section>
 
-      <Section title="Small-Group Tour">
+      <Section title="Shared Small-Group Tour">
         <div className="max-w-3xl space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 text-sm text-sand/85">
           <span className={badgeClasses}>Small-Group Tour</span>
 
           <div className="space-y-1">
-            <h2 className="font-serif text-2xl text-bone">Small-Group Tour</h2>
-            <p className="text-sm text-sand/75">
-              Antelope Island Small-Group Wildlife Tour
-            </p>
+            <h2 className="font-serif text-2xl text-bone">
+              Antelope Island Shared Small-Group Tour
+            </h2>
           </div>
 
           <p className="leading-7">
-            A shared wildlife tour for guests who want calm pacing, expert
-            guiding, and a more accessible price point without losing the feel
+            A shared public wildlife tour for guests who want expert guiding, a
+            calm pace, and a more accessible price point without losing the feel
             of a personal outing.
           </p>
 
           <ul className="list-disc space-y-2 pl-5">
-            <li>Shared small-group experience</li>
+            <li>Shared public small-group experience</li>
             <li>Approximately 4 hours</li>
-            <li>1 adult $160</li>
-            <li>2+ adults $140 per person</li>
-            <li>Youth with adult $80</li>
+            <li>1 adult $160 · 2+ adults $140 per person · Youth with adult $80</li>
+            <li>Salt Lake City downtown area pickup and drop-off included</li>
           </ul>
 
           <BokunButton
