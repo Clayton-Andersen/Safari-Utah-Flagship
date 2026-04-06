@@ -44,8 +44,8 @@ export default function Header() {
 
         <button
           className="md:hidden text-sand"
-          aria-label="Open menu"
-          onClick={() => setOpen(true)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((prev) => !prev)}
         >
           ☰
         </button>
