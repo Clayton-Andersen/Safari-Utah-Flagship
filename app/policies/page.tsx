@@ -12,11 +12,10 @@ export default function PoliciesPage() {
       <Section eyebrow="Policies" title="Refund Policy">
         <div className="space-y-4 text-sm text-sand/80 max-w-3xl">
           <p>
-            Guests may cancel their tour at least 24 hours before the scheduled
-            start time for a full refund. Cancellations made within 24 hours of
-            the tour start time are subject to a $100 cancellation fee; any
-            remaining amount will be refunded. All times are based on the local
-            time of the experience
+            Guests may cancel their tour at least 24 hours before the scheduled 
+            start time for a full refund. Cancellations made within 24 hours of 
+            the tour start time are non-refundable. All times are based on the 
+            local time of the experience.
           </p>
 
           <p>
