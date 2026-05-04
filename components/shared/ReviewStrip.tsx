@@ -2,6 +2,54 @@ import Image from "next/image";
 
 const reviews = [
   {
+    name: "Arlene P.",
+    date: "May 2026",
+    quote: "Clayton's Antelope Island Safari was great. He was very knowledgeable about all the birds and other wildlife. We saw an unusual snowy egret and at least 20 other bird species. Binoculars were provided to enhance the experience. Some great Bison photo ops and a bonus sleeping porcupine.",
+    rating: 5,
+  },
+  {
+    name: "YJ A.",
+    date: "May 2026",
+    quote: "If you have the chance to book a tour with Sinéad, do it! Beyond the scenery, Sinéad’s ability to find and identify the local animals added so much excitement to our trip. She is a fantastic guide. We left with amazing photos and even better memories. Thank you, Sinéad!",
+    rating: 5,
+  },
+  {
+    name: "Sherry M.",
+    date: "April 2026",
+    quote: "Such an amazing afternoon of awesome sights and so much information and knowledge from our guide. We got to see so many baby Bison with their pack. Watching them get the zoomies was a highlight of the day. So many amazing birds with beautiful songs. We even stopped to watch a hawk hover as he hunted and swooped down to catch his meal. Very very cool experience to witness just outside the car. Our last pull over for Bison viewing turned into 3 males approx 25’ from the car so we got to see them up close as they grazed. It. Was. Amazing Our guide was so kind, knowledgeable and enjoyable to be with throughout the whole tour. We lucked out with a cloudy windy day so the bugs were a non issue and the clouds were appreciated from this Phoenix family. I did this tour with my 14 year old daughter on a quick 2 day trip to Utah for USA gymnastics XCEL regionals . It was perfect for seeing the island and sights without physical activity (saving energy was a priority for us) 10/10 would recommend for any person no matter age or physical condition.(as long as you can get into the vehicle)",
+    rating: 5,
+  },
+  {
+    name: "John E.",
+    date: "April 2026",
+    quote: "AWESOME safari. Clayton is great. Super knowledgeable and kind. My family loved it!",
+    rating: 5,
+  },
+  {
+    name: "Edwin O.",
+    date: "April 2026",
+    quote: "I had an amazing experience with Safari Utah visiting Antelope Island. Everything was very well organized, but what truly made the difference was our guide, Sinéad. She was incredibly kind, knowledgeable, and made the whole experience feel very personal. We had great conversations, and she went above and beyond to show us wildlife, especially birds, which made it even more special. One detail I really appreciated was that on the way back, she kindly dropped me off exactly where I needed to go — a small gesture that says a lot about her level of care and service. This was definitely one of the highlights of my trip. I would absolutely recommend Safari Utah to anyone visiting the area.",
+    rating: 5,
+  },
+  {
+    name: "Veronica",
+    date: "April 2026",
+    quote: "Clayton goes above and beyond to accommodate your every wish. We saw everything! He knows exactly where to look! Excellent",
+    rating: 5,
+  },
+  {
+    name: "Lisa P.",
+    date: "April 2026",
+    quote: "Our tour was outstanding! Clayton has an expansive knowledge of the area, its geological history, fauna and wildlife. He tailored the tour with my wish list of birds in mind, and took into consideration a new enthusiast. Highly recommended",
+    rating: 5,
+  },
+  {
+    name: "Hannah J.",
+    date: "April 2026",
+    quote: "The tour by Clayton was absolutely fantastic! I really enjoyed the tour and it definitely made my trip to Salt Lake City so much better :) I learnt a lot about different aspects of both the city and the Great Salt Lake that I had no idea of before, which made my overall trip much more interesting, including the wildlife, geography and life in Salt Lake! Clayton was able to provide really interesting facts and answered all the questions we asked - clearly an expert on the area!! Even more importantly, you could tell he cared about the area and not negatively disrupting the wildlife whilst giving us great views. As someone who didn’t know that much about life in the US, Clayton was happy to answer all the questions asked, no matter how obvious! We saw incredible views on the route taken to and during Antelope Island, and most importantly the we saw an incredible variety of Salt Lake wildlife! It was like nothing I’d seen before in the UK and was certainly a highlight of the trip. Thank you again to Clayton for being so hospitable, friendly and a great tour guide!! Moreover, thank you for the complimentary coffee :)",
+    rating: 5,
+  },
+  {
     name: "Renee M.",
     date: "March 2026",
     quote:
