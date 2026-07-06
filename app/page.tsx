@@ -5,6 +5,7 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
+<meta name="google-site-verification" content="b3os46aRzG6vWhrWXZPR55ggGJhYnNlQzKsrr0xCIKc" />
 
 export const metadata: Metadata = {
   title: "Safari Utah | Private Antelope Island Wildlife Tours",
