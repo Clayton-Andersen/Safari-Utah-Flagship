@@ -60,7 +60,7 @@ export default function PrivateBookPage() {
           <ul className="list-disc space-y-2 pl-5">
             <li>Private experience for your group only</li>
             <li>Approximately 4 hours</li>
-            <li>From $400 per tour (1–4 guests)</li>
+            <li>From $450 per tour (1–4 guests)</li>
             <li>Salt Lake City area pickup and drop-off included</li>
           </ul>
 

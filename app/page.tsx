@@ -119,7 +119,7 @@ export default function HomePage() {
                 opportunities arise.
               </p>
               <p className="font-medium">
-                Minimum fare: $400 per tour (1–4 guests).
+                Minimum fare: $450 per tour (1–4 guests).
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="/book/private" className={buttonClasses}>

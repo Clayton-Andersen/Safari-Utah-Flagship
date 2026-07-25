@@ -95,7 +95,7 @@ export default function AntelopeIslandTourPage() {
                   <ul className="list-disc space-y-1 pl-5 text-sm text-sand/85">
                     <li>Private experience for your group only</li>
                     <li>Approximately 4 hours</li>
-                    <li>From $400</li>
+                    <li>From $450</li>
                     <li>1 to 4 guests</li>
                   </ul>
 
