@@ -1,12 +1,19 @@
+import type { Metadata } from "next";
 import Section from "@/components/shared/Section";
 import ContactForm from "@/components/forms/ContactForm";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Contact | Safari Utah",
+export const metadata: Metadata = {
+  title: "Contact Safari Utah",
   description:
-    "Contact Safari Utah to inquire about private wildlife tours and custom experiences.",
+    "Contact Safari Utah for Antelope Island wildlife tour questions, custom experiences, larger groups, and special pickup needs.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
+
+const buttonClasses =
+  "inline-flex items-center justify-center rounded-full border border-sand/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night";
 
 export default function ContactPage() {
   return (
@@ -14,32 +21,33 @@ export default function ContactPage() {
       <Section
         eyebrow="Contact"
         title="Get in touch with Safari Utah"
-        subtitle="Reach out with questions, trip ideas, or to discuss private wildlife experiences."
+        subtitle="Reach out with questions, trip ideas, larger groups, special pickup needs, or custom wildlife experiences."
       >
-        <div className="grid gap-10 md:grid-cols-[1.5fr,1fr] items-start text-sm text-sand/80">
-          {/* Form */}
+        <div className="grid items-start gap-10 text-sm text-sand/80 md:grid-cols-[1.5fr,1fr]">
           <div>
-            {/* Booking note – always shown for now */}
-            <div className="mb-4 rounded-xl border border-sand/30 bg-night/60 px-3 py-3 text-xs text-sand/80">
-              <p className="font-semibold text-sand">Booking note</p>
+            <div className="mb-4 rounded-xl border border-sand/30 bg-night/60 px-4 py-4 text-xs text-sand/80">
+              <p className="font-semibold text-sand">Ready to book?</p>
               <p className="mt-1">
-                Our online booking system is being updated. For now, please use
-                this form to request your tour. Include your preferred date,
-                time of day (daylight or sunset), group size (1–4), and any
-                focus you have (photography, birding, ecology, etc.).
+                Most Antelope Island tours can now be booked online. Use this form for custom dates, larger groups, new small-group tour questions, special pickup needs, or anything you want to clarify before booking.
               </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Link href="/#book-antelope-island" className={buttonClasses}>
+                  Book Antelope Island Tours
+                </Link>
+                <Link href="/tours/antelope-island#choose-your-tour" className={buttonClasses}>
+                  Compare Tour Options
+                </Link>
+              </div>
             </div>
 
             <ContactForm />
           </div>
 
-          {/* Direct contact info */}
           <div className="space-y-4">
             <div>
-              <h3 className="font-serif text-lg mb-2">Direct Contact</h3>
+              <h2 className="mb-2 font-serif text-lg">Direct Contact</h2>
               <p className="text-sand/80">
-                Prefer to reach out directly? You&apos;re welcome to call or
-                email.
+                Prefer to reach out directly? You&apos;re welcome to call or email.
               </p>
             </div>
 
@@ -48,10 +56,7 @@ export default function ContactPage() {
                 <span className="block text-xs uppercase tracking-[0.2em] text-sand/60">
                   Phone
                 </span>
-                <a
-                  href="tel:+13854490888"
-                  className="text-sand/90 hover:text-bone"
-                >
+                <a href="tel:+13854490888" className="text-sand/90 hover:text-bone">
                   (385) 449-0888
                 </a>
               </p>
@@ -71,12 +76,9 @@ export default function ContactPage() {
 
             <div className="pt-2">
               <p className="text-xs text-sand/60">
-                For tour details, you can also visit the{" "}
-                <Link
-                  href="/tours/antelope-island"
-                  className="underline hover:text-bone"
-                >
-                  Premium Antelope Island Wildlife Tour
+                For tour details, visit the {" "}
+                <Link href="/tours/antelope-island" className="underline hover:text-bone">
+                  Antelope Island Wildlife Tours
                 </Link>{" "}
                 page.
               </p>
