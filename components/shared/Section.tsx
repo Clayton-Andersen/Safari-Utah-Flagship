@@ -7,9 +7,20 @@ type Props = {
   id?: string;
   children: ReactNode;
   className?: string;
+  headingLevel?: "h1" | "h2";
 };
 
-export default function Section({ eyebrow, title, subtitle, id, children, className }: Props) {
+export default function Section({
+  eyebrow,
+  title,
+  subtitle,
+  id,
+  children,
+  className,
+  headingLevel = "h2",
+}: Props) {
+  const HeadingTag = headingLevel;
+
   return (
     <section id={id} className={`px-4 py-12 md:py-10 ${className ?? ""}`}>
       <div className="mx-auto max-w-6xl">
@@ -21,15 +32,11 @@ export default function Section({ eyebrow, title, subtitle, id, children, classN
               </p>
             )}
             {title && (
-              <h2 className="font-serif text-3xl md:text-4xl text-bone">
+              <HeadingTag className="font-serif text-3xl text-bone md:text-4xl">
                 {title}
-              </h2>
+              </HeadingTag>
             )}
-            {subtitle && (
-              <p className="text-sm text-sand/80">
-                {subtitle}
-              </p>
-            )}
+            {subtitle && <p className="text-sm text-sand/80">{subtitle}</p>}
           </header>
         )}
         {children}
