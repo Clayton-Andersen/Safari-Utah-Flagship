@@ -3,10 +3,7 @@ import type { BookingProduct } from "@/lib/booking";
 import BokunButton from "@/components/shared/BokunButton";
 
 const primaryButtonClasses =
-  "inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans";
-
-const secondaryButtonClasses =
-  "inline-flex items-center justify-center rounded-full border border-sand/70 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night";
+  "inline-flex w-full items-center justify-center rounded-full bg-sand px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans sm:w-auto";
 
 type BookingCardProps = {
   product: BookingProduct;
@@ -57,20 +54,9 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
             className={primaryButtonClasses}
           />
         ) : product.fallbackHref ? (
-          <div className="space-y-2">
-            <Link href={product.fallbackHref} className={secondaryButtonClasses}>
-              {product.fallbackLabel ?? product.buttonLabel}
-            </Link>
-            {product.isComingSoon ? (
-              <p className="text-[11px] leading-5 text-sand/65">
-                Online booking will be added here as soon as the new Bokun widget is ready.
-              </p>
-            ) : (
-              <p className="text-[11px] leading-5 text-sand/65">
-                Opens a dedicated booking page so Bokun does not mix booking channels on this page.
-              </p>
-            )}
-          </div>
+          <Link href={product.fallbackHref} className={primaryButtonClasses}>
+            {product.fallbackLabel ?? product.buttonLabel}
+          </Link>
         ) : null}
       </div>
     </article>
