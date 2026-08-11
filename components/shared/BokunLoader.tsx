@@ -12,12 +12,14 @@ function getScriptId(channelUuid: string) {
 }
 
 export default function BokunLoader({ channelUuid, channelUuids }: BokunLoaderProps) {
-  const channels = Array.from(
+  const channelsKey = Array.from(
     new Set([...(channelUuids ?? []), ...(channelUuid ? [channelUuid] : [])].filter(Boolean))
-  );
+  ).join("|");
 
   useEffect(() => {
-    channels.forEach((channel) => {
+    if (!channelsKey) return;
+
+    channelsKey.split("|").forEach((channel) => {
       const scriptId = getScriptId(channel);
       const existingScript = document.getElementById(scriptId);
 
@@ -30,7 +32,7 @@ export default function BokunLoader({ channelUuid, channelUuids }: BokunLoaderPr
 
       document.body.appendChild(script);
     });
-  }, [channels.join("|")]);
+  }, [channelsKey]);
 
   return null;
 }
