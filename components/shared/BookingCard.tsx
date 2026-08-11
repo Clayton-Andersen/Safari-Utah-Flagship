@@ -61,9 +61,13 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
             <Link href={product.fallbackHref} className={secondaryButtonClasses}>
               {product.fallbackLabel ?? product.buttonLabel}
             </Link>
-            {product.isComingSoon && (
+            {product.isComingSoon ? (
               <p className="text-[11px] leading-5 text-sand/65">
-                Online booking will be added here soon.
+                Online booking will be added here as soon as the new Bokun widget is ready.
+              </p>
+            ) : (
+              <p className="text-[11px] leading-5 text-sand/65">
+                Opens a dedicated booking page so Bokun does not mix booking channels on this page.
               </p>
             )}
           </div>
