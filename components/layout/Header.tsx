@@ -23,7 +23,7 @@ export default function Header() {
           Safari Utah
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        <nav className="hidden items-center gap-8 text-sm md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -35,7 +35,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="/tours/antelope-island#choose-your-tour"
+            href="/#book-antelope-island"
             className="inline-flex items-center rounded-full bg-sand px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
           >
             Book Now
@@ -43,7 +43,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-sand"
+          className="text-sand md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((prev) => !prev)}
         >
