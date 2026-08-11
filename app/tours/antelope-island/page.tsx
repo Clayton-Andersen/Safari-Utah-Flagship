@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Section from "@/components/shared/Section";
-import BookingCard from "@/components/shared/BookingCard";
+import BookingProductGroups from "@/components/shared/BookingProductGroups";
 import BokunLoader from "@/components/shared/BokunLoader";
 import { bookingChannelUuids, bookingProducts } from "@/lib/booking";
 
@@ -104,14 +104,10 @@ export default function AntelopeIslandTourPage() {
       <Section
         id="choose-your-tour"
         eyebrow="Choose Your Tour"
-        title="Compare options and book directly"
-        subtitle="Use the live booking buttons below, or use the fallback link under each button if the booking window gets hidden behind another browser window."
+        title="Choose private or shared first"
+        subtitle="Private tours are premium experiences for your group only. Shared tours are public small-group options with per-person pricing. Pick the style that fits, then book from the matching card."
       >
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {bookingProducts.map((product) => (
-            <BookingCard key={product.id} product={product} />
-          ))}
-        </div>
+        <BookingProductGroups />
       </Section>
 
       <Section title="Why Antelope Island">
