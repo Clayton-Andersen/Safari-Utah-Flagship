@@ -88,10 +88,8 @@ export const bookingProducts: BookingProduct[] = [
       "Guests comfortable joining others who still want a small-scale, naturalist-led outing.",
     price: "1 adult $160 · 2+ adults $140 per adult · Youth with adult $80",
     buttonLabel: "Book Small-Group Day Tour",
-    buttonId: "bokun_a1e37b66_dcb1_4c28_ac37_6eca50dda10e",
-    channelUuid: smallGroupBookingChannelUuid,
-    dataSrc: `https://widgets.bokun.io/online-sales/${smallGroupBookingChannelUuid}/experience/1167480?partialView=1`,
-    directUrl: `https://widgets.bokun.io/online-sales/${smallGroupBookingChannelUuid}/experience/1167480`,
+    fallbackHref: "/book/small-group",
+    fallbackLabel: "Open Small-Group Day Booking",
   },
   {
     id: "small-group-rollout",
