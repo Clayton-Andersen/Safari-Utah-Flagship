@@ -5,9 +5,9 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
-import BookingCard from "@/components/shared/BookingCard";
+import BookingProductGroups from "@/components/shared/BookingProductGroups";
 import BokunLoader from "@/components/shared/BokunLoader";
-import { bookingChannelUuids, bookingProducts } from "@/lib/booking";
+import { bookingChannelUuids } from "@/lib/booking";
 
 export const metadata: Metadata = {
   title: "Antelope Island Wildlife Tours from Salt Lake City | Safari Utah",
@@ -67,14 +67,10 @@ export default function HomePage() {
       <Section
         id="book-antelope-island"
         eyebrow="Book Antelope Island Tours"
-        title="Choose and book your Antelope Island experience"
-        subtitle="Live booking buttons are now on this page, so ready-to-book guests do not have to click through separate booking pages first."
+        title="Choose your tour style first"
+        subtitle="Start with the biggest decision: a premium private experience for your group only, or a shared small-group tour with other guests. Then choose the exact tour and book from the card."
       >
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {bookingProducts.map((product) => (
-            <BookingCard key={product.id} product={product} compact />
-          ))}
-        </div>
+        <BookingProductGroups compact />
       </Section>
 
       <Section
