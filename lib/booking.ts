@@ -19,11 +19,12 @@ export type BookingProduct = {
 
 export const privateBookingChannelUuid = "0e590548-6d52-498f-9513-129853da57cf";
 export const smallGroupBookingChannelUuid = "af390726-dee6-4233-8c58-0c0de47938d0";
-
-// Replace these placeholders with the new Bokun widget details once the embed code is ready.
-export const newSmallGroupBookingChannelUuid = "";
-export const newSmallGroupBookingDataSrc = "";
-export const newSmallGroupBookingButtonId = "";
+export const newSmallGroupBookingChannelUuid = "0e590548-6d52-498f-9513-129853da57cf";
+export const newSmallGroupBookingDataSrc =
+  `https://widgets.bokun.io/online-sales/${newSmallGroupBookingChannelUuid}/experience/1265851?partialView=1`;
+export const newSmallGroupBookingDirectUrl =
+  `https://widgets.bokun.io/online-sales/${newSmallGroupBookingChannelUuid}/experience/1265851`;
+export const newSmallGroupBookingButtonId = "bokun_692ba05c_86f0_4fa6_8e87_92790aa41b09";
 
 export const bookingProducts: BookingProduct[] = [
   {
@@ -96,7 +97,7 @@ export const bookingProducts: BookingProduct[] = [
     id: "small-group-rollout",
     eyebrow: "New Small-Group Tour",
     title: "New Small-Group Wildlife Tour",
-    subtitle: "Rolling out soon",
+    subtitle: "Shared tour launching next",
     description:
       "A new shared small-group option for guests who want a simple way to join Safari Utah with expert guiding and a friendly group format.",
     details: [
@@ -108,13 +109,11 @@ export const bookingProducts: BookingProduct[] = [
     bestFor:
       "Travelers who want the value of a shared tour while keeping the outing small, calm, and wildlife-focused.",
     price: "From $150 per adult (2-traveler minimum) · Youth $90",
-    buttonLabel: "Request New Small-Group Tour",
-    buttonId: newSmallGroupBookingButtonId || undefined,
-    channelUuid: newSmallGroupBookingChannelUuid || undefined,
-    dataSrc: newSmallGroupBookingDataSrc || undefined,
-    fallbackHref: "/contact?reason=new-small-group-tour",
-    fallbackLabel: "Ask About This Tour",
-    isComingSoon: true,
+    buttonLabel: "Book New Small-Group Tour",
+    buttonId: newSmallGroupBookingButtonId,
+    channelUuid: newSmallGroupBookingChannelUuid,
+    dataSrc: newSmallGroupBookingDataSrc,
+    directUrl: newSmallGroupBookingDirectUrl,
   },
 ];
 
