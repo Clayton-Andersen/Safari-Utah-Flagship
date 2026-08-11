@@ -30,8 +30,8 @@ export const bookingProducts: BookingProduct[] = [
   {
     id: "private-day",
     eyebrow: "Private Day Tour",
-    title: "Private Antelope Island Day Tour",
-    subtitle: "Premium private wildlife tour",
+    title: "Private Day Tour",
+    subtitle: "Premium Antelope Island Private Tour",
     description:
       "Our most flexible private option, timed around strong daylight wildlife viewing, scenery, photography, and natural history interpretation.",
     details: [
@@ -52,8 +52,8 @@ export const bookingProducts: BookingProduct[] = [
   {
     id: "private-sunset",
     eyebrow: "Private Sunset Tour",
-    title: "Private Antelope Island Sunset Tour",
-    subtitle: "Longer premium evening tour",
+    title: "Private Sunset Tour",
+    subtitle: "Premium Antelope Island Private Sunset Tour",
     description:
       "A longer private outing designed for the island’s best evening light, a more atmospheric pace, and stronger photography opportunities.",
     details: [
@@ -73,9 +73,9 @@ export const bookingProducts: BookingProduct[] = [
   },
   {
     id: "small-group-day",
-    eyebrow: "Small-Group Day Tour",
-    title: "Shared Antelope Island Wildlife Tour",
-    subtitle: "Current shared small-group option",
+    eyebrow: "Small-Group Tour",
+    title: "Small-Group Tour",
+    subtitle: "Antelope Island Shared Small-Group Tour",
     description:
       "A shared wildlife experience for guests who want expert guiding, calm pacing, and a more accessible price point without losing the personal feel.",
     details: [
@@ -93,9 +93,9 @@ export const bookingProducts: BookingProduct[] = [
   },
   {
     id: "small-group-rollout",
-    eyebrow: "Small-Group Sunset Tour",
+    eyebrow: "Shared Group Sunset Tour",
     title: "Great Salt Lake Sunset Safari Tour",
-    subtitle: "Shared sunset wildlife and scenery tour",
+    subtitle: "Sunset, Wildlife and Nature Tour",
     description:
       "A shared sunset outing across Antelope Island, timed for evening light, Great Salt Lake views, wildlife, birding, photography, and natural history interpretation.",
     details: [
@@ -108,7 +108,7 @@ export const bookingProducts: BookingProduct[] = [
     bestFor:
       "Guests who want a shared sunset experience with wildlife viewing, lake scenery, birding, photography, and a relaxed safari-style pace.",
     price: "From $150 per adult (2-traveler minimum) · Youth $90",
-    buttonLabel: "Book Great Salt Lake Sunset Safari",
+    buttonLabel: "Book Shared Great Salt Lake Sunset Safari",
     buttonId: newSmallGroupBookingButtonId,
     channelUuid: newSmallGroupBookingChannelUuid,
     dataSrc: newSmallGroupBookingDataSrc,
