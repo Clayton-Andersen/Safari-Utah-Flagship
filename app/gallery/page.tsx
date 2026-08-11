@@ -14,6 +14,7 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="Scenes from Safari Utah"
         subtitle="A glimpse of the wildlife, landscapes, and quiet moments that define our time in the field."
+        headingLevel="h1"
       >
         <Gallery />
       </Section>
