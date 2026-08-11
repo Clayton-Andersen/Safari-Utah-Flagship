@@ -21,7 +21,7 @@ export default function MobileMenu({
   if (!open) return null;
 
   return (
-    <nav className="md:hidden border-t border-sand/20 bg-night">
+    <nav className="border-t border-sand/20 bg-night md:hidden">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm">
         {navItems.map((item) => (
           <Link
@@ -35,7 +35,7 @@ export default function MobileMenu({
         ))}
 
         <Link
-          href="/tours/antelope-island#choose-your-tour"
+          href="/#book-antelope-island"
           className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
           onClick={onClose}
         >
