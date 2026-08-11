@@ -63,7 +63,7 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
             </Link>
             {product.isComingSoon && (
               <p className="text-[11px] leading-5 text-sand/65">
-                Online booking will be added here as soon as the new Bokun widget is ready.
+                Online booking will be added here soon.
               </p>
             )}
           </div>
