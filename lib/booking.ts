@@ -89,7 +89,7 @@ export const bookingProducts: BookingProduct[] = [
     price: "1 adult $160 · 2+ adults $140 per adult · Youth with adult $80",
     buttonLabel: "Book Small-Group Day Tour",
     fallbackHref: "/book/small-group",
-    fallbackLabel: "Open Small-Group Day Booking",
+    fallbackLabel: "Book Small-Group Day Tour",
   },
   {
     id: "small-group-rollout",
@@ -115,6 +115,14 @@ export const bookingProducts: BookingProduct[] = [
     directUrl: newSmallGroupBookingDirectUrl,
   },
 ];
+
+export const privateBookingProducts = bookingProducts.filter((product) =>
+  ["private-day", "private-sunset"].includes(product.id)
+);
+
+export const sharedBookingProducts = bookingProducts.filter((product) =>
+  ["small-group-day", "small-group-rollout"].includes(product.id)
+);
 
 export const liveBookingProducts = bookingProducts.filter(
   (product) => product.buttonId && product.dataSrc && product.channelUuid
