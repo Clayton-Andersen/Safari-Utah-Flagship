@@ -35,7 +35,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="/#book-antelope-island"
+            href="/tours/antelope-island#choose-your-tour"
             className="inline-flex items-center rounded-full bg-sand px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
           >
             Book Now
