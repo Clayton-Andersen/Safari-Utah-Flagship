@@ -1,32 +1,31 @@
 "use client";
 
 import { useEffect } from "react";
+import { websiteBookingChannelUuid } from "@/lib/booking";
 
-type BokunLoaderProps = {
-  channelUuid: string;
-};
+const scriptId = `bokun-widgets-loader-${websiteBookingChannelUuid}`;
+const loaderSrc = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${websiteBookingChannelUuid}`;
 
-export default function BokunLoader({ channelUuid }: BokunLoaderProps) {
+export default function BokunLoader() {
   useEffect(() => {
-    const existingBokunScripts = document.querySelectorAll(
-      'script[id^="bokun-widgets-loader-"], script[src*="BokunWidgetsLoader.js"]'
+    if (document.getElementById(scriptId)) return;
+
+    const existingCanonicalLoader = document.querySelector<HTMLScriptElement>(
+      `script[src="${loaderSrc}"]`
     );
 
-    existingBokunScripts.forEach((script) => {
-      script.parentNode?.removeChild(script);
-    });
+    if (existingCanonicalLoader) {
+      existingCanonicalLoader.id = scriptId;
+      return;
+    }
 
     const script = document.createElement("script");
-    script.id = `bokun-widgets-loader-${channelUuid}`;
-    script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${channelUuid}`;
+    script.id = scriptId;
+    script.src = loaderSrc;
     script.async = true;
 
     document.body.appendChild(script);
-
-    return () => {
-      script.parentNode?.removeChild(script);
-    };
-  }, [channelUuid]);
+  }, []);
 
   return null;
 }

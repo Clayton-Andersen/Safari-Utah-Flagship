@@ -21,7 +21,7 @@ export default function MobileMenu({
   if (!open) return null;
 
   return (
-    <nav className="md:hidden border-t border-sand/20 bg-night">
+    <nav className="border-t border-sand/20 bg-night md:hidden">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm">
         {navItems.map((item) => (
           <Link

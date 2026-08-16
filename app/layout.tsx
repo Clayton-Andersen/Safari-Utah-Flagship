@@ -16,8 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Safari Utah",
-  description: "Premium private wildlife tours in Utah.",
+  metadataBase: new URL("https://safariutah.com"),
+  title: {
+    default: "Antelope Island Wildlife Tours from Salt Lake City | Safari Utah",
+    template: "%s | Safari Utah",
+  },
+  description:
+    "Private and small-group Antelope Island wildlife tours from Salt Lake City with safari-trained naturalist guides, hotel pickup, bison, birds, and Great Salt Lake scenery.",
+  applicationName: "Safari Utah",
+  openGraph: {
+    siteName: "Safari Utah",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  verification: {
+    google: "b3os46aRzG6vWhrWXZPR55ggGJhYnNlQzKsrr0xCIKc",
+  },
   robots: {
     index: true,
     follow: true,

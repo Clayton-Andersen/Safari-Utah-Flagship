@@ -5,6 +5,8 @@ type BokunButtonProps = {
   dataSrc: string;
   label: string;
   className?: string;
+  directUrl?: string;
+  fallbackLabel?: string;
 };
 
 export default function BokunButton({
@@ -12,16 +14,35 @@ export default function BokunButton({
   dataSrc,
   label,
   className = "",
+  directUrl,
+  fallbackLabel = "Open full booking page",
 }: BokunButtonProps) {
   return (
-    <button
-      id={buttonId}
-      className={`bokunButton font-sans ${className}`}
-      data-src={dataSrc}
-      data-testid="widget-book-button"
-      type="button"
-    >
-      {label}
-    </button>
+    <div className="space-y-2">
+      <button
+        id={buttonId}
+        className={`bokunButton font-sans ${className}`}
+        data-src={dataSrc}
+        data-testid="widget-book-button"
+        type="button"
+      >
+        {label}
+      </button>
+
+      {directUrl && (
+        <p className="text-[11px] leading-5 text-sand/65">
+          If the booking window gets hidden, {" "}
+          <a
+            href={directUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:text-sand"
+          >
+            {fallbackLabel}
+          </a>
+          .
+        </p>
+      )}
+    </div>
   );
 }

@@ -13,6 +13,7 @@ export default function AboutPage() {
       <Section
         title="About Safari Utah"
         subtitle="African-inspired guiding in the American West"
+        headingLevel="h1"
       >
         <div className="mb-10 border-b border-sand/20" />
 
@@ -65,7 +66,6 @@ export default function AboutPage() {
                 width={600}
                 height={800}
                 className="block h-full w-full object-cover"
-                priority
               />
             </div>
 
@@ -144,7 +144,6 @@ export default function AboutPage() {
                 width={600}
                 height={800}
                 className="block h-full w-full object-cover"
-                priority
               />
             </div>
           </div>

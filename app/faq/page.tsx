@@ -1,10 +1,14 @@
+import type { Metadata } from "next";
 import Section from "@/components/shared/Section";
 import Accordion from "@/components/shared/Accordion";
 
-export const metadata = {
-  title: "FAQ | Safari Utah",
+export const metadata: Metadata = {
+  title: "Antelope Island Tour FAQ",
   description:
-    "Frequently asked questions about Safari Utah private wildlife experiences.",
+    "Frequently asked questions about Safari Utah private, sunset, and small-group Antelope Island wildlife tours from Salt Lake City.",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 const faqItems = [
@@ -16,39 +20,36 @@ const faqItems = [
   {
     question: "How long is the tour?",
     answer:
-      "The experience runs 4 hours total from pickup to drop-off. Antelope Island is roughly 30 minutes from SLC.",
+      "The private day tour and current small-group day tour are approximately 4 hours from pickup to drop-off. The private sunset tour is approximately 4.5 to 5 hours.",
   },
   {
     question: "What wildlife will we see?",
     answer:
-      "Bison are reliably present. Pronghorn, mule deer, coyotes, and seasonal birdlife such as American avocets, hawks, and various shorebirds are commonly observed.",
+      "Bison are reliably present. Pronghorn, mule deer, coyotes, and seasonal birdlife such as American avocets, hawks, and various shorebirds are commonly observed, but wildlife is never guaranteed.",
   },
   {
-    question: "Is the tour suitable for children/older adults?",
+    question: "Is the tour suitable for children or older adults?",
     answer:
-      "Yes. We recommend children be 8+ and not require a car seat.",
+      "Yes. Most of the experience is vehicle-based with optional short, easy walks when conditions allow. Youth must travel with an adult, and guests are responsible for providing any legally required child seats or boosters.",
   },
   {
     question: "What’s included?",
-    answer: "Guiding, transportation, and all entrance fees.",
+    answer: "Guiding, transportation, Salt Lake City area pickup and drop-off, and Antelope Island entrance fees.",
   },
   {
     question: "What should I bring?",
     answer:
-      "Water, snacks, binoculars and a camera if you have them, plus comfortable weather-appropriate clothing and shoes suitable for light walking.",
+      "Bring water, snacks, binoculars and a camera if you have them, plus comfortable weather-appropriate clothing and shoes suitable for light walking.",
   },
   {
     question: "What’s the group size?",
     answer:
-    <div className="space-y-2">
-      <p><strong>Premium Tours:</strong> fully private, 1–4 guests.</p>
-      <p><strong>Small-Group Tour:</strong> shared experience with a capped group size for calm, comfortable wildlife viewing.</p>
-    </div>
+      "Private tours are for your group only, typically 1–4 guests. Small-group tours are shared experiences with capped group sizes for calmer, more comfortable wildlife viewing.",
   },
   {
-    question: "Why is the group size limited to 4?",
+    question: "What is the new small-group tour?",
     answer:
-      "This applies to the premium private tours. The small-group tour has a slightly larger shared capacity but remains intentionally capped.",
+      "Safari Utah is rolling out an additional small-group tour option starting at $150 per adult with a 2-traveler minimum. Youth pricing will be $90 per youth. Online booking will be added once the new Bokun widget is ready.",
   },
   {
     question: "What if the weather changes?",
@@ -56,19 +57,9 @@ const faqItems = [
       "Weather on Antelope Island rarely prevents a quality experience. If conditions affect safety or visibility, Safari Utah may cancel and issue a full refund or offer an alternative date.",
   },
   {
-    question: "Why is there a minimum fare?",
-    answer:
-      "Tours are private, and the minimum fare reflects the time, professional guiding, vehicle use, and preparation required to deliver a premium experience for your group alone.",
-  },
-  {
     question: "How close can we get to wildlife?",
     answer:
-      "Viewing follows ethical wildlife guidelines. Most encounters are enjoyed from the vehicle, maintaining comfort and safety for both guests and animals.",
-  },
-  {
-    question: "Why choose this tour over a van tour?",
-    answer:
-      "Premium tours are private, flexible, and guided by a professionally trained safari guide. There are no crowded vehicles, fixed routes, or rushed stops. You get time, space, and expert interpretation tailored to your interests.",
+      "Viewing follows ethical wildlife guidelines. Most encounters are enjoyed from the vehicle while maintaining comfort and safety for both guests and animals.",
   },
   {
     question: "Is there walking involved?",
@@ -78,13 +69,33 @@ const faqItems = [
   {
     question: "Are restrooms available?",
     answer:
-      "Restrooms are available throughout the island during the tour.",
+      "Restrooms are available at several stops on Antelope Island during the tour.",
   },
 ];
 
 export default function FAQPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <Section eyebrow="FAQ" title="Frequently Asked Questions">
         <div className="max-w-3xl">
           <Accordion items={faqItems} />
