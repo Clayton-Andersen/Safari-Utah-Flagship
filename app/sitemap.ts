@@ -11,9 +11,6 @@ type RouteConfig = {
 const routes: RouteConfig[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/tours/antelope-island", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/book/private", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/book/sunset", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/book/small-group", changeFrequency: "monthly", priority: 0.6 },
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
   { path: "/gallery", changeFrequency: "monthly", priority: 0.6 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
