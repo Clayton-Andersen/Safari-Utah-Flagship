@@ -3,7 +3,7 @@ import Image from "next/image";
 import Section from "@/components/shared/Section";
 import BokunLoader from "@/components/shared/BokunLoader";
 import BookingProductGroups from "@/components/shared/BookingProductGroups";
-import { bookingChannelUuids, bookingProducts } from "@/lib/booking";
+import { bookingProducts } from "@/lib/booking";
 
 export const metadata: Metadata = {
   title: "Antelope Island Wildlife Tours | Safari Utah",
@@ -43,7 +43,7 @@ export default function AntelopeIslandTourPage() {
 
   return (
     <>
-      <BokunLoader channelUuids={bookingChannelUuids} />
+      <BokunLoader />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
