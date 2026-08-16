@@ -62,18 +62,18 @@ export default function BookingProductGroups({ compact = false }: BookingProduct
     <div className="grid gap-6 lg:grid-cols-2">
       <ProductGroup
         eyebrow="Premium Private Experiences"
-        title="Private tours for your group only"
-        description="Choose this style when you want the vehicle, route, pacing, and guide focused entirely on your party."
-        highlights={["Private vehicle", "Flexible pace", "1–4 guests"]}
+        title="Private Tours"
+        description="Best for guests who want privacy, flexibility, and a more personal pace in the field."
+        highlights={["Private experience", "Flexible pace", "1–4 guests"]}
         products={privateBookingProducts}
         compact={compact}
       />
 
       <ProductGroup
         eyebrow="Shared Group Tours"
-        title="Small-group tours with other guests"
-        description="Choose this style when you want a lower per-person price and are comfortable joining a calm, public small-group outing."
-        highlights={["Shared vehicle", "Per-person pricing", "Small group"]}
+        title="Shared Small-Group Tours"
+        description="Best for guests who are comfortable joining others and want a more accessible way to experience the island."
+        highlights={["Shared tour", "Per-person pricing", "Small group"]}
         products={sharedBookingProducts}
         compact={compact}
       />
