@@ -31,7 +31,7 @@ export default function ContactPage() {
                 Most Antelope Island tours can now be booked online. Use this form for custom dates, larger groups, new small-group tour questions, special pickup needs, or anything you want to clarify before booking.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                <Link href="/#book-antelope-island" className={buttonClasses}>
+                <Link href="/tours/antelope-island#choose-your-tour" className={buttonClasses}>
                   Book Antelope Island Tours
                 </Link>
                 <Link href="/tours/antelope-island#choose-your-tour" className={buttonClasses}>
