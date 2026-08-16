@@ -35,7 +35,7 @@ export default function MobileMenu({
         ))}
 
         <Link
-          href="/#book-antelope-island"
+          href="/tours/antelope-island#choose-your-tour"
           className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
           onClick={onClose}
         >
