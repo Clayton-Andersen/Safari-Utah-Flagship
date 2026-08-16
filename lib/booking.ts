@@ -17,14 +17,15 @@ export type BookingProduct = {
   isComingSoon?: boolean;
 };
 
-export const privateBookingChannelUuid = "0e590548-6d52-498f-9513-129853da57cf";
-export const smallGroupBookingChannelUuid = "af390726-dee6-4233-8c58-0c0de47938d0";
-export const newSmallGroupBookingChannelUuid = "0e590548-6d52-498f-9513-129853da57cf";
-export const newSmallGroupBookingDataSrc =
-  `https://widgets.bokun.io/online-sales/${newSmallGroupBookingChannelUuid}/experience/1265851?partialView=1`;
-export const newSmallGroupBookingDirectUrl =
-  `https://widgets.bokun.io/online-sales/${newSmallGroupBookingChannelUuid}/experience/1265851`;
-export const newSmallGroupBookingButtonId = "bokun_692ba05c_86f0_4fa6_8e87_92790aa41b09";
+export const websiteBookingChannelUuid = "af390726-dee6-4233-8c58-0c0de47938d0";
+
+function bookingCalendarDataSrc(experienceId: string) {
+  return `https://widgets.bokun.io/online-sales/${websiteBookingChannelUuid}/experience-calendar/${experienceId}?partialView=1`;
+}
+
+function bookingCalendarDirectUrl(experienceId: string) {
+  return `https://widgets.bokun.io/online-sales/${websiteBookingChannelUuid}/experience-calendar/${experienceId}`;
+}
 
 export const bookingProducts: BookingProduct[] = [
   {
@@ -37,17 +38,17 @@ export const bookingProducts: BookingProduct[] = [
     details: [
       "Private experience for your group only",
       "Approximately 4 hours",
-      "From $450",
+      "From $450 per private tour",
       "1 to 4 guests",
     ],
     bestFor:
       "couples, families, photographers, and first-time visitors who want a private wildlife tour at their own pace.",
-    price: "From $450",
+    price: "From $450 per private tour",
     buttonLabel: "Book Private Day Tour",
-    buttonId: "bokun_1a0059c4_a599_458b_91d5_474f465422cd",
-    channelUuid: privateBookingChannelUuid,
-    dataSrc: `https://widgets.bokun.io/online-sales/${privateBookingChannelUuid}/experience/1167473?partialView=1`,
-    directUrl: `https://widgets.bokun.io/online-sales/${privateBookingChannelUuid}/experience/1167473`,
+    buttonId: "bokun_6770ef37_2262_4bd4_a862_98443237beee",
+    channelUuid: websiteBookingChannelUuid,
+    dataSrc: bookingCalendarDataSrc("1167473"),
+    directUrl: bookingCalendarDirectUrl("1167473"),
   },
   {
     id: "private-sunset",
@@ -59,17 +60,17 @@ export const bookingProducts: BookingProduct[] = [
     details: [
       "Private experience for your group only",
       "Approximately 4.5 to 5 hours",
-      "From $500",
+      "From $500 per private tour",
       "1 to 4 guests",
     ],
     bestFor:
       "guests who want sunset light, stronger photography opportunities, and a more elevated feel in the field.",
-    price: "From $500",
+    price: "From $500 per private tour",
     buttonLabel: "Book Private Sunset Tour",
-    buttonId: "bokun_0188482c_9722_4886_953e_c2bbfdb222f0",
-    channelUuid: privateBookingChannelUuid,
-    dataSrc: `https://widgets.bokun.io/online-sales/${privateBookingChannelUuid}/experience/1174895?partialView=1`,
-    directUrl: `https://widgets.bokun.io/online-sales/${privateBookingChannelUuid}/experience/1174895`,
+    buttonId: "bokun_77e6f96b_8c3c_48f3_bf84_79e7685209dd",
+    channelUuid: websiteBookingChannelUuid,
+    dataSrc: bookingCalendarDataSrc("1174895"),
+    directUrl: bookingCalendarDirectUrl("1174895"),
   },
   {
     id: "small-group-day",
@@ -89,31 +90,33 @@ export const bookingProducts: BookingProduct[] = [
       "guests who are comfortable joining others and want a more accessible way to experience the island without losing the value of expert guiding.",
     price: "1 adult $160 · 2+ adults $140 per adult · Youth with adult $80",
     buttonLabel: "Book Small-Group Day Tour",
-    fallbackHref: "/book/small-group",
-    fallbackLabel: "Book Small-Group Day Tour",
+    buttonId: "bokun_142451be_f15a_4593_abed_c47faf534b52",
+    channelUuid: websiteBookingChannelUuid,
+    dataSrc: bookingCalendarDataSrc("1167480"),
+    directUrl: bookingCalendarDirectUrl("1167480"),
   },
   {
-    id: "small-group-rollout",
-    eyebrow: "Shared Group Sunset Tour",
+    id: "small-group-sunset",
+    eyebrow: "Small-Group Sunset Tour",
     title: "Great Salt Lake Sunset Safari Tour",
     subtitle: "Sunset, Wildlife and Nature Tour",
     description:
       "A shared sunset outing across Antelope Island, timed for evening light, Great Salt Lake views, wildlife, birding, photography, and natural history interpretation.",
     details: [
-      "Scenic drive with Great Salt Lake and Wasatch Mountain views",
+      "Shared small-group sunset experience",
+      "Adult $150",
+      "Youth with adult $90",
       "Wildlife, birding, and photography stops as conditions allow",
-      "Ecology and geology interpretation throughout the tour",
       "Optional short Buffalo Point walk for panoramic sunset views",
-      "April–June gnats may mean more time in the vehicle",
     ],
     bestFor:
       "guests who want a shared sunset experience with wildlife viewing, lake scenery, birding, photography, and a relaxed safari-style pace.",
-    price: "From $150 per adult (2-traveler minimum) · Youth $90",
-    buttonLabel: "Book Shared Great Salt Lake Sunset Safari",
-    buttonId: newSmallGroupBookingButtonId,
-    channelUuid: newSmallGroupBookingChannelUuid,
-    dataSrc: newSmallGroupBookingDataSrc,
-    directUrl: newSmallGroupBookingDirectUrl,
+    price: "Adult $150 · Youth with adult $90",
+    buttonLabel: "Book Small-Group Sunset Tour",
+    buttonId: "bokun_f5842ef1_0805_420e_9850_7f3bbe3a0beb",
+    channelUuid: websiteBookingChannelUuid,
+    dataSrc: bookingCalendarDataSrc("1265851"),
+    directUrl: bookingCalendarDirectUrl("1265851"),
   },
 ];
 
@@ -122,7 +125,7 @@ export const privateBookingProducts = bookingProducts.filter((product) =>
 );
 
 export const sharedBookingProducts = bookingProducts.filter((product) =>
-  ["small-group-day", "small-group-rollout"].includes(product.id)
+  ["small-group-day", "small-group-sunset"].includes(product.id)
 );
 
 export const liveBookingProducts = bookingProducts.filter(
