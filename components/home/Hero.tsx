@@ -28,12 +28,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-4 text-xs sm:flex-row sm:text-sm">
-            <a
-              href="#book-antelope-island"
+            <Link
+              href="/tours/antelope-island#choose-your-tour"
               className="inline-flex items-center justify-center rounded-full bg-sand px-8 py-4 text-base font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone"
             >
               Choose & Book Your Tour
-            </a>
+            </Link>
 
             <Link
               href="/tours/antelope-island"
