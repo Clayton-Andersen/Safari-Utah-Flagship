@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { BookingProduct } from "@/lib/booking";
 import BokunButton from "@/components/shared/BokunButton";
 
@@ -54,9 +53,9 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
             className={primaryButtonClasses}
           />
         ) : product.fallbackHref ? (
-          <Link href={product.fallbackHref} className={primaryButtonClasses}>
+          <a href={product.fallbackHref} className={primaryButtonClasses}>
             {product.fallbackLabel ?? product.buttonLabel}
-          </Link>
+          </a>
         ) : null}
       </div>
     </article>
