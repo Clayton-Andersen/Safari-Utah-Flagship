@@ -5,26 +5,24 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
-import BookingProductGroups from "@/components/shared/BookingProductGroups";
-import BokunLoader from "@/components/shared/BokunLoader";
-import { bookingChannelUuids } from "@/lib/booking";
+<meta name="google-site-verification" content="b3os46aRzG6vWhrWXZPR55ggGJhYnNlQzKsrr0xCIKc" />
 
 export const metadata: Metadata = {
-  title: "Antelope Island Wildlife Tours from Salt Lake City | Safari Utah",
+  title: "Safari Utah | Private Antelope Island Wildlife Tours",
   description:
-    "Private and small-group Antelope Island wildlife tours from Salt Lake City with safari-trained naturalist guides, hotel pickup, bison, birds, Great Salt Lake scenery, and sunset options.",
+    "Private and small-group Antelope Island wildlife tours led by Safari Utah.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Antelope Island Wildlife Tours from Salt Lake City | Safari Utah",
+    title: "Safari Utah | Private Antelope Island Wildlife Tours",
     description:
-      "Private and small-group Antelope Island wildlife tours with safari-trained naturalist guides, hotel pickup, bison, birds, and Great Salt Lake scenery.",
-    url: "/",
+      "Private and small-group Antelope Island wildlife tours led by Safari Utah.",
+    url: "https://safariutah.com/",
     siteName: "Safari Utah",
     images: [
       {
-        url: "/images/google-search-thumb.jpg",
+        url: "https://safariutah.com/images/google-search-thumb.jpg",
         width: 1600,
         height: 900,
         alt: "Bison on Antelope Island during a Safari Utah wildlife tour",
@@ -34,27 +32,24 @@ export const metadata: Metadata = {
   },
 };
 
+const buttonClasses =
+  "inline-flex items-center justify-center rounded-full bg-sand px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone";
+
 export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "WebPage",
     name: "Safari Utah",
     url: "https://safariutah.com/",
     image: "https://safariutah.com/images/google-search-thumb.jpg",
-    telephone: "+1-385-449-0888",
-    email: "safariutah@gmail.com",
-    description:
-      "Private and small-group Antelope Island wildlife tours from Salt Lake City with safari-trained naturalist guides.",
-    areaServed: ["Salt Lake City", "Antelope Island", "Great Salt Lake", "Utah"],
-    sameAs: [
-      "https://www.instagram.com/safariutah/",
-      "https://www.facebook.com/safariutah/",
-    ],
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://safariutah.com/images/google-search-thumb.jpg",
+    },
   };
 
   return (
     <>
-      <BokunLoader channelUuids={bookingChannelUuids} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -64,81 +59,201 @@ export default function HomePage() {
 
       <Hero />
 
-      <Section
-        id="book-antelope-island"
-        eyebrow="Book Antelope Island Tours"
-        title="Choose your tour style first"
-        subtitle="Start with the biggest decision: a premium private experience for your group only, or a shared small-group tour with other guests. Then choose the exact tour and book from the card."
-      >
-        <BookingProductGroups compact />
-      </Section>
+      <ValuePillars />
 
       <Section
-        eyebrow="Antelope Island Tours"
-        title="Private and small-group wildlife tours from Salt Lake City"
-        subtitle="Safari Utah offers wildlife-focused tours shaped by African safari training, ecological field experience, and a calmer pace in the field."
+        eyebrow="Our Premium Wildlife Experience"
+        title="Premium Antelope Island Wildlife Tours"
+        subtitle="Private premium safaris, with a small-group option for guests who prefer a shared experience."
       >
-        <div className="grid items-start gap-8 md:grid-cols-[1.1fr,0.9fr]">
-          <div className="space-y-4 text-sm leading-7 text-sand/85">
+        <div
+          id="tours"
+          className="grid gap-8 md:grid-cols-[2fr,2fr] items-start"
+        >
+          <div className="space-y-4 text-sm text-sand/80">
             <p>
-              Choose the format that fits your style of travel, whether that means a fully private outing, a sunset-focused premium tour, or a shared small-group experience. Every tour is designed to help you slow down, see more, and better understand the island’s wildlife, landscapes, and seasonal rhythms.
+              Discover Antelope Island through immersive, expert-guided wildlife
+              experiences inspired by the depth of African safari guiding.
+              Choose between fully private premium tours or a calm, capped
+              small-group option. Each format is designed to help you connect
+              with the island’s wildlife and landscapes in a thoughtful,
+              intentional way.
             </p>
             <p>
-              Antelope Island is only a short drive from Salt Lake City, but it feels like a different world: open grasslands, bison, pronghorn, shorebirds, raptors, lake light, and some of the most distinctive scenery in northern Utah.
+              You’ll gain a clearer understanding of the island’s ecology,
+              wildlife patterns, and the forces that shape these landscapes.
+              Whether you prefer complete privacy or a calm shared outing, each
+              tour offers space to slow down, observe, and genuinely connect
+              with Utah’s wild side.
             </p>
-            <Link
-              href="/tours/antelope-island"
-              className="inline-flex rounded-full border border-sand/70 px-5 py-2 text-xs uppercase tracking-[0.2em] text-sand transition hover:bg-sand hover:text-night"
-            >
-              View full tour details
-            </Link>
-          </div>
 
-          <div className="grid gap-4">
-            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+            <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
-                src="/images/bison-antelope-island.jpg"
+                src="/images/google-search-thumb.jpg"
                 alt="Bison on Antelope Island viewed during a Safari Utah tour"
                 fill
-                sizes="(min-width: 768px) 45vw, 100vw"
                 className="object-cover"
               />
             </div>
-            <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+
+            <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
               <Image
                 src="/images/island-sunset.jpg"
                 alt="Sunset over the Great Salt Lake from Antelope Island"
                 fill
-                sizes="(min-width: 768px) 45vw, 100vw"
                 className="object-cover"
               />
+            </div>
+          </div>
+
+          <div className="grid gap-4 text-sm text-sand/80">
+            <div className="border border-sand/20 rounded-2xl p-8 bg-night/50 space-y-3">
+              <h3 className="font-serif text-lg">
+                Premium Antelope Island Tour
+              </h3>
+              <p>
+                A four-hour private wildlife experience designed around the best
+                daylight viewing. From hotel pickup to drop-off, we move through
+                Antelope Island&apos;s landscapes at a comfortable, flexible
+                pace, stopping for wildlife, photography, and interpretation as
+                opportunities arise.
+              </p>
+              <p className="font-medium">
+                Minimum fare: $450 per tour (1–4 guests).
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="/book/private" className={buttonClasses}>
+                  Book Your Private Antelope Island Tour
+                </a>
+                <Link
+                  href="/tours/antelope-island"
+                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
+                >
+                  View full tour details
+                </Link>
+              </div>
+            </div>
+
+            <div className="border border-sand/20 rounded-2xl p-8 bg-night/50 space-y-3">
+              <h3 className="font-serif text-lg">
+                Premium Antelope Island Elite Sunset Tour
+              </h3>
+              <p>
+                The Sunset Elite version follows the same private wildlife
+                itinerary as our daytime tour but extends the experience into
+                the island&apos;s most stunning light, timed around sunset for
+                quiet views and photography.
+              </p>
+              <p className="font-medium">
+                Minimum fare: $500 per tour (1–4 guests). Fridays and Mondays,
+                4.5–5 hours.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="/book/sunset" className={buttonClasses}>
+                  Book Your Sunset Elite Experience
+                </a>
+                <Link
+                  href="/tours/antelope-island"
+                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
+                >
+                  View full tour details
+                </Link>
+              </div>
+            </div>
+
+            <div className="border border-sand/20 rounded-2xl p-7 bg-night/50 space-y-3">
+              <h3 className="font-serif text-lg">
+                Antelope Island Small-Group Wildlife Tour
+              </h3>
+              <p>
+                A four-hour small-group wildlife experience for guests who
+                prefer a shared tour while still valuing calm, space, and expert
+                guidance. Group size is capped to keep the outing intimate as we
+                move through Antelope Island. The itinerary mirrors the private
+                tour but follows a set schedule and shared vehicle.
+              </p>
+              <p className="text-xs text-sand/70">
+                Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
+                adult $80
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="/book/small-group" className={buttonClasses}>
+                  Book the Small-Group Tour
+                </a>
+
+                <Link
+                  href="/tours/antelope-island#small-group"
+                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
+                >
+                  View small-group details
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      <ValuePillars />
+      <Section
+        eyebrow="About Safari Utah"
+        title="African-Inspired Nature Guiding in the American West"
+      >
+        <div className="space-y-8 text-sm text-sand/80">
+          <div className="space-y-3">
+            <p>
+              Safari Utah brings African-inspired nature guiding to the American
+              West through private, expert-led wildlife experiences. Our focus
+              is to connect people with nature through clear insight, meaningful
+              moments, and a deeper understanding of place.
+            </p>
+          </div>
 
-      <div className="w-full overflow-x-hidden">
-        <ReviewStrip />
-      </div>
+          <div className="space-y-3">
+            <h3 className="font-serif text-xl">About Your Guide</h3>
+            <p>
+              Educated in the natural sciences, with ecological field experience
+              and professional FGASA safari guide training, Clayton offers a
+              grounded, holistic approach to interpreting landscapes and
+              wildlife. His goal is to help people understand the natural world
+              more deeply and recognize our connection to it.
+            </p>
+          </div>
+        </div>
+        <div>
+          <p>
+            <Link
+              href="/about"
+              className="text-xs underline text-sand/70 hover:text-sand"
+            >
+              Learn more about Safari Utah & your guide
+            </Link>
+          </p>
+        </div>
+      </Section>
 
       <Section
         eyebrow="Custom Experiences"
         title="Custom Experiences — By Request Only"
       >
-        <div className="space-y-4 text-sm leading-7 text-sand/85">
+        <div className="space-y-4 text-sm text-sand/80">
           <p>
-            For guests seeking something more tailored, Safari Utah offers a limited number of custom outings. Options include full-day trips to Arches or Canyonlands, wildlife and nature outings in the Wasatch Mountains, and personalized African safari planning.
+            For guests seeking something tailored, Safari Utah offers a limited
+            number of custom outings. Options include full-day trips to Arches
+            or Canyonlands, wildlife and nature outings in the Wasatch
+            Mountains, and personalized African safari planning. These
+            experiences are curated individually and available by request.
           </p>
-          <Link
+          <a
             href="/custom-experiences"
-            className="inline-flex rounded-full border border-sand/70 px-5 py-2 text-xs uppercase tracking-[0.2em] transition hover:bg-sand hover:text-night"
+            className="inline-flex rounded-full border border-sand/70 px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-sand hover:text-night transition"
           >
             Request a custom experience
-          </Link>
+          </a>
         </div>
       </Section>
+
+      <div className="w-full overflow-x-hidden">
+        <ReviewStrip />
+      </div>
     </>
   );
 }
