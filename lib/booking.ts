@@ -104,14 +104,14 @@ export const bookingProducts: BookingProduct[] = [
       "A shared sunset outing across Antelope Island, timed for evening light, Great Salt Lake views, wildlife, birding, photography, and natural history interpretation.",
     details: [
       "Shared small-group sunset experience",
-      "Adult $150",
+      "Approximately 4.5 to 5 hours",
+      "1 adult $170",
+      "2+ adults $150 per adult",
       "Youth with adult $90",
-      "Wildlife, birding, and photography stops as conditions allow",
-      "Optional short Buffalo Point walk for panoramic sunset views",
     ],
     bestFor:
       "guests who want a shared sunset experience with wildlife viewing, lake scenery, birding, photography, and a relaxed safari-style pace.",
-    price: "Adult $150 · Youth with adult $90",
+    price: "1 adult $170 · 2+ adults $150 per adult · Youth with adult $90",
     buttonLabel: "Book Small-Group Sunset Tour",
     buttonId: "bokun_f5842ef1_0805_420e_9850_7f3bbe3a0beb",
     channelUuid: websiteBookingChannelUuid,
