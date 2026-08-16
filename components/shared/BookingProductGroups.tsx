@@ -6,6 +6,8 @@ type BookingProductGroupsProps = {
   compact?: boolean;
 };
 
+type ProductGroupVariant = "private" | "shared";
+
 type ProductGroupProps = {
   eyebrow: string;
   title: string;
@@ -13,10 +15,27 @@ type ProductGroupProps = {
   highlights: string[];
   products: BookingProduct[];
   compact: boolean;
+  variant: ProductGroupVariant;
 };
 
-const groupClasses =
-  "rounded-3xl border border-sand/25 bg-night/50 p-4 shadow-sm md:p-6";
+const groupClasses: Record<ProductGroupVariant, string> = {
+  private:
+    "rounded-3xl border border-sand/40 bg-sand/[0.08] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] ring-1 ring-sand/10 md:p-7",
+  shared:
+    "rounded-3xl border border-bone/25 bg-bone/[0.05] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.24)] ring-1 ring-bone/10 md:p-7",
+};
+
+const headerClasses: Record<ProductGroupVariant, string> = {
+  private: "mb-5 space-y-3 rounded-2xl border border-sand/20 bg-night/35 p-4 md:p-5",
+  shared: "mb-5 space-y-3 rounded-2xl border border-bone/15 bg-night/45 p-4 md:p-5",
+};
+
+const badgeClasses: Record<ProductGroupVariant, string> = {
+  private:
+    "rounded-full border border-sand/25 bg-sand/15 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-sand/90",
+  shared:
+    "rounded-full border border-bone/20 bg-bone/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-sand/85",
+};
 
 function ProductGroup({
   eyebrow,
@@ -25,10 +44,11 @@ function ProductGroup({
   highlights,
   products,
   compact,
+  variant,
 }: ProductGroupProps) {
   return (
-    <section className={groupClasses}>
-      <div className="mb-5 space-y-3 border-b border-sand/15 pb-5">
+    <section className={groupClasses[variant]}>
+      <div className={headerClasses[variant]}>
         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-sand/70">
           {eyebrow}
         </p>
@@ -38,10 +58,7 @@ function ProductGroup({
         </div>
         <div className="flex flex-wrap gap-2">
           {highlights.map((highlight) => (
-            <span
-              key={highlight}
-              className="rounded-full border border-sand/20 bg-sand/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-sand/80"
-            >
+            <span key={highlight} className={badgeClasses[variant]}>
               {highlight}
             </span>
           ))}
@@ -59,7 +76,7 @@ function ProductGroup({
 
 export default function BookingProductGroups({ compact = false }: BookingProductGroupsProps) {
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
+    <div className="grid gap-8 lg:grid-cols-2">
       <ProductGroup
         eyebrow="Premium Private Experiences"
         title="Private Tours"
@@ -67,6 +84,7 @@ export default function BookingProductGroups({ compact = false }: BookingProduct
         highlights={["Private experience", "Flexible pace", "1–4 guests"]}
         products={privateBookingProducts}
         compact={compact}
+        variant="private"
       />
 
       <ProductGroup
@@ -76,6 +94,7 @@ export default function BookingProductGroups({ compact = false }: BookingProduct
         highlights={["Shared tour", "Per-person pricing", "Small group"]}
         products={sharedBookingProducts}
         compact={compact}
+        variant="shared"
       />
     </div>
   );
