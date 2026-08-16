@@ -5,7 +5,6 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
-<meta name="google-site-verification" content="b3os46aRzG6vWhrWXZPR55ggGJhYnNlQzKsrr0xCIKc" />
 
 export const metadata: Metadata = {
   title: "Safari Utah | Private Antelope Island Wildlife Tours",
@@ -34,6 +33,8 @@ export const metadata: Metadata = {
 
 const buttonClasses =
   "inline-flex items-center justify-center rounded-full bg-sand px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone";
+
+const bookingComparisonHref = "/tours/antelope-island#choose-your-tour";
 
 export default function HomePage() {
   const jsonLd = {
@@ -122,7 +123,7 @@ export default function HomePage() {
                 Minimum fare: $450 per tour (1–4 guests).
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="/book/private" className={buttonClasses}>
+                <a href={bookingComparisonHref} className={buttonClasses}>
                   Book Your Private Antelope Island Tour
                 </a>
                 <Link
@@ -149,7 +150,7 @@ export default function HomePage() {
                 4.5–5 hours.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="/book/sunset" className={buttonClasses}>
+                <a href={bookingComparisonHref} className={buttonClasses}>
                   Book Your Sunset Elite Experience
                 </a>
                 <Link
@@ -177,12 +178,12 @@ export default function HomePage() {
                 adult $80
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="/book/small-group" className={buttonClasses}>
+                <a href={bookingComparisonHref} className={buttonClasses}>
                   Book the Small-Group Tour
                 </a>
 
                 <Link
-                  href="/tours/antelope-island#small-group"
+                  href="/tours/antelope-island#small-group-day"
                   className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
                 >
                   View small-group details
