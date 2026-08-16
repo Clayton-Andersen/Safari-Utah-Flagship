@@ -1,58 +1,31 @@
 "use client";
 
 import { useEffect } from "react";
+import { websiteBookingChannelUuid } from "@/lib/booking";
 
-type BokunLoaderProps = {
-  channelUuid?: string;
-  channelUuids?: string[];
-};
+const scriptId = `bokun-widgets-loader-${websiteBookingChannelUuid}`;
+const loaderSrc = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${websiteBookingChannelUuid}`;
 
-function getScriptId(channelUuid: string) {
-  return `bokun-widgets-loader-${channelUuid}`;
-}
-
-function removeExistingBokunScripts() {
-  document
-    .querySelectorAll<HTMLScriptElement>(
-      'script[id^="bokun-widgets-loader-"], script[src*="BokunWidgetsLoader.js"]'
-    )
-    .forEach((script) => {
-      script.parentNode?.removeChild(script);
-    });
-}
-
-export default function BokunLoader({ channelUuid, channelUuids }: BokunLoaderProps) {
-  const channelsKey = Array.from(
-    new Set([...(channelUuids ?? []), ...(channelUuid ? [channelUuid] : [])].filter(Boolean))
-  ).join("|");
-
+export default function BokunLoader() {
   useEffect(() => {
-    if (!channelsKey) return;
+    if (document.getElementById(scriptId)) return;
 
-    const channels = channelsKey.split("|");
-    const insertedScripts: HTMLScriptElement[] = [];
+    const existingCanonicalLoader = document.querySelector<HTMLScriptElement>(
+      `script[src="${loaderSrc}"]`
+    );
 
-    // Bokun keeps one active booking channel in the widget runtime. Reset the
-    // loader on each page so buttons do not inherit the channel from a previous
-    // client-side route.
-    removeExistingBokunScripts();
+    if (existingCanonicalLoader) {
+      existingCanonicalLoader.id = scriptId;
+      return;
+    }
 
-    channels.forEach((channel) => {
-      const script = document.createElement("script");
-      script.id = getScriptId(channel);
-      script.src = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${channel}`;
-      script.async = true;
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = loaderSrc;
+    script.async = true;
 
-      document.body.appendChild(script);
-      insertedScripts.push(script);
-    });
-
-    return () => {
-      insertedScripts.forEach((script) => {
-        script.parentNode?.removeChild(script);
-      });
-    };
-  }, [channelsKey]);
+    document.body.appendChild(script);
+  }, []);
 
   return null;
 }
