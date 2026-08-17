@@ -32,9 +32,49 @@ export const metadata: Metadata = {
 };
 
 const buttonClasses =
-  "inline-flex items-center justify-center rounded-full bg-sand px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-night transition hover:bg-bone";
+  "inline-flex w-full items-center justify-center rounded-full bg-sand px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone sm:w-auto";
 
-const bookingComparisonHref = "/tours/antelope-island#choose-your-tour";
+const secondaryLinkClasses =
+  "text-xs font-semibold uppercase tracking-[0.18em] underline underline-offset-4 text-sand/70 hover:text-sand";
+
+const tourCards = [
+  {
+    eyebrow: "Private Experience",
+    title: "Private Day Tour",
+    description:
+      "A flexible daytime wildlife tour for guests who want privacy, expert guiding, and a personal pace on Antelope Island.",
+    price: "From $450 per private tour",
+    href: "/tours/antelope-island#private-day",
+    buttonLabel: "Book Private Day Tour",
+  },
+  {
+    eyebrow: "Private Experience",
+    title: "Private Sunset Tour",
+    description:
+      "A longer private tour timed for evening light, photography, and a more atmospheric finish on the island.",
+    price: "From $500 per private tour",
+    href: "/tours/antelope-island#private-sunset",
+    buttonLabel: "Book Private Sunset Tour",
+  },
+  {
+    eyebrow: "Shared Small Group",
+    title: "Small-Group Day Tour",
+    description:
+      "A shared daytime wildlife tour for guests who want expert guiding, a calm pace, and per-person pricing.",
+    price: "1 adult $160 · 2+ adults $140 · Youth $80",
+    href: "/tours/antelope-island#small-group-day",
+    buttonLabel: "Book Small-Group Day Tour",
+  },
+  {
+    eyebrow: "Shared Small Group",
+    title: "Small-Group Sunset Tour",
+    description:
+      "A shared sunset outing with Great Salt Lake views, wildlife stops, birding, photography, and natural history interpretation.",
+    price: "1 adult $170 · 2+ adults $150 · Youth $90",
+    href: "/tours/antelope-island#small-group-sunset",
+    buttonLabel: "Book Small-Group Sunset Tour",
+  },
+];
 
 export default function HomePage() {
   const jsonLd = {
@@ -63,132 +103,85 @@ export default function HomePage() {
       <ValuePillars />
 
       <Section
-        eyebrow="Our Premium Wildlife Experience"
-        title="Premium Antelope Island Wildlife Tours"
-        subtitle="Private premium safaris, with a small-group option for guests who prefer a shared experience."
+        eyebrow="Antelope Island Tour Options"
+        title="Choose your Safari Utah experience"
+        subtitle="Choose private for a tour with your group only, or shared for a small-group public tour with per-person pricing."
       >
         <div
           id="tours"
-          className="grid gap-8 md:grid-cols-[2fr,2fr] items-start"
+          className="grid items-start gap-8 lg:grid-cols-[0.95fr,1.35fr]"
         >
-          <div className="space-y-4 text-sm text-sand/80">
+          <div className="space-y-4 text-sm leading-7 text-sand/80">
             <p>
               Discover Antelope Island through immersive, expert-guided wildlife
-              experiences inspired by the depth of African safari guiding.
-              Choose between fully private premium tours or a calm, capped
-              small-group option. Each format is designed to help you connect
-              with the island’s wildlife and landscapes in a thoughtful,
-              intentional way.
+              experiences inspired by the depth of African safari guiding. Each
+              tour is designed to help you connect with the island’s wildlife,
+              scenery, ecology, and changing light in a thoughtful, unhurried way.
             </p>
             <p>
-              You’ll gain a clearer understanding of the island’s ecology,
-              wildlife patterns, and the forces that shape these landscapes.
-              Whether you prefer complete privacy or a calm shared outing, each
-              tour offers space to slow down, observe, and genuinely connect
-              with Utah’s wild side.
+              Pick the format that fits your travel style: private day, private
+              sunset, small-group day, or small-group sunset. All options keep
+              the experience calm, personal, and focused on meaningful time in
+              the field.
             </p>
 
-            <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
-              <Image
-                src="/images/google-search-thumb.jpg"
-                alt="Bison on Antelope Island viewed during a Safari Utah tour"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+                <Image
+                  src="/images/google-search-thumb.jpg"
+                  alt="Bison on Antelope Island viewed during a Safari Utah tour"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
 
-            <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden border border-sand/20 bg-night/40">
-              <Image
-                src="/images/island-sunset.jpg"
-                alt="Sunset over the Great Salt Lake from Antelope Island"
-                fill
-                className="object-cover"
-              />
+              <div className="relative h-56 overflow-hidden rounded-2xl border border-sand/20 bg-night/40 md:h-72">
+                <Image
+                  src="/images/island-sunset.jpg"
+                  alt="Sunset over the Great Salt Lake from Antelope Island"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="grid gap-4 text-sm text-sand/80">
-            <div className="border border-sand/20 rounded-2xl p-8 bg-night/50 space-y-3">
-              <h3 className="font-serif text-lg">
-                Premium Antelope Island Tour
-              </h3>
-              <p>
-                A four-hour private wildlife experience designed around the best
-                daylight viewing. From hotel pickup to drop-off, we move through
-                Antelope Island&apos;s landscapes at a comfortable, flexible
-                pace, stopping for wildlife, photography, and interpretation as
-                opportunities arise.
-              </p>
-              <p className="font-medium">
-                Minimum fare: $450 per tour (1–4 guests).
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href={bookingComparisonHref} className={buttonClasses}>
-                  Book Your Private Antelope Island Tour
-                </a>
-                <Link
-                  href="/tours/antelope-island"
-                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
+          <div className="space-y-5">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {tourCards.map((tour) => (
+                <article
+                  key={tour.href}
+                  className="flex h-full flex-col space-y-3 rounded-2xl border border-sand/20 bg-night/50 p-6 text-sm text-sand/80"
                 >
-                  View full tour details
-                </Link>
-              </div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sand/60">
+                    {tour.eyebrow}
+                  </p>
+                  <h3 className="font-serif text-xl text-bone">{tour.title}</h3>
+                  <p className="leading-7">{tour.description}</p>
+                  <p className="font-medium text-bone">{tour.price}</p>
+                  <div className="mt-auto pt-2">
+                    <Link href={tour.href} className={buttonClasses}>
+                      {tour.buttonLabel}
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
 
-            <div className="border border-sand/20 rounded-2xl p-8 bg-night/50 space-y-3">
-              <h3 className="font-serif text-lg">
-                Premium Antelope Island Elite Sunset Tour
-              </h3>
+            <div className="rounded-2xl border border-sand/15 bg-night/40 p-5 text-sm leading-7 text-sand/80">
               <p>
-                The Sunset Elite version follows the same private wildlife
-                itinerary as our daytime tour but extends the experience into
-                the island&apos;s most stunning light, timed around sunset for
-                quiet views and photography.
+                Not sure which format fits best? Compare the full Antelope Island
+                lineup, including what each tour includes and who each option is
+                best for.
               </p>
-              <p className="font-medium">
-                Minimum fare: $500 per tour (1–4 guests). Fridays and Mondays,
-                4.5–5 hours.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href={bookingComparisonHref} className={buttonClasses}>
-                  Book Your Sunset Elite Experience
-                </a>
-                <Link
-                  href="/tours/antelope-island"
-                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
-                >
-                  View full tour details
-                </Link>
-              </div>
-            </div>
-
-            <div className="border border-sand/20 rounded-2xl p-7 bg-night/50 space-y-3">
-              <h3 className="font-serif text-lg">
-                Antelope Island Small-Group Wildlife Tour
-              </h3>
-              <p>
-                A four-hour small-group wildlife experience for guests who
-                prefer a shared tour while still valuing calm, space, and expert
-                guidance. Group size is capped to keep the outing intimate as we
-                move through Antelope Island. The itinerary mirrors the private
-                tour but follows a set schedule and shared vehicle.
-              </p>
-              <p className="text-xs text-sand/70">
-                Pricing: 1 adult $160 · 2+ adults $140 per person · Youth with
-                adult $80
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href={bookingComparisonHref} className={buttonClasses}>
-                  Book the Small-Group Tour
-                </a>
-
-                <Link
-                  href="/tours/antelope-island#small-group-day"
-                  className="text-xs uppercase tracking-[0.2em] underline text-sand/70 hover:text-sand"
-                >
-                  View small-group details
-                </Link>
-              </div>
+              <Link
+                href="/tours/antelope-island#choose-your-tour"
+                className={secondaryLinkClasses}
+              >
+                Compare all Antelope Island tours
+              </Link>
             </div>
           </div>
         </div>
