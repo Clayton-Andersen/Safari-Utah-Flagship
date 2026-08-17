@@ -21,13 +21,17 @@ export default function MobileMenu({
   if (!open) return null;
 
   return (
-    <nav className="border-t border-sand/20 bg-night md:hidden">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm">
+    <nav
+      id="mobile-menu"
+      className="border-t border-sand/20 bg-night md:hidden"
+      aria-label="Mobile navigation"
+    >
+      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-sm">
         {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="uppercase tracking-[0.2em] text-sand/80"
+            className="rounded-lg px-2 py-3 uppercase tracking-[0.18em] text-sand/85 hover:bg-sand/10 hover:text-bone"
             onClick={onClose}
           >
             {item.label}
@@ -36,10 +40,10 @@ export default function MobileMenu({
 
         <Link
           href="/tours/antelope-island#choose-your-tour"
-          className="inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-night transition hover:bg-bone"
+          className="mt-2 inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone"
           onClick={onClose}
         >
-          Book Now
+          Book Direct
         </Link>
       </div>
     </nav>
