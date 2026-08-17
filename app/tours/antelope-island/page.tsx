@@ -35,13 +35,6 @@ const primaryButtonClasses =
 const secondaryButtonClasses =
   "inline-flex items-center justify-center rounded-full border border-sand/60 px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-sand transition hover:bg-sand hover:text-night font-sans";
 
-const quickFacts = [
-  "Salt Lake City pickup and drop-off",
-  "Private and shared options",
-  "Day and sunset tours",
-  "Bison, birds, pronghorn, lake views, and changing seasonal wildlife",
-];
-
 const fitCards = [
   {
     title: "Choose private if",
@@ -150,17 +143,6 @@ export default function AntelopeIslandTourPage() {
                 <a href="#what-to-expect" className={secondaryButtonClasses}>
                   What to Expect
                 </a>
-              </div>
-
-              <div className="grid gap-2 pt-4 text-xs text-sand/85 sm:grid-cols-2 md:flex md:flex-wrap md:gap-x-4 md:text-sm">
-                {quickFacts.map((fact) => (
-                  <span
-                    key={fact}
-                    className="rounded-full border border-sand/20 bg-night/35 px-3 py-2 backdrop-blur"
-                  >
-                    {fact}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
