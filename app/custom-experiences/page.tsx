@@ -42,6 +42,11 @@ export default function CustomExperiencesPage() {
                 planning. These experiences are curated individually and available
                 by request.
               </p>
+              <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+                <Link href="/contact?reason=custom#contact-form" className={buttonClasses}>
+                  Request a custom experience
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -120,7 +125,7 @@ export default function CustomExperiencesPage() {
             interests, timeline, group details, and what kind of day you&apos;re
             hoping for, and we&apos;ll explore what might be possible.
           </p>
-          <Link href="/contact?reason=custom" className={buttonClasses}>
+          <Link href="/contact?reason=custom#contact-form" className={buttonClasses}>
             Request a custom experience
           </Link>
         </div>
