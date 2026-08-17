@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Section from "@/components/shared/Section";
 import Accordion from "@/components/shared/Accordion";
 
@@ -20,12 +21,12 @@ const faqItems = [
   {
     question: "How long is the tour?",
     answer:
-      "The private and small-group day tours are approximately 4.5 hours from pickup to drop-off. The private sunset and small-group sunset tours run approximately 4.5 to 5 hours from pick up to drop off.",
+      "The private and small-group day tours are approximately 4.5 hours from pickup to drop-off. The private sunset and small-group sunset tours run approximately 4.5 to 5 hours from pickup to drop-off.",
   },
   {
     question: "What wildlife will we see?",
     answer:
-      "Bison are reliably present. Pronghorn, mule deer, coyotes, and seasonal birdlife such as American avocets, hawks, and various shorebirds are commonly observed, but wildlife is never guaranteed.",
+      "Bison are reliably present. Pronghorn, mule deer, coyotes, and seasonal birdlife such as American avocets, hawks, owls, and various shorebirds are commonly observed, but wildlife is never guaranteed.",
   },
   {
     question: "Is the tour suitable for children or older adults?",
@@ -34,7 +35,8 @@ const faqItems = [
   },
   {
     question: "What’s included?",
-    answer: "Guiding, transportation, Salt Lake City area pickup and drop-off, and Antelope Island entrance fees.",
+    answer:
+      "Guiding, transportation, Salt Lake City area pickup and drop-off, Antelope Island entrance fees, wildlife viewing, scenic stops, and time for photos and interpretation.",
   },
   {
     question: "What should I bring?",
@@ -44,12 +46,17 @@ const faqItems = [
   {
     question: "What’s the group size?",
     answer:
-      "Private tours are for your group only, typically 1–4 guests. Small-group tours are shared experiences with capped group sizes for calmer, more comfortable wildlife viewing.",
+      "Private tours are for your group only, typically 1 to 4 guests. Small-group tours are shared experiences with capped group sizes for calmer, more comfortable wildlife viewing.",
   },
   {
     question: "What small-group tours are available?",
     answer:
       "Safari Utah offers a small-group day tour and a small-group sunset tour. These shared public tours use per-person pricing and capped group sizes while keeping the experience calm, wildlife-focused, and personal in feel.",
+  },
+  {
+    question: "Why book directly with Safari Utah?",
+    answer:
+      "Booking directly lets you see the current Safari Utah tour lineup in one place, reserve through secure Bókun checkout, and communicate directly with the local guides who operate the experience.",
   },
   {
     question: "What if the weather changes?",
@@ -96,9 +103,26 @@ export default function FAQPage() {
         }}
       />
 
-      <Section eyebrow="FAQ" title="Frequently Asked Questions">
+      <Section
+        eyebrow="FAQ"
+        title="Frequently Asked Questions"
+        subtitle="Answers to common questions about pickup, timing, wildlife, group size, booking directly, and what to expect on Antelope Island."
+      >
         <div className="max-w-3xl">
           <Accordion items={faqItems} />
+          <div className="mt-8 rounded-2xl border border-sand/20 bg-sand/[0.06] p-5 text-sm leading-7 text-sand/80">
+            <p className="font-semibold text-bone">Ready to choose a tour?</p>
+            <p className="mt-2">
+              Compare private and small-group Antelope Island tours, then book
+              directly through Safari Utah.
+            </p>
+            <Link
+              href="/tours/antelope-island#choose-your-tour"
+              className="mt-4 inline-flex rounded-full bg-sand px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone"
+            >
+              Compare and Book Tours
+            </Link>
+          </div>
         </div>
       </Section>
     </>
