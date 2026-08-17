@@ -32,17 +32,17 @@ export const bookingProducts: BookingProduct[] = [
     id: "private-day",
     eyebrow: "Private Day Tour",
     title: "Private Day Tour",
-    subtitle: "Premium Antelope Island Private Tour",
+    subtitle: "Antelope Island Private Wildlife Tour",
     description:
-      "Our most flexible private option, timed around the best daylight hours for wildlife viewing and scenery.",
+      "Our most flexible daytime option, designed around wildlife viewing, natural history, photography, and a personal pace in the field.",
     details: [
       "Private experience for your group only",
-      "Approximately 4 hours",
+      "Approximately 4.5 hours from pickup to drop-off",
       "From $450 per private tour",
       "1 to 4 guests",
     ],
     bestFor:
-      "couples, families, photographers, and first-time visitors who want a private wildlife tour at their own pace.",
+      "couples, families, photographers, birders, and first-time visitors who want a private wildlife tour at their own pace.",
     price: "From $450 per private tour",
     buttonLabel: "Book Private Day Tour",
     buttonId: "bokun_6770ef37_2262_4bd4_a862_98443237beee",
@@ -54,17 +54,17 @@ export const bookingProducts: BookingProduct[] = [
     id: "private-sunset",
     eyebrow: "Private Sunset Tour",
     title: "Private Sunset Tour",
-    subtitle: "Premium Antelope Island Private Sunset Tour",
+    subtitle: "Antelope Island Private Sunset Wildlife Tour",
     description:
-      "A longer private outing designed for guests who want the island’s best evening light and a more atmospheric finish to the day.",
+      "A longer private outing timed for evening light, Great Salt Lake views, wildlife activity, and a more atmospheric finish to the day.",
     details: [
       "Private experience for your group only",
-      "Approximately 4.5 to 5 hours",
+      "Approximately 4.5 to 5 hours from pickup to drop-off",
       "From $500 per private tour",
       "1 to 4 guests",
     ],
     bestFor:
-      "guests who want sunset light, stronger photography opportunities, and a more elevated feel in the field.",
+      "guests who want sunset light, stronger photography opportunities, and a more elevated private experience in the field.",
     price: "From $500 per private tour",
     buttonLabel: "Book Private Sunset Tour",
     buttonId: "bokun_77e6f96b_8c3c_48f3_bf84_79e7685209dd",
@@ -74,14 +74,14 @@ export const bookingProducts: BookingProduct[] = [
   },
   {
     id: "small-group-day",
-    eyebrow: "Small-Group Tour",
-    title: "Small-Group Tour",
-    subtitle: "Antelope Island Shared Small-Group Tour",
+    eyebrow: "Small-Group Day Tour",
+    title: "Small-Group Day Tour",
+    subtitle: "Antelope Island Shared Wildlife Tour",
     description:
-      "A shared public tour for guests who want expert guiding, a calm pace, and a lower entry price while still keeping the experience small-scale.",
+      "A shared public tour for guests who want expert guiding, a calm pace, and per-person pricing while still keeping the experience small-scale.",
     details: [
       "Shared small-group experience",
-      "Approximately 4 hours",
+      "Approximately 4.5 hours from pickup to drop-off",
       "1 adult $160",
       "2+ adults $140 per adult",
       "Youth with adult $80",
@@ -98,13 +98,13 @@ export const bookingProducts: BookingProduct[] = [
   {
     id: "small-group-sunset",
     eyebrow: "Small-Group Sunset Tour",
-    title: "Great Salt Lake Sunset Safari Tour",
-    subtitle: "Sunset, Wildlife and Nature Tour",
+    title: "Small-Group Sunset Tour",
+    subtitle: "Great Salt Lake Sunset Safari Tour",
     description:
       "A shared sunset outing across Antelope Island, timed for evening light, Great Salt Lake views, wildlife, birding, photography, and natural history interpretation.",
     details: [
       "Shared small-group sunset experience",
-      "Approximately 4.5 to 5 hours",
+      "Approximately 4.5 to 5 hours from pickup to drop-off",
       "1 adult $170",
       "2+ adults $150 per adult",
       "Youth with adult $90",

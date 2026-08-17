@@ -27,7 +27,7 @@ const items: GalleryItem[] = [
   },
   {
     src: "/images/sunset.jpg",
-    alt: "Enjoying a Sunset View",
+    alt: "Enjoying a sunset view",
     label: "Buffalo Point Sunset",
   },
   {
@@ -42,12 +42,12 @@ const items: GalleryItem[] = [
   },
   {
     src: "/images/kestrel.jpeg",
-    alt: "American Kestrel",
+    alt: "American kestrel",
     label: "Small but Fierce American Kestrel",
   },
   {
     src: "/images/Great Horned Owl.jpeg",
-    alt: "Great Horned Owl in Tree",
+    alt: "Great horned owl in tree",
     label: "Great Horned Owl",
   },
   {
@@ -87,7 +87,7 @@ const items: GalleryItem[] = [
   },
   {
     src: "/images/burrowing-owl.jpg",
-    alt: "Burrowing owls seen on the island and arount Utah",
+    alt: "Burrowing owls seen on the island and around Utah",
     label: "Burrowing Owl",
   },
   {
@@ -97,10 +97,9 @@ const items: GalleryItem[] = [
   },
   {
     src: "/images/wild-horses.jpg",
-    alt: "The wild horses in Northern Utah",
+    alt: "Wild horses in Northern Utah",
     label: "Wild Horses in Utah's West Desert",
   },
-  // add more images here whenever you like
 ];
 
 export default function Gallery() {
@@ -125,7 +124,6 @@ export default function Gallery() {
     if (e.key === "ArrowLeft") showPrev();
   };
 
-  // Lock background scroll when lightbox is open
   useEffect(() => {
     if (activeIndex !== null) {
       document.body.style.overflow = "hidden";
@@ -138,23 +136,21 @@ export default function Gallery() {
   }, [activeIndex]);
 
   return (
-    <div
-      className="space-y-6"
-      tabIndex={-1}
-      onKeyDown={handleKeyDown}
-    >
-      {/* Grid */}
+    <div className="space-y-6" tabIndex={-1} onKeyDown={handleKeyDown}>
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item, index) => (
           <button
             key={item.src}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-sand/20 bg-night/40"
+            type="button"
+            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-sand/20 bg-night/40 text-left"
             onClick={() => setActiveIndex(index)}
+            aria-label={`Open image: ${item.label ?? item.alt}`}
           >
             <Image
               src={item.src}
               alt={item.alt}
               fill
+              sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {item.label && (
@@ -168,14 +164,16 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* Lightbox */}
       {activeIndex !== null && (
         <div
           className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 px-4"
           onClick={close}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Gallery image viewer"
         >
           <div
-            className="relative max-w-5xl w-full max-h-[90vh]"
+            className="relative max-h-[90vh] w-full max-w-5xl"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -183,34 +181,38 @@ export default function Gallery() {
               alt={items[activeIndex].alt}
               width={1600}
               height={1066}
-              className="w-full h-auto rounded-2xl object-contain"
+              className="h-auto w-full rounded-2xl object-contain"
             />
             {items[activeIndex].label && (
-              <p className="mt-3 text-sm text-sand/80 text-center">
+              <p className="mt-3 text-center text-sm text-sand/80">
                 {items[activeIndex].label}
               </p>
             )}
 
-            {/* Close button */}
             <button
+              type="button"
               onClick={close}
-              className="absolute top-3 right-3 rounded-full bg-black/70 px-3 py-1 text-xs uppercase tracking-[0.2em] text-sand hover:bg-black"
+              className="absolute right-3 top-3 rounded-full bg-black/70 px-3 py-2 text-xs uppercase tracking-[0.2em] text-sand hover:bg-black"
+              aria-label="Close gallery image viewer"
             >
               Close
             </button>
 
-            {/* Prev / Next */}
             <button
+              type="button"
               onClick={showPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-sm text-sand hover:bg-black"
+              className="absolute left-2 top-1/2 rounded-full bg-black/60 px-3 py-2 text-sm text-sand hover:bg-black"
+              aria-label="Show previous gallery image"
             >
-              ‹
+              <span aria-hidden="true">‹</span>
             </button>
             <button
+              type="button"
               onClick={showNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-sm text-sand hover:bg-black"
+              className="absolute right-2 top-1/2 rounded-full bg-black/60 px-3 py-2 text-sm text-sand hover:bg-black"
+              aria-label="Show next gallery image"
             >
-              ›
+              <span aria-hidden="true">›</span>
             </button>
           </div>
         </div>

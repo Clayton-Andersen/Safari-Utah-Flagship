@@ -1,11 +1,18 @@
 import Section from "@/components/shared/Section";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "About Safari Utah",
   description:
-    "African-inspired nature guiding in the American West, led by safari-trained guides.",
+    "Meet Safari Utah's safari-trained naturalist guides and learn about African-inspired nature guiding in the American West.",
 };
+
+const buttonClasses =
+  "inline-flex items-center justify-center rounded-full bg-sand px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
+
+const secondaryButtonClasses =
+  "inline-flex items-center justify-center rounded-full border border-sand/60 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night";
 
 export default function AboutPage() {
   return (
@@ -146,6 +153,27 @@ export default function AboutPage() {
                 className="block h-full w-full object-cover"
               />
             </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Ready to head into the field?"
+        title="Choose the Antelope Island tour that fits your style"
+      >
+        <div className="rounded-3xl border border-sand/25 bg-sand/[0.07] p-6 text-sm leading-7 text-sand/85 md:p-8">
+          <p className="max-w-3xl">
+            The best way to understand Safari Utah is to spend time on the island
+            with us. Compare private and small-group options, then book directly
+            through the current Safari Utah tour lineup.
+          </p>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+            <Link href="/tours/antelope-island#choose-your-tour" className={buttonClasses}>
+              Compare and Book Tours
+            </Link>
+            <Link href="/gallery" className={secondaryButtonClasses}>
+              View Gallery
+            </Link>
           </div>
         </div>
       </Section>
