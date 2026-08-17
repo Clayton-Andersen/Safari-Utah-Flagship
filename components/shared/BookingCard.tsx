@@ -15,7 +15,7 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
   return (
     <article
       id={product.id}
-      className="flex h-full flex-col space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 text-sm text-sand/85"
+      className="scroll-mt-28 flex h-full flex-col space-y-4 rounded-2xl border border-sand/20 bg-night/60 p-6 text-sm text-sand/85 md:scroll-mt-32"
     >
       <div className="space-y-3 border-b border-sand/15 pb-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sand/70">
