@@ -22,7 +22,7 @@ export default function Section({
   const HeadingTag = headingLevel;
 
   return (
-    <section id={id} className={`px-4 py-12 md:py-10 ${className ?? ""}`}>
+    <section id={id} className={`scroll-mt-28 px-4 py-12 md:scroll-mt-32 md:py-10 ${className ?? ""}`}>
       <div className="mx-auto max-w-6xl">
         {(eyebrow || title || subtitle) && (
           <header className="mb-4 max-w-2xl space-y-3">
