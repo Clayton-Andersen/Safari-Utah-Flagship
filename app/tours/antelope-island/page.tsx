@@ -113,18 +113,18 @@ export default function AntelopeIslandTourPage() {
         }}
       />
 
-      <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden md:min-h-[82svh]">
+      <section className="relative min-h-[70svh] overflow-hidden md:min-h-[72svh]">
         <Image
           src="/images/avocets.jpeg"
           alt="Wildlife and shoreline landscape on Antelope Island"
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.60]"
+          className="object-cover brightness-[0.66]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/35 to-night/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/30 to-night/10" />
 
-        <div className="relative z-10 flex min-h-[calc(100svh-4rem)] items-end py-20 md:min-h-[82svh] md:py-14">
+        <div className="relative z-10 flex min-h-[70svh] items-end py-16 md:min-h-[72svh] md:py-14">
           <div className="mx-auto max-w-6xl px-4">
             <div className="max-w-3xl space-y-4">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-sand">
