@@ -14,17 +14,17 @@ const buttonClasses =
 export default function CustomExperiencesPage() {
   return (
     <>
-      <section className="relative min-h-[52svh] overflow-hidden md:min-h-[60svh]">
+      <section className="relative min-h-[70svh] overflow-hidden md:min-h-[72svh]">
         <Image
           src="/images/salt-flats-sunset.jpg"
           alt="Western landscape suitable for custom wildlife and nature outings"
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.62]"
+          className="object-cover brightness-[0.66]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/35 to-night/10" />
-        <div className="relative z-10 flex min-h-[52svh] items-end py-16 md:min-h-[60svh] md:py-14">
+        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/30 to-night/10" />
+        <div className="relative z-10 flex min-h-[70svh] items-end py-16 md:min-h-[72svh] md:py-14">
           <div className="mx-auto max-w-6xl space-y-3 px-4">
             <p className="text-xs uppercase tracking-[0.3em] text-sand/80">
               Custom Experiences
