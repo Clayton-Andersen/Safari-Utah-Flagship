@@ -46,7 +46,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <ContactForm />
+            <div id="contact-form" className="scroll-mt-28">
+              <ContactForm />
+            </div>
           </div>
 
           <div className="space-y-6 rounded-2xl border border-sand/20 bg-night/45 p-6">
