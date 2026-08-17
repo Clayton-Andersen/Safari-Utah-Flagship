@@ -35,24 +35,16 @@ export default function CustomExperiencesPage() {
               </h1>
               <p className="max-w-2xl text-sm leading-7 text-sand/95 md:text-base md:leading-8">
                 For guests seeking something tailored, Safari Utah offers a limited
-                number of custom outings in Utah and beyond.
+                number of custom outings in Utah and beyond. Options include
+                full-day trips to Arches or Canyonlands, wildlife and nature
+                outings in the Wasatch Mountains, and personalized African safari
+                planning. These experiences are curated individually and available
+                by request.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      <Section>
-        <div className="max-w-3xl space-y-4 text-sm leading-7 text-sand/80">
-          <p>
-            For guests seeking something tailored, Safari Utah offers a limited
-            number of custom outings. Options include full-day trips to Arches
-            or Canyonlands, wildlife and nature outings in the Wasatch
-            Mountains, and personalized African safari planning. These
-            experiences are curated individually and available by request.
-          </p>
-        </div>
-      </Section>
 
       <Section title="Examples of Custom Outings">
         <div className="grid gap-6 text-sm text-sand/80 md:grid-cols-3">
