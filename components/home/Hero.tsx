@@ -20,15 +20,16 @@ export default function Hero() {
         className="object-cover brightness-[0.62]"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-night/72 via-night/34 to-night/14" />
+      <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-night/46 via-night/18 to-transparent md:w-[58%]" />
 
       <div className="relative z-10 flex min-h-[70svh] items-start py-16 md:min-h-[72svh] md:py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.26em] text-sand/90">
               Private and small-group wildlife tours from Salt Lake City
             </p>
 
-            <h1 className="mb-5 max-w-3xl font-serif text-4xl leading-[1.05] text-bone sm:text-5xl md:mb-6 md:text-6xl">
+            <h1 className="mb-5 max-w-3xl font-serif text-4xl leading-[1.05] text-bone drop-shadow-[0_3px_14px_rgba(0,0,0,0.45)] sm:text-5xl md:mb-6 md:text-6xl">
               Inspired by Africa, Discover the American West
             </h1>
 
