@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const trustItems = [
-  "Salt Lake City pickup",
-  "Private and small-group tours",
-  "Safari-trained naturalist guides",
-  "Secure direct booking",
-];
-
 export default function Hero() {
   return (
     <section className="relative min-h-[70svh] overflow-hidden md:min-h-[72svh]">
@@ -54,19 +47,6 @@ export default function Hero() {
               >
                 Why Safari Utah
               </Link>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-3 text-xs font-semibold leading-5 text-sand/95 sm:max-w-2xl lg:flex lg:max-w-none lg:flex-nowrap lg:items-center lg:gap-x-0 lg:text-sm">
-              {trustItems.map((item, index) => (
-                <span key={item} className="whitespace-normal lg:whitespace-nowrap">
-                  {item}
-                  {index < trustItems.length - 1 && (
-                    <span className="hidden px-3 text-sand/45 lg:inline" aria-hidden="true">
-                      ·
-                    </span>
-                  )}
-                </span>
-              ))}
             </div>
           </div>
         </div>
