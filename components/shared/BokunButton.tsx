@@ -15,7 +15,7 @@ export default function BokunButton({
   label,
   className = "",
   directUrl,
-  fallbackLabel = "Open full booking page",
+  fallbackLabel = "open the full calendar",
 }: BokunButtonProps) {
   return (
     <div className="space-y-2">
@@ -30,8 +30,8 @@ export default function BokunButton({
       </button>
 
       {directUrl && (
-        <p className="text-[11px] leading-5 text-sand/65">
-          If the booking window gets hidden, {" "}
+        <p className="text-[11px] leading-5 text-sand/60">
+          Trouble opening the calendar?{" "}
           <a
             href={directUrl}
             target="_blank"
