@@ -123,15 +123,16 @@ export default function AntelopeIslandTourPage() {
           className="object-cover brightness-[0.62]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-night/72 via-night/34 to-night/14" />
+        <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-night/46 via-night/18 to-transparent md:w-[58%]" />
 
         <div className="relative z-10 flex min-h-[70svh] items-start py-16 md:min-h-[72svh] md:py-16">
           <div className="mx-auto max-w-6xl px-4">
-            <div className="max-w-3xl space-y-4">
+            <div className="max-w-3xl space-y-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-sand">
                 Antelope Island Wildlife Tours
               </p>
 
-              <h1 className="font-serif text-4xl leading-tight text-bone md:text-6xl">
+              <h1 className="font-serif text-4xl leading-tight text-bone drop-shadow-[0_3px_14px_rgba(0,0,0,0.45)] md:text-6xl">
                 Antelope Island wildlife tours from Salt Lake City
               </h1>
 
