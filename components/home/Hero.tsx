@@ -17,7 +17,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover brightness-[0.52]"
+        className="object-cover brightness-[0.58]"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/35 to-night/15" />
 
@@ -55,13 +55,15 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-8 grid gap-2 text-xs text-sand/85 sm:grid-cols-2 md:flex md:flex-wrap md:gap-x-5 md:gap-y-3 md:text-sm">
-              {trustItems.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-sand/20 bg-night/35 px-3 py-2 backdrop-blur"
-                >
+            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-3 text-xs font-semibold leading-5 text-sand/95 sm:max-w-2xl lg:flex lg:max-w-none lg:flex-nowrap lg:items-center lg:gap-x-0 lg:text-sm">
+              {trustItems.map((item, index) => (
+                <span key={item} className="whitespace-normal lg:whitespace-nowrap">
                   {item}
+                  {index < trustItems.length - 1 && (
+                    <span className="hidden px-3 text-sand/45 lg:inline" aria-hidden="true">
+                      ·
+                    </span>
+                  )}
                 </span>
               ))}
             </div>
