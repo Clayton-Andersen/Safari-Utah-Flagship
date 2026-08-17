@@ -21,21 +21,23 @@ export default function CustomExperiencesPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.66]"
+          className="object-cover brightness-[0.68]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/30 to-night/10" />
-        <div className="relative z-10 flex min-h-[70svh] items-end py-16 md:min-h-[72svh] md:py-14">
-          <div className="mx-auto max-w-6xl space-y-3 px-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-sand/80">
-              Custom Experiences
-            </p>
-            <h1 className="max-w-3xl font-serif text-4xl leading-tight text-bone md:text-5xl">
-              Custom experiences by request
-            </h1>
-            <p className="max-w-xl text-sm leading-7 text-sand/85 md:text-base">
-              For guests seeking something tailored, Safari Utah offers a limited
-              number of custom outings in Utah and beyond.
-            </p>
+        <div className="absolute inset-0 bg-gradient-to-r from-night/68 via-night/28 to-night/10" />
+        <div className="relative z-10 flex min-h-[70svh] items-start py-16 md:min-h-[72svh] md:py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="max-w-3xl space-y-4">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-sand">
+                Custom Experiences
+              </p>
+              <h1 className="font-serif text-4xl leading-tight text-bone md:text-6xl">
+                Custom experiences by request
+              </h1>
+              <p className="max-w-2xl text-sm leading-7 text-sand/95 md:text-base md:leading-8">
+                For guests seeking something tailored, Safari Utah offers a limited
+                number of custom outings in Utah and beyond.
+              </p>
+            </div>
           </div>
         </div>
       </section>
