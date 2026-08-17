@@ -23,7 +23,7 @@ export default function MobileMenu({
   return (
     <nav
       id="mobile-menu"
-      className="border-t border-sand/20 bg-night md:hidden"
+      className="border-t border-sand/20 bg-night lg:hidden"
       aria-label="Mobile navigation"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-sm">
