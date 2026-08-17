@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "How long is the tour?",
     answer:
-      "The private day tour and current small-group day tour are approximately 4 hours from pickup to drop-off. The private sunset tour is approximately 4.5 to 5 hours.",
+      "The private and small-group day tours are approximately 4.5 hours from pickup to drop-off. The private sunset and small-group sunset tours run approximately 4.5 to 5 hours from pick up to drop off.",
   },
   {
     question: "What wildlife will we see?",
@@ -47,9 +47,9 @@ const faqItems = [
       "Private tours are for your group only, typically 1–4 guests. Small-group tours are shared experiences with capped group sizes for calmer, more comfortable wildlife viewing.",
   },
   {
-    question: "What is the new small-group tour?",
+    question: "What small-group tours are available?",
     answer:
-      "Safari Utah is rolling out an additional small-group tour option starting at $150 per adult with a 2-traveler minimum. Youth pricing will be $90 per youth. Online booking will be added once the new Bokun widget is ready.",
+      "Safari Utah offers a small-group day tour and a small-group sunset tour. These shared public tours use per-person pricing and capped group sizes while keeping the experience calm, wildlife-focused, and personal in feel.",
   },
   {
     question: "What if the weather changes?",
