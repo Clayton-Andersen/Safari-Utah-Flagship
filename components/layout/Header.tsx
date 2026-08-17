@@ -6,11 +6,11 @@ import MobileMenu from "./MobileMenu";
 
 const navItems = [
   { href: "/tours/antelope-island", label: "Antelope Island Tours" },
+  { href: "/custom-experiences", label: "Custom Experiences" },
   { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/custom-experiences", label: "Custom Experiences" },
   { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Header() {
