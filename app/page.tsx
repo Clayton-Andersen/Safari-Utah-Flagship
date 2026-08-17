@@ -391,7 +391,7 @@ export default function HomePage() {
             Mountains, and personalized African safari planning. These
             experiences are curated individually and available by request.
           </p>
-          <Link href="/custom-experiences" className={secondaryButtonClasses}>
+          <Link href="/contact?reason=custom#contact-form" className={secondaryButtonClasses}>
             Request a custom experience
           </Link>
         </div>
