@@ -53,7 +53,7 @@ function ProductGroup({
           {eyebrow}
         </p>
         <div className="space-y-2">
-          <h3 className="font-serif text-2xl text-bone md:text-3xl">{title}</h3>
+          <h2 className="font-serif text-2xl text-bone md:text-3xl">{title}</h2>
           <p className="text-sm leading-6 text-sand/80">{description}</p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -78,19 +78,19 @@ export default function BookingProductGroups({ compact = false }: BookingProduct
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       <ProductGroup
-        eyebrow="Premium Private Experiences"
+        eyebrow="Private Experiences"
         title="Private Tours"
-        description="Best for guests who want privacy, flexibility, and a more personal pace in the field."
-        highlights={["Private experience", "Flexible pace", "1–4 guests"]}
+        description="Best for guests who want their group only, flexible pacing, and a more personal day in the field."
+        highlights={["Private vehicle", "Flexible pace", "1 to 4 guests"]}
         products={privateBookingProducts}
         compact={compact}
         variant="private"
       />
 
       <ProductGroup
-        eyebrow="Shared Group Tours"
-        title="Shared Small-Group Tours"
-        description="Best for guests who are comfortable joining others and want a more accessible way to experience the island."
+        eyebrow="Shared Small-Group Experiences"
+        title="Small-Group Tours"
+        description="Best for guests who are comfortable joining others and want expert guiding with per-person pricing."
         highlights={["Shared tour", "Per-person pricing", "Small group"]}
         products={sharedBookingProducts}
         compact={compact}
