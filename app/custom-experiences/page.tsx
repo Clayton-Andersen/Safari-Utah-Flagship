@@ -21,7 +21,7 @@ export default function CustomExperiencesPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.58]"
+          className="object-cover brightness-[0.62]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/35 to-night/10" />
         <div className="relative z-10 flex min-h-[52svh] items-end py-16 md:min-h-[60svh] md:py-14">
