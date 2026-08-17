@@ -51,7 +51,7 @@ export default function AntelopeIslandTourPage() {
         }}
       />
 
-      <section className="relative h-[70vh] overflow-hidden md:h-[80vh]">
+      <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden md:min-h-[80svh]">
         <Image
           src="/images/avocets.jpeg"
           alt="Wildlife and shoreline landscape on Antelope Island"
@@ -61,18 +61,18 @@ export default function AntelopeIslandTourPage() {
           className="object-cover brightness-[0.55]"
         />
 
-        <div className="relative z-10 flex h-full items-end">
-          <div className="mx-auto max-w-6xl px-4 pb-10 md:pb-14">
+        <div className="relative z-10 flex min-h-[calc(100svh-4rem)] items-end py-24 md:min-h-[80svh] md:py-14">
+          <div className="mx-auto max-w-6xl px-4">
             <div className="max-w-3xl space-y-4">
-              <p className="text-xs uppercase font-bold tracking-[0.3em] text-sand">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-sand">
                 Antelope Island Wildlife Tours
               </p>
 
-              <h1 className="font-serif text-3xl text-bone md:text-5xl">
+              <h1 className="font-serif text-3xl leading-tight text-bone md:text-5xl">
                 Private and small-group Antelope Island wildlife tours
               </h1>
 
-              <p className="max-w-2xl text-sm text-sand/95 md:text-base">
+              <p className="max-w-2xl text-sm leading-7 text-sand/95 md:text-base">
                 Explore Antelope Island with wildlife-focused guiding shaped by
                 African safari training and ecological field experience. Choose a
                 flexible private daytime tour, a more atmospheric sunset tour, or
