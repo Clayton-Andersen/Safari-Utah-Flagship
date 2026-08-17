@@ -120,7 +120,7 @@ export default function AntelopeIslandTourPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.55]"
+          className="object-cover brightness-[0.60]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/35 to-night/15" />
 
