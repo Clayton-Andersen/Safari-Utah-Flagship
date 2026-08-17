@@ -5,6 +5,9 @@ import Hero from "@/components/home/Hero";
 import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
+import BokunLoader from "@/components/shared/BokunLoader";
+import BokunButton from "@/components/shared/BokunButton";
+import { bookingProducts } from "@/lib/booking";
 
 export const metadata: Metadata = {
   title: "Safari Utah | Antelope Island Wildlife Tours from Salt Lake City",
@@ -34,44 +37,51 @@ export const metadata: Metadata = {
 const primaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone sm:w-auto";
 
+const bookingButtonClasses =
+  "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
+
 const secondaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full border border-sand/60 px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night sm:w-auto";
 
 const tourCards = [
   {
+    productId: "private-day",
     eyebrow: "Private Experience",
     title: "Private Day Tour",
     description:
       "A flexible daytime wildlife tour for guests who want privacy, expert guiding, and a personal pace on Antelope Island.",
     price: "From $450 per private tour",
-    href: "/tours/antelope-island#private-day",
+    pageHref: "/tours/antelope-island#private-day",
     buttonLabel: "Book Private Day Tour",
   },
   {
+    productId: "private-sunset",
     eyebrow: "Private Experience",
     title: "Private Sunset Tour",
     description:
       "A longer private tour timed for evening light, photography, and a more atmospheric finish on the island.",
     price: "From $500 per private tour",
-    href: "/tours/antelope-island#private-sunset",
+    pageHref: "/tours/antelope-island#private-sunset",
     buttonLabel: "Book Private Sunset Tour",
   },
   {
+    productId: "small-group-day",
     eyebrow: "Shared Small Group",
     title: "Small-Group Day Tour",
     description:
       "A shared daytime wildlife tour for guests who want expert guiding, a calm pace, and per-person pricing.",
     price: "1 adult $160 · 2+ adults $140 · Youth $80",
-    href: "/tours/antelope-island#small-group-day",
+    pageHref: "/tours/antelope-island#small-group-day",
     buttonLabel: "Book Small-Group Day Tour",
   },
   {
+    productId: "small-group-sunset",
     eyebrow: "Shared Small Group",
     title: "Small-Group Sunset Tour",
     description:
       "A shared sunset outing with Great Salt Lake views, wildlife stops, birding, photography, and natural history interpretation.",
     price: "1 adult $170 · 2+ adults $150 · Youth $90",
-    href: "/tours/antelope-island#small-group-sunset",
+    pageHref: "/tours/antelope-island#small-group-sunset",
     buttonLabel: "Book Small-Group Sunset Tour",
   },
 ];
@@ -98,6 +108,10 @@ const reviewThemes = [
   },
 ];
 
+function findBookingProduct(productId: string) {
+  return bookingProducts.find((product) => product.id === productId);
+}
+
 export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -116,13 +130,14 @@ export default function HomePage() {
         "@type": "ListItem",
         position: index + 1,
         name: tour.title,
-        url: `https://safariutah.com${tour.href}`,
+        url: `https://safariutah.com${tour.pageHref}`,
       })),
     },
   };
 
   return (
     <>
+      <BokunLoader />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -180,24 +195,38 @@ export default function HomePage() {
 
           <div className="space-y-5">
             <div className="grid gap-4 sm:grid-cols-2">
-              {tourCards.map((tour) => (
-                <article
-                  key={tour.href}
-                  className="flex h-full flex-col space-y-3 rounded-2xl border border-sand/20 bg-night/50 p-6 text-sm text-sand/80 shadow-[0_18px_45px_rgba(0,0,0,0.18)]"
-                >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sand/60">
-                    {tour.eyebrow}
-                  </p>
-                  <h3 className="font-serif text-xl text-bone">{tour.title}</h3>
-                  <p className="leading-7">{tour.description}</p>
-                  <p className="font-medium text-bone">{tour.price}</p>
-                  <div className="mt-auto pt-2">
-                    <Link href={tour.href} className={primaryButtonClasses}>
-                      {tour.buttonLabel}
-                    </Link>
-                  </div>
-                </article>
-              ))}
+              {tourCards.map((tour) => {
+                const bookingProduct = findBookingProduct(tour.productId);
+
+                return (
+                  <article
+                    key={tour.productId}
+                    className="flex h-full flex-col space-y-3 rounded-2xl border border-sand/20 bg-night/50 p-6 text-sm text-sand/80 shadow-[0_18px_45px_rgba(0,0,0,0.18)]"
+                  >
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sand/60">
+                      {tour.eyebrow}
+                    </p>
+                    <h3 className="font-serif text-xl text-bone">{tour.title}</h3>
+                    <p className="leading-7">{tour.description}</p>
+                    <p className="font-medium text-bone">{tour.price}</p>
+                    <div className="mt-auto pt-2">
+                      {bookingProduct?.buttonId && bookingProduct.dataSrc ? (
+                        <BokunButton
+                          buttonId={bookingProduct.buttonId}
+                          dataSrc={bookingProduct.dataSrc}
+                          directUrl={bookingProduct.directUrl}
+                          label={tour.buttonLabel}
+                          className={bookingButtonClasses}
+                        />
+                      ) : (
+                        <Link href={tour.pageHref} className={primaryButtonClasses}>
+                          {tour.buttonLabel}
+                        </Link>
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
             </div>
 
             <div className="rounded-2xl border border-sand/15 bg-sand/[0.06] p-5 text-sm leading-7 text-sand/80">
