@@ -82,13 +82,12 @@ export const bookingProducts: BookingProduct[] = [
     details: [
       "Shared small-group experience",
       "Approximately 4.5 hours from pickup to drop-off",
-      "1 adult $160",
-      "2+ adults $140 per adult",
+      "Adults $140 per person",
       "Youth with adult $80",
     ],
     bestFor:
       "guests who are comfortable joining others and want a more accessible way to experience the island without losing the value of expert guiding.",
-    price: "1 adult $160 · 2+ adults $140 per adult · Youth with adult $80",
+    price: "Adults $140 per person · Youth with adult $80",
     buttonLabel: "Book Small-Group Day Tour",
     buttonId: "bokun_142451be_f15a_4593_abed_c47faf534b52",
     channelUuid: websiteBookingChannelUuid,
@@ -105,13 +104,12 @@ export const bookingProducts: BookingProduct[] = [
     details: [
       "Shared small-group sunset experience",
       "Approximately 4.5 to 5 hours from pickup to drop-off",
-      "1 adult $170",
-      "2+ adults $150 per adult",
+      "Adults $150 per person",
       "Youth with adult $90",
     ],
     bestFor:
       "guests who want a shared sunset experience with wildlife viewing, lake scenery, birding, photography, and a relaxed safari-style pace.",
-    price: "1 adult $170 · 2+ adults $150 per adult · Youth with adult $90",
+    price: "Adults $150 per person · Youth with adult $90",
     buttonLabel: "Book Small-Group Sunset Tour",
     buttonId: "bokun_f5842ef1_0805_420e_9850_7f3bbe3a0beb",
     channelUuid: websiteBookingChannelUuid,
