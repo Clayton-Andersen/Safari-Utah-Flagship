@@ -54,6 +54,11 @@ const faqItems = [
       "Safari Utah offers a small-group day tour and a small-group sunset tour. These shared public tours use per-person pricing and capped group sizes while keeping the experience calm, wildlife-focused, and personal in feel.",
   },
   {
+    question: "Can I book a small-group tour as a solo traveler?",
+    answer:
+      "Yes. Solo travelers are welcome to join a shared departure once at least two guests are already booked. A single traveler cannot open a new shared departure on their own. If a departure has not met the two-guest minimum yet, check back as the date approaches or contact us for current availability.",
+  },
+  {
     question: "Why book directly with Safari Utah?",
     answer:
       "Booking directly lets you see the current Safari Utah tour lineup in one place, reserve through secure Bókun checkout, and communicate directly with the local guides who operate the experience.",
