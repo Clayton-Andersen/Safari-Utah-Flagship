@@ -70,7 +70,7 @@ const tourCards = [
     title: "Small-Group Day Tour",
     description:
       "A shared daytime wildlife tour for guests who want expert guiding, a calm pace, and per-person pricing.",
-    price: "1 adult $160 · 2+ adults $140 · Youth $80",
+    price: "Adults $140 · Youth $80",
     pageHref: "/tours/antelope-island#small-group-day",
     buttonLabel: "Book Small-Group Day Tour",
   },
@@ -80,7 +80,7 @@ const tourCards = [
     title: "Small-Group Sunset Tour",
     description:
       "A shared sunset outing with Great Salt Lake views, wildlife stops, birding, photography, and natural history interpretation.",
-    price: "1 adult $170 · 2+ adults $150 · Youth $90",
+    price: "Adults $150 · Youth $90",
     pageHref: "/tours/antelope-island#small-group-sunset",
     buttonLabel: "Book Small-Group Sunset Tour",
   },
