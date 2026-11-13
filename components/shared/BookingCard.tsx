@@ -1,5 +1,5 @@
 import type { BookingProduct } from "@/lib/booking";
-import BokunButton from "@/components/shared/BokunButton";
+import BookingActions from "@/components/shared/BookingActions";
 
 const primaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full bg-sand px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans sm:w-auto";
@@ -45,12 +45,9 @@ export default function BookingCard({ product, compact = false }: BookingCardPro
 
       <div className="mt-auto pt-2">
         {hasLiveWidget ? (
-          <BokunButton
-            buttonId={product.buttonId!}
-            dataSrc={product.dataSrc!}
-            directUrl={product.directUrl}
-            label={product.buttonLabel}
-            className={primaryButtonClasses}
+          <BookingActions
+            product={product}
+            bookingButtonClasses={primaryButtonClasses}
           />
         ) : product.fallbackHref ? (
           <a href={product.fallbackHref} className={primaryButtonClasses}>
