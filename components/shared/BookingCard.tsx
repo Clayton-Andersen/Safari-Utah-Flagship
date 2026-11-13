@@ -2,7 +2,7 @@ import type { BookingProduct } from "@/lib/booking";
 import BookingActions from "@/components/shared/BookingActions";
 
 const primaryButtonClasses =
-  "inline-flex w-full items-center justify-center rounded-full bg-sand px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans sm:w-auto";
+  "inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sand px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-night shadow-md transition hover:bg-bone font-sans";
 
 type BookingCardProps = {
   product: BookingProduct;
