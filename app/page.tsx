@@ -6,7 +6,7 @@ import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
 import BokunLoader from "@/components/shared/BokunLoader";
-import BokunButton from "@/components/shared/BokunButton";
+import BookingActions from "@/components/shared/BookingActions";
 import { bookingProducts } from "@/lib/booking";
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ const primaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone sm:w-auto";
 
 const bookingButtonClasses =
-  "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
+  "inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
 
 const secondaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full border border-sand/60 px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night sm:w-auto";
@@ -211,12 +211,10 @@ export default function HomePage() {
                     <p className="font-medium text-bone">{tour.price}</p>
                     <div className="mt-auto pt-2">
                       {bookingProduct?.buttonId && bookingProduct.dataSrc ? (
-                        <BokunButton
-                          buttonId={bookingProduct.buttonId}
-                          dataSrc={bookingProduct.dataSrc}
-                          directUrl={bookingProduct.directUrl}
+                        <BookingActions
+                          product={bookingProduct}
                           label={tour.buttonLabel}
-                          className={bookingButtonClasses}
+                          bookingButtonClasses={bookingButtonClasses}
                         />
                       ) : (
                         <Link href={tour.pageHref} className={primaryButtonClasses}>

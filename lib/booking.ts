@@ -15,6 +15,8 @@ export type BookingProduct = {
   fallbackHref?: string;
   fallbackLabel?: string;
   isComingSoon?: boolean;
+  giftWidgetId?: string;
+  giftDataSrc?: string;
 };
 
 export const websiteBookingChannelUuid = "af390726-dee6-4233-8c58-0c0de47938d0";
@@ -25,6 +27,10 @@ function bookingCalendarDataSrc(experienceId: string) {
 
 function bookingCalendarDirectUrl(experienceId: string) {
   return `https://widgets.bokun.io/online-sales/${websiteBookingChannelUuid}/experience-calendar/${experienceId}`;
+}
+
+function giftCardDataSrc(widgetId: string) {
+  return `https://widgets.bokun.io/online-sales/${websiteBookingChannelUuid}/gift-card/${widgetId}`;
 }
 
 export const bookingProducts: BookingProduct[] = [
@@ -49,6 +55,8 @@ export const bookingProducts: BookingProduct[] = [
     channelUuid: websiteBookingChannelUuid,
     dataSrc: bookingCalendarDataSrc("1167473"),
     directUrl: bookingCalendarDirectUrl("1167473"),
+    giftWidgetId: "5323",
+    giftDataSrc: giftCardDataSrc("5323"),
   },
   {
     id: "private-sunset",
@@ -71,6 +79,8 @@ export const bookingProducts: BookingProduct[] = [
     channelUuid: websiteBookingChannelUuid,
     dataSrc: bookingCalendarDataSrc("1174895"),
     directUrl: bookingCalendarDirectUrl("1174895"),
+    giftWidgetId: "5322",
+    giftDataSrc: giftCardDataSrc("5322"),
   },
   {
     id: "small-group-day",
@@ -93,6 +103,8 @@ export const bookingProducts: BookingProduct[] = [
     channelUuid: websiteBookingChannelUuid,
     dataSrc: bookingCalendarDataSrc("1167480"),
     directUrl: bookingCalendarDirectUrl("1167480"),
+    giftWidgetId: "5324",
+    giftDataSrc: giftCardDataSrc("5324"),
   },
   {
     id: "small-group-sunset",
@@ -115,6 +127,8 @@ export const bookingProducts: BookingProduct[] = [
     channelUuid: websiteBookingChannelUuid,
     dataSrc: bookingCalendarDataSrc("1265851"),
     directUrl: bookingCalendarDirectUrl("1265851"),
+    giftWidgetId: "5325",
+    giftDataSrc: giftCardDataSrc("5325"),
   },
 ];
 
