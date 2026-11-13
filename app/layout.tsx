@@ -4,6 +4,9 @@ import "./globals.css";
 import SkipLink from "@/components/shared/SkipLink";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import HolidayGiftBanner from "@/components/layout/HolidayGiftBanner";
+import { holidayGiftDismissalCookie, isHolidayGiftSeason } from "@/lib/seasonal";
+import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,11 +111,18 @@ const localBusinessJsonLd = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Reading session cookies opts this layout into request-time rendering, keeping the
+  // November 1–January 2 schedule accurate across years without hydration flashes.
+  const cookieStore = await cookies();
+  const showHolidayGiftBanner =
+    isHolidayGiftSeason() &&
+    cookieStore.get(holidayGiftDismissalCookie)?.value !== "1";
+
   return (
     <html lang="en">
       <body
@@ -125,6 +135,7 @@ export default function RootLayout({
           }}
         />
         <SkipLink />
+        <HolidayGiftBanner initiallyVisible={showHolidayGiftBanner} />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
