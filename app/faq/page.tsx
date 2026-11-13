@@ -64,6 +64,26 @@ const faqItems = [
       "Booking directly lets you see the current Safari Utah tour lineup in one place, reserve through secure Bókun checkout, and communicate directly with the local guides who operate the experience.",
   },
   {
+    question: "Can I purchase a Safari Utah tour as a gift?",
+    answer:
+      'Yes. Safari Utah offers gift purchase options for all four Antelope Island experiences: private and small-group day and sunset tours. On the tour page, choose the experience and select "Gift This Experience."',
+  },
+  {
+    question: "Do I need to choose a date when purchasing a gift?",
+    answer:
+      "No. A gift experience can be purchased without selecting a tour date. The recipient chooses a departure from available dates when they are ready.",
+  },
+  {
+    question: "How does someone redeem their gift experience?",
+    answer:
+      "The recipient chooses the corresponding experience and an available departure on SafariUtah.com, then applies the gift card code in the Gift Card field at Bókun checkout. Redemption is subject to the experience and categories included on that gift.",
+  },
+  {
+    question: "When do gift experiences expire?",
+    answer:
+      "The gift's validity period and expiration details are shown in the purchase and gift terms. Please check those details before completing checkout.",
+  },
+  {
     question: "What if the weather changes?",
     answer:
       "Weather on Antelope Island rarely prevents a quality experience. If conditions affect safety or visibility, Safari Utah may cancel and issue a full refund or offer an alternative date.",
@@ -111,7 +131,7 @@ export default function FAQPage() {
       <Section
         eyebrow="FAQ"
         title="Frequently Asked Questions"
-        subtitle="Answers to common questions about pickup, timing, wildlife, group size, booking directly, and what to expect on Antelope Island."
+        subtitle="Answers to common questions about pickup, timing, wildlife, group size, gift experiences, booking directly, and what to expect on Antelope Island."
       >
         <div className="max-w-3xl">
           <Accordion items={faqItems} />
