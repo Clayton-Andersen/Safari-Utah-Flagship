@@ -38,7 +38,7 @@ const primaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone sm:w-auto";
 
 const bookingButtonClasses =
-  "inline-flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
+  "inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-night transition hover:bg-bone";
 
 const secondaryButtonClasses =
   "inline-flex w-full items-center justify-center rounded-full border border-sand/60 px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-sand transition hover:bg-sand hover:text-night sm:w-auto";
