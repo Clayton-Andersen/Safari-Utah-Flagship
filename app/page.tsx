@@ -6,7 +6,7 @@ import ValuePillars from "@/components/home/ValuePillars";
 import Section from "@/components/shared/Section";
 import ReviewStrip from "@/components/shared/ReviewStrip";
 import BokunLoader from "@/components/shared/BokunLoader";
-import BokunButton from "@/components/shared/BokunButton";
+import BookingActions from "@/components/shared/BookingActions";
 import { bookingProducts } from "@/lib/booking";
 
 export const metadata: Metadata = {
@@ -211,12 +211,10 @@ export default function HomePage() {
                     <p className="font-medium text-bone">{tour.price}</p>
                     <div className="mt-auto pt-2">
                       {bookingProduct?.buttonId && bookingProduct.dataSrc ? (
-                        <BokunButton
-                          buttonId={bookingProduct.buttonId}
-                          dataSrc={bookingProduct.dataSrc}
-                          directUrl={bookingProduct.directUrl}
+                        <BookingActions
+                          product={bookingProduct}
                           label={tour.buttonLabel}
-                          className={bookingButtonClasses}
+                          bookingButtonClasses={bookingButtonClasses}
                         />
                       ) : (
                         <Link href={tour.pageHref} className={primaryButtonClasses}>
